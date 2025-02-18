@@ -1,0 +1,62 @@
+﻿<Page x:Class="Canabis.Views.PageInscription"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Canabis.Views"
+      mc:Ignorable="d"
+      Title="PageInscription" Height="auto" Width="auto">
+
+    <Grid Background="Bisque">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Vos contrôles ici... -->
+        <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="0">
+            <Label Content="Nom Utilisateur" Width="120" VerticalContentAlignment="Center"/>
+            <Label  Content="Nom Utilisateur" x:Name="lbIdentification" Width="200" Height="30" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="1">
+            <Label Content="Prénom" Width="120" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="tbPrenom" Width="200" Height="30" VerticalContentAlignment="Center" 
+                     BorderThickness="1" BorderBrush="#ccc" Background="#fff" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="2">
+            <Label Content="Nom" Width="120" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="tbnom" Width="200" Height="30" VerticalContentAlignment="Center" 
+                     BorderThickness="1" BorderBrush="#ccc" Background="#fff" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="3">
+            <Label Content="Email" Width="120" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="tbEmail" Width="200" Height="30" VerticalContentAlignment="Center" 
+                     BorderThickness="1" BorderBrush="#ccc" Background="#fff" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="4">
+            <Label Content="Mot de passe" Width="120" VerticalContentAlignment="Center"/>
+            <PasswordBox x:Name="PasswordBox" Width="200" Height="30" VerticalContentAlignment="Center" 
+                         BorderThickness="1" BorderBrush="#ccc" Background="#fff" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="5">
+            <Label Content="Confirmer mot de passe" Width="120" VerticalContentAlignment="Center"/>
+            <PasswordBox x:Name="PasswordBox2" Width="200" Height="30" VerticalContentAlignment="Center" 
+                         BorderThickness="1" BorderBrush="#ccc" Background="#fff" />
+        </StackPanel>
+
+        <Button x:Name="btEnregistrerUtilisateur" Content="Enregistrer" Width="100" Margin="20" Grid.Row="6" 
+                HorizontalAlignment="Left" VerticalAlignment="Center"
+                Background="#4CAF50" Foreground="#fff" BorderBrush="#4CAF50" BorderThickness="1" Click="btEnregistrerUtilisateur_Click" />
+    </Grid>
+</Page>

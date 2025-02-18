@@ -1,0 +1,114 @@
+﻿<Page x:Class="Canabis.Views.PageModifierPlantule"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Canabis.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="697.5" d:DesignWidth="1005.5"
+      Title="PageModifierPlantule">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+
+            <ColumnDefinition Width="auto" MinWidth="230"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Specialité" HorizontalAlignment="Left" Margin="147,10,0,46" Grid.Row="0" Width="60" Grid.Column="1"/>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="1" Grid.ColumnSpan="2">
+            <Label Content="Identification" Width="170"/>
+            <TextBox x:Name="tbIdentification" Width="234"/>
+            <Button x:Name="btnSupprimerSpecialite" Content="Recherche" Grid.Row="1"  Grid.Column="1" Width="60"  Margin="21,0,0,0" Click="btRecherche_Click" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="2" Grid.ColumnSpan="2">
+            <Label Content="Etat de santé" Width="170"/>
+            <!-- <TextBox x:Name="tbEtatDeSante" Width="234" RenderTransformOrigin="1.771,26.192"/> -->
+            <ComboBox x:Name="cbEtatDeSante" Width="234"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="3" Grid.ColumnSpan="2">
+            <Label Content="Date" Width="170"/>
+            <!-- <TextBox x:Name="tbDate" Width="234"/> -->
+            <DatePicker x:Name="calendrier" VerticalAlignment="Top" HorizontalAlignment="Left" Width="234"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="4" Grid.ColumnSpan="2">
+            <Label Content="Provenance" Width="170"/>
+            <TextBox x:Name="tbProvenance" Width="234"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1"  Margin="0,10,0,10" HorizontalAlignment="Center" Width="230">
+            <Button x:Name="btnModifierSpecialite" Content="Modifier" Width="60" Margin="4" Click="modifierPlant_Click" />
+        </StackPanel>
+
+        <DataGrid x:Name="grillePlante" Grid.Row="5" Grid.RowSpan="9" Grid.Column="1" Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="CornflowerBlue" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+BorderBrush="Gray"  BorderThickness="5" IsReadOnly="True" CanUserSortColumns = "True"   AreRowDetailsFrozen="True" CanUserResizeColumns="False"  CanUserReorderColumns="True"    Margin="21,2,2,2" />
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="5" Grid.ColumnSpan="2">
+            <Label Content="Description" Width="170"/>
+            <TextBox x:Name="tbDescription" Width="234"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="6" Grid.ColumnSpan="2">
+            <Label Content="Stade" Width="170"/>
+            <!-- <TextBox x:Name="tbStade" Width="234"/> -->
+            <ComboBox x:Name="cbStade" Width="234"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="7" Grid.ColumnSpan="2">
+            <Label Content="Entreposage" Width="170"/>
+            <!-- <TextBox x:Name="tbEntreposage" Width="234"/> -->
+            <ComboBox x:Name="cbEntreposage" Width="234"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="8" Grid.ColumnSpan="2">
+            <Label Content="Quantité ajoutée" Width="170"/>
+            <!-- <TextBox x:Name="tbQuantiteAjoutee" Width="234"/> -->
+            <!-- <CheckBox x:Name="checkboxAjoute" Margin="2,0,0,0"  Content="1"></CheckBox> -->
+            <RadioButton x:Name="rbActif" IsChecked="True" Margin="2,0,0,0"  Content="Actif"></RadioButton>
+            <RadioButton x:Name="rbInactif"  Margin="11,0,0,0"  Content="Inactif"></RadioButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="9" Grid.ColumnSpan="2">
+            <Label Content="Item retiré de l’inventaire" Width="170"/>
+            <!-- <TextBox x:Name="tbItemRetireDeLInventaire1" Width="234"/> -->
+            <ComboBox x:Name="cbItemRetireDeLInventaire" Width="234"/>
+        </StackPanel>
+
+
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="10" Grid.ColumnSpan="2">
+            <Label Content="Note" Width="170"/>
+            <TextBox x:Name="tbNote" Width="234"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="11" Grid.ColumnSpan="2">
+            <Label Content="Responsable décontamination" Width="170"/>
+            <TextBox x:Name="tbResponsableDecontamination" Width="234"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

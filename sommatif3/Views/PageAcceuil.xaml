@@ -1,0 +1,94 @@
+﻿<Page x:Class="Canabis.Views.PageAcceuil"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Canabis.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAcceuil">
+
+    <Grid Background="#FFF0F0F0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btAffichePlantule" Width="120" Height="120" Click="affichePlantule_click" Background="Transparent" BorderBrush="Transparent">
+                <Viewbox Width="100" Height="100">
+                    <Path Fill="#FF2E8B57" Data="M19 3H5c-1.1 0-1.99.9-1.99 2L3 21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V5h14v16z"/>
+                </Viewbox>
+            </Button>
+            <Label Content="Afficher Plantules" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btAjouterPlantule" Width="120" Height="120" Click="jouterPlantule_click" Background="Transparent" BorderBrush="Transparent">
+                <Viewbox Width="100" Height="100">
+                    <Path Fill="#FF2E8B57" Data="M20 14h-4v-4h-4v4H4v4h8v4h4v-4h4z"/>
+                </Viewbox>
+            </Button>
+            <Label Content="Ajouter Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btModifierPlantule" Width="120" Height="120" Click="modifierPlantule_click" Background="Transparent" BorderBrush="Transparent">
+                <Viewbox Width="100" Height="100">
+                    <Path Fill="#FF2E8B57" Data="M16 12l-4-4v3H8v2h4v3zM12 4v7.17l2.12-2.12 4.59 4.59L18 16.59 12 10.59 6 16.59 4.59 15.17 10.59 9.17 6.59 5.17 8 3.59z"/>
+                </Viewbox>
+            </Button>
+            <Label Content="Modifier Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btArchivePlantule" Width="120" Height="120" Background="Transparent" BorderBrush="Transparent" Click="Archiver_Plant_click">
+                <Viewbox Width="100" Height="100">
+                    <Path Fill="#FF2E8B57" Data="M15 4V3H9v1H4v2h16V4h-5zM5 19c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V7H5v12z"/>
+                </Viewbox>
+            </Button>
+            <Label Content="Archiver Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btImport" Width="120" Height="120" Background="Transparent" BorderBrush="Transparent" Click="btImport_click">
+                <Viewbox Width="100" Height="100">
+                    <Path Fill="#FF2E8B57" Data="M19 3H5c-1.1 0-1.99.9-1.99 2L3 21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM8 13h2v2H8v-2zm4-8h2v2h-2V5zm-4 4h2v2H8V9zm8 0h2v2h-2V9zm-8 4h2v2H8v-2zm8 0h2v2h-2v-2zm-4 4h2v2h-2v-2z"/>
+                </Viewbox>
+            </Button>
+            <Label Content="Import données" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btRecherchePlant" Width="120" Height="120" Click="ConsulterPlante_click" Background="Transparent" BorderBrush="Transparent">
+                <Viewbox Width="100" Height="100">
+                    <Path Fill="#FF2E8B57" Data="M15.5 14h-.79l-.28-.27c1.11-1.36 1.76-3.11 1.76-5 0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.89 0 3.64-.65 5-1.76l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                </Viewbox>
+            </Button>
+            <Label Content="Consulter Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="btHistorique" Width="120" Height="120" Background="Transparent" BorderBrush="Transparent" Click="btHistorique_click">
+                <Viewbox Width="100" Height="100">
+                    <Path Fill="#FF2E8B57" Data="M19 3H5c-1.1 0-1.99.9-1.99 2L3 21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM8 13h2v2H8v-2zm4-8h2v2h-2V5zm-4 4h2v2H8V9zm8 0h2v2h-2V9zm-8 4h2v2H8v-2zm8 0h2v2h-2v-2zm-4 4h2v2h-2v-2z"/>
+                </Viewbox>
+            </Button>
+            <Label Content="Historique" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Viewbox Width="100" Height="100">
+                <Path Fill="#FF2E8B57" Data="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </Viewbox>
+            <Label Content="Accueil" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Page>

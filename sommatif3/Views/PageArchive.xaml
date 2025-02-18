@@ -1,0 +1,44 @@
+﻿<Page x:Class="Canabis.Views.PageArchive"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Canabis.Views"
+      mc:Ignorable="d" 
+      Title="PageArchive" Height="1053" Width="auto">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="1" >
+            <Label Content="Identification" Width="170"/>
+            <TextBox x:Name="tbIdentification" Width="234"/>
+            <Button x:Name="btnSupprimerSpecialite" Content="Recherche" Grid.Row="1"  Grid.Column="1" Width="60"  Margin="21,0,0,0" Click="btRecherche_Click" />
+            <Button x:Name="btnArchive" Content="Archiver Plantule" Grid.Row="3"  Grid.Column="1" Width="100"  Margin="12,0,0,0" Click="btArchive_Click" />
+        </StackPanel>
+
+        <DataGrid x:Name="grillePlante" Grid.Row="5" Grid.RowSpan="9"  Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="CornflowerBlue" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+BorderBrush="Gray"  BorderThickness="5" IsReadOnly="True" CanUserSortColumns = "True"   AreRowDetailsFrozen="True" CanUserResizeColumns="False"  CanUserReorderColumns="True"    Margin="2,2,2,2" />
+
+
+    </Grid>
+</Page>

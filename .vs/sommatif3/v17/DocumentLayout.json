@@ -1,0 +1,803 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageconnexion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconnexion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageconnexion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconnexion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pagemodifierplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagemodifierplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pagemodifierplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagemodifierplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\plantulecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\plantulecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageinscription.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageinscription.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageinscription.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageinscription.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\compteutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\compteutilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageajouterplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageajouterplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\compteutilisateurcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\compteutilisateurcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageafficheplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageafficheplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\entreposagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\entreposagecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageacceuil.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageacceuil.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageconsultationplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconsultationplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pagearchive.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagearchive.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pagehistorique.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagehistorique.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pagehistorique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagehistorique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pagearchive.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagearchive.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageacceuil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageacceuil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\controlerpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\controlerpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\historiquecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\historiquecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageconsultationplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconsultationplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\historiquerecordrow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\historiquerecordrow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageajouterplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageajouterplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\historiqueplantecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\historiqueplantecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\historiqueplante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\historiqueplante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\plantearchive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\plantearchive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\historiquerecordrow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\historiquerecordrow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageimportdonnee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageimportdonnee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\plantecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\plantecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\plantearchivecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\plantearchivecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\medecincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\medecincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\entreposage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\entreposage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\plante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\plante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\models\\medecin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\medecin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageafficheplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageafficheplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\mainswitch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\mainswitch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\views\\pageimportdonnee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageimportdonnee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DIVETISSA\\AppData\\Local\\Temp\\.vsdbgsrc\\4315b130d37ec1c13dcbffadb62faf5459da3810441204f490a8637c4a8c6da9\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\obj\\Debug\\net8.0-windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sommatif3\\obj\\Debug\\net8.0-windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\canabis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\canabis.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\mylab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\mainswitch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\mainswitch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\david\\AppData\\Local\\Temp\\0sstg2wn..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\SpecialiteContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\specialite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 28,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CompteUtilisateurContext.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\CompteUtilisateurContext.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\CompteUtilisateurContext.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\CompteUtilisateurContext.cs",
+              "RelativeToolTip": "sommatif3\\Models\\CompteUtilisateurContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:53:11.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompteUtilisateur.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\CompteUtilisateur.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\CompteUtilisateur.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\CompteUtilisateur.cs",
+              "RelativeToolTip": "sommatif3\\Models\\CompteUtilisateur.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:52:57.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PageHistorique.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageHistorique.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageHistorique.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageHistorique.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageHistorique.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAwwEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T08:40:04.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HistoriqueRecordRow.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T08:39:02.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HistoriquePlanteContext.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\HistoriquePlanteContext.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\HistoriquePlanteContext.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\HistoriquePlanteContext.cs",
+              "RelativeToolTip": "sommatif3\\Models\\HistoriquePlanteContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T07:42:24.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HistoriquePlante.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\HistoriquePlante.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\HistoriquePlante.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\HistoriquePlante.cs",
+              "RelativeToolTip": "sommatif3\\Models\\HistoriquePlante.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T07:42:10.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HistoriqueControler.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\HistoriqueControler.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\HistoriqueControler.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\HistoriqueControler.cs",
+              "RelativeToolTip": "sommatif3\\Models\\HistoriqueControler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAFYAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T07:41:19.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HistoriqueRecordRow.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-04T07:08:06.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PageHistorique.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageHistorique.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageHistorique.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageHistorique.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageHistorique.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-04T07:05:24.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PlanteArchive.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\PlanteArchive.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\PlanteArchive.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\PlanteArchive.cs",
+              "RelativeToolTip": "sommatif3\\Models\\PlanteArchive.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T17:34:47.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PageAjouterPlantule.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-25T01:23:40.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "PlanteArchiveContext.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\PlanteArchiveContext.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\PlanteArchiveContext.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\PlanteArchiveContext.cs",
+              "RelativeToolTip": "sommatif3\\Models\\PlanteArchiveContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T17:35:10.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PageConsultationPlantule.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwEUAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T01:58:33.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "plantuleControler.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\plantuleControler.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\plantuleControler.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\plantuleControler.cs",
+              "RelativeToolTip": "sommatif3\\Models\\plantuleControler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T02:06:04.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EntreposageContext.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\EntreposageContext.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\EntreposageContext.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\EntreposageContext.cs",
+              "RelativeToolTip": "sommatif3\\Models\\EntreposageContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T16:16:24.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Entreposage.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\Entreposage.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\Entreposage.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\Entreposage.cs",
+              "RelativeToolTip": "sommatif3\\Models\\Entreposage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T16:13:21.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PlanteContext.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\PlanteContext.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\PlanteContext.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\PlanteContext.cs",
+              "RelativeToolTip": "sommatif3\\Models\\PlanteContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAACyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:02:18.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MedecinContext.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\MedecinContext.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\MedecinContext.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\MedecinContext.cs",
+              "RelativeToolTip": "sommatif3\\Models\\MedecinContext.cs",
+              "ViewState": "AQIAAAIAAAAgMzMzMzMrwAwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T15:25:46.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "plante.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\plante.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\plante.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\plante.cs",
+              "RelativeToolTip": "sommatif3\\Models\\plante.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T04:45:55.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "medecin.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\medecin.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\medecin.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Models\\medecin.cs",
+              "RelativeToolTip": "sommatif3\\Models\\medecin.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAABAPQwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T15:31:33.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PageArchive.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageArchive.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageArchive.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageArchive.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageArchive.xaml.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwFEAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T17:58:22.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PageArchive.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageArchive.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageArchive.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageArchive.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageArchive.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-02T17:49:34.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PageImportDonnee.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAwwHMAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T11:48:00.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PageImportDonnee.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageImportDonnee.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageImportDonnee.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageImportDonnee.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageImportDonnee.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-02T11:46:09.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PageModifierPlantule.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageModifierPlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageModifierPlantule.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageModifierPlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageModifierPlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-27T08:23:37.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PageConsultationPlantule.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-27T01:05:36.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ControlerPage.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\ControlerPage.cs",
+              "RelativeDocumentMoniker": "sommatif3\\ControlerPage.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\ControlerPage.cs",
+              "RelativeToolTip": "sommatif3\\ControlerPage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T03:19:56.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PageConnexion.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConnexion.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConnexion.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConnexion.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageConnexion.xaml.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAnwGQAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T02:25:14.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PageInscription.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageInscription.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageInscription.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageInscription.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageInscription.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-26T02:33:17.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PageInscription.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageInscription.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageInscription.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageInscription.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageInscription.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T02:34:35.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageConnexion.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConnexion.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConnexion.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageConnexion.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageConnexion.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-26T01:57:55.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PageAffichePlantule.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAffichePlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAffichePlantule.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAffichePlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageAffichePlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-27T05:31:32.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PageAcceuil.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAcceuil.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAcceuil.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAcceuil.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageAcceuil.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-26T21:07:37.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\MainWindow.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainWindow.xaml",
+              "RelativeToolTip": "sommatif3\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-17T13:35:07.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainWindow.xaml.cs",
+              "RelativeToolTip": "sommatif3\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T13:35:07.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "MainSwitch.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainSwitch.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\MainSwitch.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainSwitch.xaml",
+              "RelativeToolTip": "sommatif3\\MainSwitch.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-26T03:15:34.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\App.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\App.xaml",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\App.xaml",
+              "RelativeToolTip": "sommatif3\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-18T20:04:48.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\App.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\App.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\App.xaml.cs",
+              "RelativeToolTip": "sommatif3\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T05:22:49.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "sommatif3\\AssemblyInfo.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\AssemblyInfo.cs",
+              "RelativeToolTip": "sommatif3\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T20:04:42.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "XamlReader.cs [Lecture seule]",
+              "DocumentMoniker": "C:\\Users\\DIVETISSA\\AppData\\Local\\Temp\\.vsdbgsrc\\4315b130d37ec1c13dcbffadb62faf5459da3810441204f490a8637c4a8c6da9\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\DIVETISSA\\AppData\\Local\\Temp\\.vsdbgsrc\\4315b130d37ec1c13dcbffadb62faf5459da3810441204f490a8637c4a8c6da9\\XamlReader.cs [Lecture seule]",
+              "ViewState": "AQIAAAcCAACA+/////8nwAMCAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T11:45:39.768Z",
+              "EditorCaption": " [Lecture seule]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PageModifierPlantule.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAYwK0AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:41:07.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PageAffichePlantule.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAEAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T06:00:57.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PageAcceuil.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAArwDwAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T23:07:40.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Canabis.csproj",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Canabis.csproj",
+              "RelativeDocumentMoniker": "sommatif3\\Canabis.csproj",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Canabis.csproj",
+              "RelativeToolTip": "sommatif3\\Canabis.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-26T03:15:08.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MainSwitch.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainSwitch.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\MainSwitch.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\MainSwitch.xaml.cs",
+              "RelativeToolTip": "sommatif3\\MainSwitch.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T03:18:53.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PageAjouterPlantule.xaml.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "ViewState": "AQIAAHMBAAAAAAAAAAAmwJMBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T01:42:29.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\obj\\Debug\\net8.0-windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "sommatif3\\obj\\Debug\\net8.0-windows\\App.g.i.cs",
+              "ToolTip": "D:\\myLab\\final canabis\\sommatif3 (2)\\sommatif3\\sommatif3\\obj\\Debug\\net8.0-windows\\App.g.i.cs",
+              "RelativeToolTip": "sommatif3\\obj\\Debug\\net8.0-windows\\App.g.i.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowD8AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T02:58:56.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "SpecialiteContext.cs",
+              "DocumentMoniker": "D:\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\SpecialiteContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\SpecialiteContext.cs",
+              "ToolTip": "D:\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\SpecialiteContext.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\SpecialiteContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T21:33:09.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "specialite.cs",
+              "DocumentMoniker": "D:\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\specialite.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\specialite.cs",
+              "ToolTip": "D:\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\specialite.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\laCite\\session3\\developpement Bureau\\ES_3\\sommatif3\\sommatif3\\sommatif3\\Models\\specialite.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T21:25:53.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\david\\AppData\\Local\\Temp\\0sstg2wn..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-18T20:20:21.89Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

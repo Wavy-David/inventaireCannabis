@@ -1,0 +1,128 @@
+﻿<Page x:Class="sommatif3.PageAjouterPlantule"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:sommatif3"
+      mc:Ignorable="d"
+      Title="PageAjouterPlantule" Height="auto" Width="auto">
+
+    <DockPanel Background="#FFF0F0F0" Margin="20">
+        <StatusBar DockPanel.Dock="Bottom" Background="#FF2E8B57" Foreground="White">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem>
+                <TextBlock Name="statusMessage">Message:</TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="2">
+                <TextBlock Name="statusAction">Action!</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto" MinWidth="200"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="2" Grid.ColumnSpan="2">
+                    <Label Content="Etat de santé" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <ComboBox x:Name="cbEtatDeSante" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="3" Grid.ColumnSpan="2">
+                    <Label Content="Date" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <DatePicker x:Name="calendrier" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="4" Grid.ColumnSpan="2">
+                    <Label Content="Provenance" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <TextBox x:Name="tbProvenance" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="2" Margin="0,10,0,10" HorizontalAlignment="Center" Width="200">
+                    <Button x:Name="btnAjouterPlantule" Content="Ajout Plante" Width="100" Margin="20,4,4,4" Background="#FF2E8B57" Foreground="White" BorderBrush="#FF2E8B57" BorderThickness="1" Click="ajouter_plantule" />
+                </StackPanel>
+
+                <DataGrid x:Name="grillePlante" Grid.Row="5" Grid.RowSpan="9" Grid.Column="2" Background="White" RowBackground="#FFFAF0E6" AlternatingRowBackground="#FFF5F5DC" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+                          BorderBrush="#FFD3D3D3" BorderThickness="1" IsReadOnly="True" CanUserSortColumns="True" AreRowDetailsFrozen="True" CanUserResizeColumns="True" CanUserReorderColumns="True" Margin="20,2,2,2" />
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="5" Grid.ColumnSpan="2">
+                    <Label Content="Description" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <TextBox x:Name="tbDescription" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="6" Grid.ColumnSpan="3">
+                    <Label Content="Stade" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <ComboBox x:Name="cbStade" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="7" Grid.ColumnSpan="2">
+                    <Label Content="Entreposage" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <ComboBox x:Name="cbEntreposage" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                    <Button x:Name="btnAjouterEntrepo" Content="Ajout entrepos" Width="82" Margin="10,4,4,4" Background="#FF2E8B57" Foreground="White" BorderBrush="#FF2E8B57" BorderThickness="1" Click="ajouter_entrepo_click" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="8" Grid.ColumnSpan="2">
+                    <Label Content="Active [1] / Inactive [0]" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <RadioButton x:Name="rbActif" IsChecked="True" Margin="2,0,0,0" Content="Actif" Foreground="#FF2E8B57"/>
+                    <RadioButton x:Name="rbInactif" Margin="11,0,0,0" Content="Inactif" Foreground="#FF2E8B57"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="9" Grid.ColumnSpan="2">
+                    <Label Content="Item retiré de l’inventaire" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <ComboBox x:Name="cbItemRetireDeLInventaire" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="10" Grid.ColumnSpan="2">
+                    <Label Content="Responsable décontamination" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <ComboBox x:Name="tbResponsableDecontamination" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5">
+                        <ComboBoxItem Content="Kadija Houssein Youssouf"/>
+                        <ComboBoxItem Content="Alexandre Tromas"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="11" Grid.ColumnSpan="2">
+                    <Label Content="Note" Width="150"/>
+                    <TextBox x:Name="tbNote" Width="300" Height="100"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="12" Grid.ColumnSpan="2">
+                    <Label Content="QR Code" Width="150" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                    <Image x:Name="qrCodeImageBox" Width="200" Height="200" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </DockPanel>
+</Page>
