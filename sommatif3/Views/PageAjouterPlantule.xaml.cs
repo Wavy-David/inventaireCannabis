@@ -1,4 +1,5 @@
-﻿using Canabis.Models;
+﻿using Canabis;
+using Canabis.Models;
 using QRCoder;
 using sommatif3.Models;
 using System;
@@ -33,13 +34,7 @@ namespace sommatif3
         public PageAjouterPlantule()
         {
             InitializeComponent();
-
-            //charger datagrid
-            //ChargerListeMedecin();
-            //charger datagrid
-            ChargerListePlantules();
-
-            //viderToutLesComboBox();
+            //ChargerListePlantules();
             AjouterElementsAComboBox();
         }
 
@@ -56,13 +51,6 @@ namespace sommatif3
             cbStade.Items.Add("double magenta");
             cbStade.Items.Add("Hydroponie");
 
-            /*cbEntreposage.Items.Add("B3200");
-            cbEntreposage.Items.Add("B3080.01");
-            cbEntreposage.Items.Add("B3070");
-            cbEntreposage.Items.Add("F1260.01");
-            cbEntreposage.Items.Add("F1260.04");
-            cbEntreposage.Items.Add("B3320");*/
-
             #region add entrepo from db
             using (EntreposageContext EC = new EntreposageContext())
                 try
@@ -72,7 +60,7 @@ namespace sommatif3
                     {
                         p.idEntreposage
                     }).ToList();
-                    
+
                     foreach (var m in MesEntrepo)
                     {
                         cbEntreposage.Items.Add(m.idEntreposage.ToString());
@@ -114,46 +102,12 @@ namespace sommatif3
                 }
         }
 
-        /*public void ChargerListeMedecin()
-        {
-            using (MedecinContext MC = new MedecinContext())
-                try
-                {
-                    
-                    var MesMedecins = MC.medecin.ToList();
-                    grille.ItemsSource = MesMedecins;
-                    statusMessage.Text = "Liste des Medecins chargé  e";
-
-                }
-                catch (Exception ex)
-                {
-                    statusMessage.Text = ex.Message;
-                }
-        }*/
-
-        /*//charger data grid
-        public void ChargerListePlantules()
-        {
-            using (PlanteContext PC = new PlanteContext())
-                try
-                {
-                    var MesPlante = PC.plante.ToList();
-                    grillePlante.ItemsSource = MesPlante;
-                    statusMessage.Text = "Liste des Specialités chargée";
-                }
-                catch (Exception ex)
-                {
-                    statusMessage.Text = ex.Message;
-                }
-        }*/
-
         //charger data grid
         public void ChargerListePlantules()
         {
             using (PlanteContext PC = new PlanteContext())
                 try
                 {
-                    //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
                     var MesPlante = PC.plante.Select(p => new
                     {
                         p.IdPlante,
@@ -207,10 +161,6 @@ namespace sommatif3
 
         private void ajouter_plantule(object sender, RoutedEventArgs e)
         {
-            
-            // Récupérer la date sélectionnée
-            //DateTime? dateSelectionnee = calendrier.SelectedDate;
-
             //******* Ajouter Plantule
             try
             {
@@ -218,16 +168,23 @@ namespace sommatif3
                 using (PlanteContext PC = new PlanteContext())
                 {
                     plante newPlante = new plante();
+                    String tempId = "SLH" + (plantuleControler.countAllPlantule() + 1);
+                    int idDigit = 1;
 
-                    //newPlante.IdPlante = tbIdentification.Text;
-                    newPlante.IdPlante = "SLH" + (plantuleControler.countAllPlantule() + 1);
+                    while (plantuleControler.getPlantIdFromDb(tempId) == tempId)
+                    {
+                        idDigit++;
+                        tempId = "SLH" + (plantuleControler.countAllPlantule() + idDigit);
+                    }
+
+                    newPlante.IdPlante = tempId;
                     newPlante.EtatSante = cbEtatDeSante.SelectedItem.ToString();
-                    //newPlante.DateAjout = calendrier.SelectedDate.Value.ToShortDateString();
                     newPlante.DateAjout = (DateTime)calendrier.SelectedDate;
                     newPlante.Provenance = tbProvenance.Text;
                     newPlante.Description = tbDescription.Text;
                     newPlante.Stade = cbStade.SelectedItem.ToString();
                     newPlante.Entreposage = cbEntreposage.SelectedItem.ToString();
+
                     if (rbActif.IsChecked == true)
                     {
                         newPlante.Active_Inactive = 1;
@@ -242,18 +199,16 @@ namespace sommatif3
 
                     //add new car to the context/ Table SC: stand for --> specialite context
                     PC.plante.Add(newPlante);
+
                     //save dans la base de donnee
                     PC.SaveChanges();
 
-                    enregistreHistorique();
+                    enregistreHistorique(newPlante.IdPlante);
 
                     GeneratePrintQRcode();
 
                     ChargerListePlantules();
 
-                    //viderToutLesComboBox();
-                    //chargerComboBox(cbMedecinSpecialite);
-                    //chargerComboBox(cbSpecialiteConsultation);
                     statusMessage.Text = "Plantule ajoutée";
 
                 }
@@ -261,12 +216,8 @@ namespace sommatif3
             catch (Exception ex)
             {
                 statusMessage.Text = ex.Message;
-               // MessageBox.Show("s'assurer de mettre l'Id de l'utilisateur sur le champ Responsable");
                 MessageBox.Show(ex.Message.ToString());
             }
-
-            //****
-
         }
 
         private void GeneratePrintQRcode()
@@ -282,12 +233,6 @@ namespace sommatif3
                 active_inactive = 0;
             }
             #region generate qr code
-            /*QRCoder.QRCodeGenerator QRgen = new QRCoder.QRCodeGenerator();
-            var QRdata = QRgen.CreateQrCode(tbIdentification.Text, QRCoder.QRCodeGenerator.ECCLevel.H);
-            var QRcode = new QRCoder.QRCode(QRdata);
-
-            qrCodeImageBox.DataContext = QRcode;*/
-
             // Generate the QR code
             QRCodeGenerator QRgen = new QRCodeGenerator();
 
@@ -349,7 +294,6 @@ namespace sommatif3
             string title = "Ajouter un entrepo";
             string entrepoCode = Microsoft.VisualBasic.Interaction.InputBox(promptMessage, title, "");
             string nomEntrepo = Microsoft.VisualBasic.Interaction.InputBox("Entrer le nom de l'entrepos:", title, "");
-            //MessageBox.Show(entreposName);
 
             // Check if the input is not empty
             if (!string.IsNullOrEmpty(entrepoCode))
@@ -396,10 +340,10 @@ namespace sommatif3
 
         }
 
-        public void enregistreHistorique()
+        public void enregistreHistorique(string plantId)
         {
             //historiqueModification();
-            string myId = "SLH" + (plantuleControler.countAllPlantule() + 1);
+            //string myId = "SLH" + (plantuleControler.countAllPlantule() + 1);
 
             try
             {
@@ -408,9 +352,8 @@ namespace sommatif3
                     HistoriquePlante newPlanteArchive = new HistoriquePlante();
 
                     newPlanteArchive.Id = HistoriqueControler.countAllHistoriqueRecord() + 1;
-                    newPlanteArchive.IdPlante = myId.ToUpper();
+                    newPlanteArchive.IdPlante = plantId.ToUpper();
                     newPlanteArchive.Action = "ajout";
-                    //newPlante.DateAjout = calendrier.SelectedDate.Value.ToShortDateString();
                     newPlanteArchive.Date = DateTime.Today;
                     newPlanteArchive.Champ = "--";
                     newPlanteArchive.AncienneValeur = "--";
@@ -422,293 +365,29 @@ namespace sommatif3
 
                     HistoriqueControler.listAncienneValeur.Clear();
                     HistoriqueControler.listAncienneValeur.Clear();
-                    plantuleControler.trouverPlantuleInfo(myId).Clear();
-
-                    //listInformation.Clear();
-                    //MessageBox.Show("Plantule archivée");
+                    plantuleControler.trouverPlantuleInfo(plantId).Clear();
                 }
             }
             catch (Exception ex)
             {
                 //statusMessage.Text = ex.Message;
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
-        /*        private void modifierPlant(object sender, RoutedEventArgs e)
-                {
-                    if (tbIdentification.Text != "")
-                    {
-                        try
-                        {
-                            //utilise le context
-                            using (PlanteContext PC = new PlanteContext())
-                            {
-                                plante newPlante = PC.plante.FirstOrDefault(p => p.IdPlante.Equals(tbIdentification.Text));
-
-                                if (newPlante != null)
-                                {
-                                    newPlante.IdPlante = tbIdentification.Text;
-                                    newPlante.EtatSante = cbEtatDeSante.SelectedItem.ToString();
-                                    //newPlante.DateAjout = calendrier.SelectedDate.Value.ToShortDateString();
-                                    newPlante.DateAjout = (DateTime)calendrier.SelectedDate;
-                                    newPlante.Provenance = tbProvenance.Text;
-                                    newPlante.Description = tbDescription.Text;
-                                    newPlante.Stade = cbStade.SelectedItem.ToString();
-                                    newPlante.Entreposage = cbEntreposage.SelectedItem.ToString();
-                                    if (rbActif.IsChecked == true)
-                                    {
-                                        newPlante.Active_Inactive = 1;
-                                    }
-                                    else if (rbInactif.IsChecked == true)
-                                    {
-                                        newPlante.Active_Inactive = 0;
-                                    }
-                                    newPlante.ItemRetireInventaire = cbItemRetireDeLInventaire.SelectedItem.ToString();
-                                    newPlante.Note = tbNote.Text;
-
-                                    //save dans la base de donnee
-                                    PC.SaveChanges();
-
-                                    ChargerListePlantules();
-
-                                    //viderToutLesComboBox();
-                                    //chargerComboBox(cbMedecinSpecialite);
-                                    //chargerComboBox(cbSpecialiteConsultation);
-                                    statusMessage.Text = "Plantule modifiée";
-                                }
-                                else
-                                {
-                                    statusMessage.Text = "ID invalide";
-                                }
-
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            statusMessage.Text = ex.Message;
-                        }
-                    }
-                    else
-                    {
-                        statusMessage.Text = "aucun champ ne doit etre vide";
-                    }
-
-                }
-
-                private void suprimerPlantule(object sender, RoutedEventArgs e)
-                {
-                    if (tbIdentification.Text != "")
-                    {
-                        try
-                        {
-                            //utilise le context
-                            using (PlanteContext PC = new PlanteContext())
-                            {
-                                plante newPlante = PC.plante.FirstOrDefault(p => p.IdPlante.Equals(tbIdentification.Text));
-
-                                if (newPlante != null)
-                                {
-                                    PC.plante.Remove(newPlante);
-                                    PC.SaveChanges();
-
-                                    ChargerListePlantules();
-
-                                    //viderToutLesComboBox();
-                                    //chargerComboBox(cbMedecinSpecialite);
-                                    //chargerComboBox(cbSpecialiteConsultation);
-                                    statusMessage.Text = "Plantule suprimée";
-                                }
-                                else
-                                {
-                                    statusMessage.Text = "ID invalide";
-                                }
-
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            statusMessage.Text = ex.Message;
-                        }
-                    }
-                    else
-                    {
-                        statusMessage.Text = "aucun champ ne doit etre vide";
-                    }
-                }*/
-
-
-        /*private void Ajouter_Medecin_Click(object sender, RoutedEventArgs e)
+        private void btRetour_Click(object sender, RoutedEventArgs e)
         {
-            if (tbMedecinId.Text != "" && tbMedecinNom.Text != "" && tbMedecinPrenom.Text != "" && tbMedecinTelephone.Text != "" && tbMedecinSalaire.Text != "" && cbMedecinSpecialite.SelectedItem != null)
-            {
-                try
-                {
-                    // Utilisation du context pour se connecter a la BD
-                    using (MedecinContext medecinContext = new MedecinContext())
-                    {
-                        medecin nouveauMedecin = new medecin();
-                        nouveauMedecin.MedecinId = int.Parse(tbMedecinId.Text);
-                        nouveauMedecin.MedecinNom = tbMedecinNom.Text;
-                        nouveauMedecin.MedecinPrenom = tbMedecinPrenom.Text;
-                        nouveauMedecin.MedecinTelephone = long.Parse(tbMedecinTelephone.Text);
-                        nouveauMedecin.SpecialiteId = trouveIdSpecialite(cbMedecinSpecialite.SelectedItem.ToString());
-                        nouveauMedecin.SpecialiteNom = cbMedecinSpecialite.SelectedItem.ToString();
-                        nouveauMedecin.MedecinSalaire = decimal.Parse(tbMedecinSalaire.Text);
-
-                        medecinContext.medecin.Add(nouveauMedecin);
-                        medecinContext.SaveChanges();
-                        ChargerListeMedecin();
-                        statusMessage.Text = "Nouveau medecin ajoutee!";
-
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    statusMessage.Text = ex.Message;
-                }
-            }
-            else
-            {
-                statusMessage.Text = "aucun champ ne doit etre vide";
-            }
-            
-        }
-*/
-        /*private void Modifier_Medecin_Click(object sender, RoutedEventArgs e)
-        {
-            if (tbMedecinId.Text != "" && tbMedecinNom.Text != "" && tbMedecinPrenom.Text != "" && tbMedecinTelephone.Text != "" && tbMedecinSalaire.Text != "" && cbMedecinSpecialite.SelectedItem != null)
-            {
-                try
-                {
-                    using (MedecinContext medecinContext = new MedecinContext())
-                    {
-                        medecin medecinAModifier = medecinContext.medecin.FirstOrDefault(med => med.MedecinId.Equals(int.Parse(tbMedecinId.Text)));
-                        if (medecinAModifier != null)
-                        {
-                            medecinAModifier.MedecinNom = tbMedecinNom.Text;
-                            medecinAModifier.MedecinPrenom = tbMedecinPrenom.Text;
-                            medecinAModifier.MedecinTelephone = long.Parse(tbMedecinTelephone.Text);
-                            medecinAModifier.MedecinSalaire = decimal.Parse(tbMedecinSalaire.Text);
-                            medecinAModifier.SpecialiteId = trouveIdSpecialite(cbMedecinSpecialite.SelectedItem.ToString());
-                            medecinAModifier.SpecialiteNom = cbMedecinSpecialite.SelectedItem.ToString();
-
-                            medecinContext.SaveChanges();
-
-                            ChargerListeMedecin();
-                            statusMessage.Text = "Medecin modifie!";
-                        }
-                        else
-                        {
-                            statusMessage.Text = "Aucun medecin avec cet ID";
-                        }
-
-                    }
-                }
-                catch (Exception exp)
-                {
-                    statusMessage.Text = exp.Message;
-                }
-            }
-            else
-            {
-                statusMessage.Text = "aucun champ ne doit etre vide";
-            }
-        }*/
-
-        /*private void Spprimer_Medecin_Click(object sender, RoutedEventArgs e)
-        {
-            if(tbMedecinId.Text != "")
-            {
-                try
-                {
-                    using (MedecinContext medecinContext = new MedecinContext())
-                    {
-                        medecin medecinASupprimer = medecinContext.medecin.FirstOrDefault(med => med.MedecinId.Equals(int.Parse(tbMedecinId.Text)));
-                        if (medecinASupprimer != null)
-                        {
-                            medecinContext.medecin.Remove(medecinASupprimer);
-                            medecinContext.SaveChanges();
-                            ChargerListeMedecin();
-                            statusMessage.Text = "Medecin Supprimee!";
-                        }
-                        else
-                        {
-                            statusMessage.Text = "Aucun medecin avec cet ID";
-                        }
-                    }
-                }
-                catch (Exception exp)
-                {
-                    statusMessage.Text = exp.Message;
-                }
-            }
-            else
-            {
-                statusMessage.Text = "le champ identifiant medecin ne doit etre vide";
-            } 
-        }*/
-
-        /*private void rechercheConsultation(object sender, RoutedEventArgs e)
-        {
-            if(tbSalaireTrie.Text != "" && cbSpecialiteConsultation.SelectedItem != null)
-            {
-                int IdspecialiteSelectione = trouveIdSpecialite(cbSpecialiteConsultation.SelectedItem.ToString());
-                using (MedecinContext MC = new MedecinContext())
-                    try
-                    {
-                        if (operateurLogicWhere == "==")
-                        {
-                            var MesMedecins = MC.medecin.Where(m => m.SpecialiteId == IdspecialiteSelectione && m.MedecinSalaire == Decimal.Parse(tbSalaireTrie.Text)).ToList();
-                            grilleConsultation.ItemsSource = MesMedecins;
-                            statusMessage.Text = "Liste des Medecins chargée";
-                        }
-                        else if (operateurLogicWhere == ">")
-                        {
-                            var MesMedecins = MC.medecin.Where(m => m.SpecialiteId == IdspecialiteSelectione && m.MedecinSalaire > Decimal.Parse(tbSalaireTrie.Text)).ToList();
-                            grilleConsultation.ItemsSource = MesMedecins;
-                            statusMessage.Text = "Liste des Medecins chargée";
-                        }
-                        else
-                        {
-                            var MesMedecins = MC.medecin.Where(m => m.SpecialiteId == IdspecialiteSelectione && m.MedecinSalaire < Decimal.Parse(tbSalaireTrie.Text)).ToList();
-                            grilleConsultation.ItemsSource = MesMedecins;
-                            statusMessage.Text = "Liste des Medecins chargée";
-                        }
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        statusMessage.Text = ex.Message;
-                    }
-            }
-            else
-            {
-                statusMessage.Text = "aucun champ ne doit etre vide";
-            }
-        }*/
-
-        /*private void rbSuperieur_Checked(object sender, RoutedEventArgs e)
-        {
-            operateurLogicWhere = ">";
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+            grillePlante.ItemsSource = null;
+            tbProvenance.Clear();
+            tbDescription.Clear();
+            tbNote.Clear();
+            qrCodeImageBox.Source = null;
         }
 
-        private void rbEgal_Checked(object sender, RoutedEventArgs e)
+        private void loaded(object sender, RoutedEventArgs e)
         {
-            operateurLogicWhere = "==";
+            ChargerListePlantules();
         }
-
-        private void rbInferieur_Checked(object sender, RoutedEventArgs e)
-        {
-            operateurLogicWhere = "<";
-        }
-
-        public void viderToutLesComboBox()
-        {
-            cbSpecialiteConsultation.Items.Clear();
-            cbMedecinSpecialite.Items.Clear();
-        }*/
     }
 }

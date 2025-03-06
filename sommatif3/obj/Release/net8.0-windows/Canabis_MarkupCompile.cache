@@ -1,18 +1,18 @@
 ﻿Canabis
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Projet d'integration\sommatif3\obj\Debug\net8.0-windows\
+C:\Projet d'integration\sommatif3\obj\Release\net8.0-windows\
 Canabis
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Projet d'integration\sommatif3\App.xaml
 131534555883
 
-33-1022771915
+311520321143
 250-213866235
 MainSwitch.xaml;MainWindow.xaml;Views\HistoriqueRecordRow.xaml;Views\PageAcceuil.xaml;Views\PageAffichePlantule.xaml;Views\PageAjouterPlantule.xaml;Views\PageArchive.xaml;Views\PageConnexion.xaml;Views\PageConsultationPlantule.xaml;Views\PageHistorique.xaml;Views\PageImportDonnee.xaml;Views\PageInscription.xaml;Views\PageModifierPlantule.xaml;
 
