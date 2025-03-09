@@ -15,7 +15,7 @@ namespace Canabis.Models
         public static List<string> trouverPlantuleInfo(string id)
         {
             List<string> listPlantInfo = new List<string>();
-            
+
 
             using (PlanteContext PC = new PlanteContext())
                 try
@@ -34,9 +34,6 @@ namespace Canabis.Models
                         p.Note,
                         p.Responsable
                     }).ToList();
-
-
-                    //listPlantInfo.Add(MesPlante.E);
 
                     //listPlantInfo.Add(MesPlante[0].EtatSante.ToString());
                     foreach (var plant in MesPlante)
@@ -108,18 +105,18 @@ namespace Canabis.Models
                     //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
                     var MesPlante = PC.plante.Where(p => p.IdPlante == id)
                         .Select(p => new
-                    {
-                        p.IdPlante,
-                        p.EtatSante,
-                        p.DateAjout,
-                        p.Provenance,
-                        p.Description,
-                        p.Stade,
-                        p.Entreposage,
-                        p.Active_Inactive,
-                        p.ItemRetireInventaire,
-                        p.Note,
-                        p.Responsable
+                        {
+                            p.IdPlante,
+                            p.EtatSante,
+                            p.DateAjout,
+                            p.Provenance,
+                            p.Description,
+                            p.Stade,
+                            p.Entreposage,
+                            p.Active_Inactive,
+                            p.ItemRetireInventaire,
+                            p.Note,
+                            p.Responsable
                         }).ToList();
                     grille.ItemsSource = MesPlante;
                     //statusMessage.Text = "Liste des Specialités chargée";
@@ -129,6 +126,71 @@ namespace Canabis.Models
                     // statusMessage.Text = ex.Message;
                     Console.WriteLine(ex.ToString());
                 }
+        }
+        public static string getPlantIdFromDb(string id)
+        {
+            string plantId = string.Empty;
+            using (PlanteContext PC = new PlanteContext())
+            {
+                try
+                {
+                    var mesPlante = PC.plante
+                        .Where(p => p.IdPlante == id)
+                        .Select(p => p.IdPlante)
+                        .FirstOrDefault(); // Get the actual first result
+
+                    plantId = mesPlante ?? string.Empty; // Ensure it's not null
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return plantId;
+        }
+
+        public static string getUserIdFromDb(string id)
+        {
+            string userId = string.Empty;
+            using (CompteUtilisateurContext PC = new CompteUtilisateurContext())
+            {
+                try
+                {
+                    var myUser = PC.CompteUtilisateur
+                        .Where(p => p.IdUtilisateur == id)
+                        .Select(p => p.IdUtilisateur)
+                        .FirstOrDefault(); // Get the actual first result
+
+                    userId = myUser ?? string.Empty; // Ensure it's not null
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return userId;
+        }
+
+        public static string getPasswordFromDb(string password)
+        {
+            string userId = string.Empty;
+            using (CompteUtilisateurContext PC = new CompteUtilisateurContext())
+            {
+                try
+                {
+                    var myUser = PC.CompteUtilisateur
+                        .Where(p => p.motdepass == password)
+                        .Select(p => p.motdepass)
+                        .FirstOrDefault(); // Get the actual first result
+
+                    userId = myUser ?? string.Empty; // Ensure it's not null
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+            return userId;
         }
 
         public static void chargerListePlantules(DataGrid maGrille)
