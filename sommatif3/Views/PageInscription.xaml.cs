@@ -24,6 +24,7 @@ namespace Canabis.Views
         public PageInscription()
         {
             InitializeComponent();
+            lbIdentification.Visibility = Visibility.Hidden;
         }
 
         private void btEnregistrerUtilisateur_Click(object sender, RoutedEventArgs e)
@@ -39,7 +40,7 @@ namespace Canabis.Views
                     newPlanteArchive.Prenom = tbPrenom.Text;
                     //newPlante.DateAjout = calendrier.SelectedDate.Value.ToShortDateString();
                     newPlanteArchive.Email = tbEmail.Text;
-                    newPlanteArchive.MotDePasse = PasswordBox.Password;
+                    newPlanteArchive.motdepass = PasswordBox.Password;
 
                     //save dans la base de donnee
                     PC.CompteUtilisateur.Add(newPlanteArchive);
@@ -47,14 +48,30 @@ namespace Canabis.Views
 
 
                     //listInformation.Clear();
-                    //MessageBox.Show("Plantule archivée");
+                    MessageBox.Show("Utilisateur Enregistré\nVotre nom d'utilisateur est: " + newPlanteArchive.IdUtilisateur);
+
+                    lbIdentification.Content = newPlanteArchive.IdUtilisateur;
+                    lbIdentification.Visibility = Visibility.Visible;
+
+                    tbnom.Clear();
+                    tbPrenom.Clear();
+                    tbEmail.Clear();
+                    PasswordBox.Clear();
+                    PasswordBox2.Clear();
                 }
+
             }
             catch (Exception ex)
             {
                 //statusMessage.Text = ex.Message;
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btRetour_Click(object sender, RoutedEventArgs e)
+        {
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.pageConnexion;
         }
     }
 }
+
