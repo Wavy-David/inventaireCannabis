@@ -64,5 +64,12 @@ namespace Canabis.Views
                     Console.WriteLine(ex.ToString());
                 }
         }
+
+        private void btRetour_Click(object sender, RoutedEventArgs e)
+        {
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+            grillePlante.ItemsSource = null;
+            tbIdentification.Clear();
+        }
     }
 }

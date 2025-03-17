@@ -25,14 +25,6 @@ namespace Canabis.Views
         public PageAffichePlantule()
         {
             InitializeComponent();
-
-            lbPlantActif.Content = plantuleControler.countActifPlantule();
-
-            lbPlantInactif.Content = plantuleControler.countInactifPlantule();
-
-            lbTotalPlant.Content = (plantuleControler.countActifPlantule() + plantuleControler.countInactifPlantule()).ToString();
-
-            ChargerListePlantules();
         }
 
         public void ChargerListePlantules()
@@ -63,6 +55,26 @@ namespace Canabis.Views
                    // statusMessage.Text = ex.Message;
                    Console.WriteLine(ex.ToString());
                 }
+        }
+
+        private void btRetour_Click(object sender, RoutedEventArgs e)
+        {
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+            grillePlante.ItemsSource = null;
+            lbPlantActif.Content = null;
+            lbPlantInactif.Content = null;
+            lbTotalPlant.Content = null;
+        }
+
+        private void loaded(object sender, RoutedEventArgs e)
+        {
+            lbPlantActif.Content = plantuleControler.countActifPlantule();
+
+            lbPlantInactif.Content = plantuleControler.countInactifPlantule();
+
+            lbTotalPlant.Content = (plantuleControler.countActifPlantule() + plantuleControler.countInactifPlantule()).ToString();
+
+            ChargerListePlantules();
         }
     }
 }

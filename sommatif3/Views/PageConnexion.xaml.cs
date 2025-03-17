@@ -32,14 +32,37 @@ namespace Canabis.Views
         {
             // Navigation vers la page d'inscription
             NavigationService?.Navigate(new PageInscription());
+            tbIdentification.Clear();
+            PasswordBox.Clear();
         }
     
 
         private void btConnexion_Click(object sender, RoutedEventArgs e)
         {
-            bool isUsername = false;
-            bool isPassword = false;
+            //bool isUsername = false;
+            //bool isPassword = false;
 
+            try
+            {
+                if (tbIdentification.Text.Equals(plantuleControler.getUserIdFromDb(tbIdentification.Text), StringComparison.OrdinalIgnoreCase)  && PasswordBox.Password == plantuleControler.getPasswordFromDb(PasswordBox.Password))
+                {
+                    tbIdentification.Clear();
+                    PasswordBox.Clear();
+                    ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+                }
+                else
+                {
+                    MessageBox.Show("Mot de passe, nom d'utilisateur incorrect");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            
+            
+            /*=====================================================================================
             try
             {
                 //utilise le context
@@ -64,13 +87,16 @@ namespace Canabis.Views
                 //statusMessage.Text = ex.Message;
                 //MessageBox.Show(ex.Message);
             }
+            =====================================================================================*/
 
+
+            /*===================================================================================
             try
             {
                 //utilise le context
                 using (CompteUtilisateurContext PC = new CompteUtilisateurContext())
                 {
-                    CompteUtilisateur newPlante = PC.CompteUtilisateur.FirstOrDefault(p => p.MotDePasse.Equals(PasswordBox.Password));
+                    CompteUtilisateur newPlante = PC.CompteUtilisateur.FirstOrDefault(p => p.motdepass.Equals(PasswordBox.Password));
 
                     if (newPlante != null)
                     {
@@ -98,8 +124,9 @@ namespace Canabis.Views
             {
                // MessageBox.Show("invalide info");
             }
-            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+            ======================================================================================*/
 
+            //ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
         }
 
     }

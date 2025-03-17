@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:sommatif3"
         mc:Ignorable="d"
-        Title="Canabis" Height="auto" Width="auto">
+        Title="Canabis" Height="1080" Width="1920">
     <Grid>
-        <Frame x:Name="Main"/>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
     </Grid>
     
 </Window>

@@ -25,6 +25,7 @@ namespace sommatif3
         public MainWindow()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             Main.Content = ControlerPage.mainFrameControl;
             ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.pageConnexion;
            // Main.Content = new PageAffichePlantule();

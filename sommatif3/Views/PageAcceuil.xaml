@@ -5,8 +5,84 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Canabis.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="PageAcceuil">
+    <Page.Resources>
+        <!--button style-->
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Foreground" Value="#fff"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+            <!-- Initial margin -->
+
+            <!-- Set the initial background to a gradient brush -->
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#11d171" Offset="0"/>
+                        <GradientStop Color="#3ea882" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+            <!-- Define the visual structure with Border and CornerRadius -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="BorderElement" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                        </Border>
+
+                        <!-- Define the VisualState for MouseOver (hover) -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderElement" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="Transparent" Offset="0"/>
+                                            <GradientStop Color="Transparent" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+
+                                <!-- Increase the size by 25% when hovered -->
+                                <Setter TargetName="BorderElement" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="1.25" ScaleY="1.25" />
+                                    </Setter.Value>
+                                </Setter>
+
+                                <!-- Increase the margin by 50% when hovered -->
+                                <Setter Property="Margin" Value="15"/>
+                                <!-- 50% increase from initial 10 -->
+                            </Trigger>
+
+                            <!-- Reset the size and margin when not hovering -->
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter TargetName="BorderElement" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                    </Setter.Value>
+                                </Setter>
+
+                                <Setter Property="Margin" Value="10"/>
+                                <!-- Reset margin to initial value -->
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </Page.Resources>
 
     <Grid Background="#FFF0F0F0">
         <Grid.ColumnDefinitions>
@@ -22,73 +98,75 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btAffichePlantule" Width="120" Height="120" Click="affichePlantule_click" Background="Transparent" BorderBrush="Transparent">
-                <Viewbox Width="100" Height="100">
-                    <Path Fill="#FF2E8B57" Data="M19 3H5c-1.1 0-1.99.9-1.99 2L3 21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V5h14v16z"/>
-                </Viewbox>
+            <Button x:Name="btAffichePlantule" Width="120" Height="120" Click="affichePlantule_click" Background="Transparent" 
+                    BorderBrush="Transparent" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/spreadsheet.png"/>
             </Button>
-            <Label Content="Afficher Plantules" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Afficher Plantules" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold" 
+                   Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btAjouterPlantule" Width="120" Height="120" Click="jouterPlantule_click" Background="Transparent" BorderBrush="Transparent">
-                <Viewbox Width="100" Height="100">
-                    <Path Fill="#FF2E8B57" Data="M20 14h-4v-4h-4v4H4v4h8v4h4v-4h4z"/>
-                </Viewbox>
+            <Button x:Name="btAjouterPlantule" Width="120" Height="120" Click="jouterPlantule_click"
+                    Background="Transparent" BorderBrush="Transparent" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/add-file.png"/>
             </Button>
-            <Label Content="Ajouter Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Ajouter Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"
+                   Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btModifierPlantule" Width="120" Height="120" Click="modifierPlantule_click" Background="Transparent" BorderBrush="Transparent">
-                <Viewbox Width="100" Height="100">
-                    <Path Fill="#FF2E8B57" Data="M16 12l-4-4v3H8v2h4v3zM12 4v7.17l2.12-2.12 4.59 4.59L18 16.59 12 10.59 6 16.59 4.59 15.17 10.59 9.17 6.59 5.17 8 3.59z"/>
-                </Viewbox>
+            <Button x:Name="btModifierPlantule" Width="120" Height="120" Click="modifierPlantule_click" 
+                    Background="Transparent" BorderBrush="Transparent" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/sync.png"/>
             </Button>
-            <Label Content="Modifier Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Modifier Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"
+                   Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btArchivePlantule" Width="120" Height="120" Background="Transparent" BorderBrush="Transparent" Click="Archiver_Plant_click">
-                <Viewbox Width="100" Height="100">
-                    <Path Fill="#FF2E8B57" Data="M15 4V3H9v1H4v2h16V4h-5zM5 19c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V7H5v12z"/>
-                </Viewbox>
+            <Button x:Name="btArchivePlantule" Width="120" Height="120" Background="Transparent" 
+                    BorderBrush="Transparent" Click="Archiver_Plant_click" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/recycle-bin.png"/>
             </Button>
-            <Label Content="Archiver Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Archiver Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"
+                   Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btImport" Width="120" Height="120" Background="Transparent" BorderBrush="Transparent" Click="btImport_click">
-                <Viewbox Width="100" Height="100">
-                    <Path Fill="#FF2E8B57" Data="M19 3H5c-1.1 0-1.99.9-1.99 2L3 21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM8 13h2v2H8v-2zm4-8h2v2h-2V5zm-4 4h2v2H8V9zm8 0h2v2h-2V9zm-8 4h2v2H8v-2zm8 0h2v2h-2v-2zm-4 4h2v2h-2v-2z"/>
-                </Viewbox>
+            <Button x:Name="btImport" Width="120" Height="120" Background="Transparent" 
+                    BorderBrush="Transparent" Click="btImport_click" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/import2.png"/>
             </Button>
-            <Label Content="Import données" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Import données" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"
+                   Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btRecherchePlant" Width="120" Height="120" Click="ConsulterPlante_click" Background="Transparent" BorderBrush="Transparent">
-                <Viewbox Width="100" Height="100">
-                    <Path Fill="#FF2E8B57" Data="M15.5 14h-.79l-.28-.27c1.11-1.36 1.76-3.11 1.76-5 0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.89 0 3.64-.65 5-1.76l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
-                </Viewbox>
+            <Button x:Name="btRecherchePlant" Width="120" Height="120" Click="ConsulterPlante_click" 
+                    Background="Transparent" BorderBrush="Transparent" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/search.png"/>
             </Button>
-            <Label Content="Consulter Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Consulter Plantule" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"
+                   Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btHistorique" Width="120" Height="120" Background="Transparent" BorderBrush="Transparent" Click="btHistorique_click">
-                <Viewbox Width="100" Height="100">
-                    <Path Fill="#FF2E8B57" Data="M19 3H5c-1.1 0-1.99.9-1.99 2L3 21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM8 13h2v2H8v-2zm4-8h2v2h-2V5zm-4 4h2v2H8V9zm8 0h2v2h-2V9zm-8 4h2v2H8v-2zm8 0h2v2h-2v-2zm-4 4h2v2h-2v-2z"/>
-                </Viewbox>
+            <Button x:Name="btHistorique" Width="120" Height="120" Background="Transparent" 
+                    BorderBrush="Transparent" Click="btHistorique_click" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/history.png"/>
             </Button>
-            <Label Content="Historique" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Label Content="Historique" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"
+                   Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="20" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Viewbox Width="100" Height="100">
-                <Path Fill="#FF2E8B57" Data="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-            </Viewbox>
-            <Label Content="Accueil" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"/>
+            <Button x:Name="btDeconnexion" Width="120" Height="120" Background="Transparent" 
+                    BorderBrush="Transparent" Click="btDeconnexion_click" Style="{StaticResource RoundButtonStyle}">
+                <Image Source="pack://application:,,,/AutreDoc/exit.png"/>
+            </Button>
+            <Label Content="Deconnexion" HorizontalAlignment="Center" Foreground="#FF2E8B57" FontSize="16" FontWeight="Bold"
+                   Margin="0 10 0 0"/>
         </StackPanel>
     </Grid>
 </Page>

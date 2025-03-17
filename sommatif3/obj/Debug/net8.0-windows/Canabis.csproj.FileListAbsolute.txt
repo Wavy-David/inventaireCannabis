@@ -966,3 +966,344 @@ D:\myLab\final canabis\sommatif3 (2)\sommatif3\sommatif3\obj\Debug\net8.0-window
 D:\myLab\final canabis\sommatif3 (2)\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageHistorique.g.cs
 D:\myLab\final canabis\sommatif3 (2)\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\HistoriqueRecordRow.baml
 D:\myLab\final canabis\sommatif3 (2)\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageHistorique.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Canabis.exe
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Canabis.deps.json
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Canabis.runtimeconfig.json
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Canabis.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Canabis.pdb
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Azure.Core.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Azure.Identity.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\EPPlus.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Humanizer.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.Workspaces.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\Mono.TextTemplating.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\QRCoder.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.Composition.AttributedModel.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.Composition.Convention.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.Composition.Hosting.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.Composition.Runtime.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.Composition.TypedParts.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.Memory.Data.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zxing.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.csproj.AssemblyReference.cache
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\MainSwitch.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\HistoriqueRecordRow.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageAcceuil.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageAffichePlantule.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageAjouterPlantule.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageArchive.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageConnexion.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageConsultationPlantule.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageHistorique.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageImportDonnee.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageInscription.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageModifierPlantule.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\App.g.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis_MarkupCompile.cache
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis_MarkupCompile.lref
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\MainSwitch.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\MainWindow.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\HistoriqueRecordRow.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageAcceuil.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageAffichePlantule.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageAjouterPlantule.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageArchive.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageConnexion.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageConsultationPlantule.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageHistorique.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageImportDonnee.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageInscription.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Views\PageModifierPlantule.baml
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.g.resources
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.GeneratedMSBuildEditorConfig.editorconfig
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.AssemblyInfoInputs.cache
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.AssemblyInfo.cs
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.csproj.CoreCompileInputs.cache
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.csproj.Up2Date
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\refint\Canabis.dll
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.pdb
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\Canabis.genruntimeconfig.cache
+D:\laCite\session4\projet integration\sommatif3 3\sommatif3\sommatif3\obj\Debug\net8.0-windows\ref\Canabis.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Canabis.exe
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Canabis.deps.json
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Canabis.runtimeconfig.json
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Canabis.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Canabis.pdb
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Azure.Core.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Azure.Identity.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\EPPlus.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Humanizer.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.Workspaces.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\Mono.TextTemplating.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\QRCoder.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.Composition.AttributedModel.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.Composition.Convention.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.Composition.Hosting.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.Composition.Runtime.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.Composition.TypedParts.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.Memory.Data.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zxing.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x64\native\msalruntime.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.csproj.AssemblyReference.cache
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\MainSwitch.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\HistoriqueRecordRow.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageAcceuil.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageAffichePlantule.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageAjouterPlantule.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageArchive.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageConnexion.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageConsultationPlantule.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageHistorique.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageImportDonnee.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageInscription.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageModifierPlantule.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\App.g.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis_MarkupCompile.cache
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis_MarkupCompile.lref
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\MainSwitch.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\MainWindow.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\HistoriqueRecordRow.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageAcceuil.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageAffichePlantule.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageAjouterPlantule.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageArchive.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageConnexion.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageConsultationPlantule.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageHistorique.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageImportDonnee.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageInscription.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Views\PageModifierPlantule.baml
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.g.resources
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.GeneratedMSBuildEditorConfig.editorconfig
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.AssemblyInfoInputs.cache
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.AssemblyInfo.cs
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.csproj.CoreCompileInputs.cache
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.sourcelink.json
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.csproj.Up2Date
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\refint\Canabis.dll
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.pdb
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\Canabis.genruntimeconfig.cache
+D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\sommatif3\obj\Debug\net8.0-windows\ref\Canabis.dll

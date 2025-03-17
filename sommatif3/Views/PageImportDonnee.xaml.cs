@@ -59,6 +59,41 @@ namespace Canabis.Views
             }
         }
 
+        public void enregistreHistorique(string plantId)
+        {
+            //historiqueModification();
+            //string myId = "SLH" + (plantuleControler.countAllPlantule() + 1);
+
+            try
+            {
+                using (HistoriquePlanteContext PC = new HistoriquePlanteContext())
+                {
+                    HistoriquePlante newPlanteArchive = new HistoriquePlante();
+
+                    newPlanteArchive.Id = HistoriqueControler.countAllHistoriqueRecord() + 1;
+                    newPlanteArchive.IdPlante = plantId.ToUpper();
+                    newPlanteArchive.Action = "ajout";
+                    newPlanteArchive.Date = DateTime.Today;
+                    newPlanteArchive.Champ = "--";
+                    newPlanteArchive.AncienneValeur = "--";
+                    newPlanteArchive.NouvelleValeur = "__";
+
+                    //save dans la base de donnee
+                    PC.HistoriquePlante.Add(newPlanteArchive);
+                    PC.SaveChanges();
+
+                    HistoriqueControler.listAncienneValeur.Clear();
+                    HistoriqueControler.listAncienneValeur.Clear();
+                    plantuleControler.trouverPlantuleInfo(plantId).Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                //statusMessage.Text = ex.Message;
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private List<plante> ReadExcelFile(string filePath)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Set the license context
@@ -112,10 +147,8 @@ namespace Canabis.Views
                     {
                         plante newPlante = new plante();
 
-                        //newPlante.IdPlante = "SLH" + plantuleControler.countAllPlantule();
                         newPlante.IdPlante = maPlante.IdPlante;
                         newPlante.EtatSante = maPlante.EtatSante;
-                        //newPlante.DateAjout = calendrier.SelectedDate.Value.ToShortDateString();
                         newPlante.DateAjout = maPlante.DateAjout;
                         newPlante.Provenance = maPlante.Provenance;
                         newPlante.Description = maPlante.Description;
@@ -132,6 +165,7 @@ namespace Canabis.Views
                         PC.SaveChanges();
 
                         plantuleControler.chargerListePlantules(grilleImport);
+                        enregistreHistorique(newPlante.IdPlante);
 
                         //viderToutLesComboBox();
                         //chargerComboBox(cbMedecinSpecialite);
@@ -147,6 +181,11 @@ namespace Canabis.Views
                     MessageBox.Show(ex.Message.ToString());
                 }
             }
+        }
+
+        private void btRetour_Click(object sender, RoutedEventArgs e)
+        {
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
         }
     }
 }

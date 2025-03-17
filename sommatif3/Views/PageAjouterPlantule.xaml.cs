@@ -1,5 +1,6 @@
 ﻿using Canabis;
 using Canabis.Models;
+using OfficeOpenXml.Style;
 using QRCoder;
 using sommatif3.Models;
 using System;
@@ -31,6 +32,11 @@ namespace sommatif3
     public partial class PageAjouterPlantule : Page
     {
         string nomEntrepo = "";
+        string planteSante = String.Empty;
+
+        List<string> responsableNom = new List<string>();
+        List<string> responsablePrenom = new List<string>();
+        List<string> responsableFullName = new List<string>();
         public PageAjouterPlantule()
         {
             InitializeComponent();
@@ -40,10 +46,10 @@ namespace sommatif3
 
         private void AjouterElementsAComboBox()
         {
-            cbEtatDeSante.Items.Add("rouge");
-            cbEtatDeSante.Items.Add("orange");
-            cbEtatDeSante.Items.Add("jaune");
-            cbEtatDeSante.Items.Add("vert");
+            //cbEtatDeSante.Items.Add("rouge");
+            //cbEtatDeSante.Items.Add("orange");
+            //cbEtatDeSante.Items.Add("jaune");
+            //cbEtatDeSante.Items.Add("vert");
 
             cbStade.Items.Add("initiation");
             cbStade.Items.Add("micro dissection");
@@ -60,7 +66,7 @@ namespace sommatif3
                     {
                         p.idEntreposage
                     }).ToList();
-
+                    
                     foreach (var m in MesEntrepo)
                     {
                         cbEntreposage.Items.Add(m.idEntreposage.ToString());
@@ -74,6 +80,55 @@ namespace sommatif3
                 }
             #endregion
 
+
+            #region add responsable from db
+
+            /*
+            using (CompteUtilisateurContext EC = new CompteUtilisateurContext())
+                try
+                {
+                    //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
+                    var MesUtilisateur = EC.CompteUtilisateur.Select(p => new
+                    {
+                        p.Prenom
+                    }).ToList();
+
+                    foreach (var m in MesUtilisateur)
+                    {
+                        cbResponsableDecontamination.Items.Add(m.Prenom.ToString());
+                    }
+
+                    statusMessage.Text = "Liste des Specialités chargée";
+                }
+                catch (Exception ex)
+                {
+                    statusMessage.Text = ex.Message;
+                }
+            */
+
+
+            //using (CompteUtilisateurContext EC = new CompteUtilisateurContext())
+            //    try
+            //    {
+            //        //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
+            //        var MesUtilisateur = EC.CompteUtilisateur.Select(p => new
+            //        {
+            //            p.Nom
+            //        }).ToList();
+
+            //        foreach (var m in MesUtilisateur)
+            //        {
+            //            cbEntreposage.Items.Add(m.Nom.ToString());
+            //        }
+
+            //        statusMessage.Text = "Liste des Specialités chargée";
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        statusMessage.Text = ex.Message;
+            //    }
+            #endregion
+
             cbItemRetireDeLInventaire.Items.Add("DESTRUCTION PAR AUTOCLAVE");
             cbItemRetireDeLInventaire.Items.Add("TRANSFERT CLIENT");
             cbItemRetireDeLInventaire.Items.Add("TRANSFERT AUTRE CENTRE");
@@ -84,6 +139,29 @@ namespace sommatif3
             cbItemRetireDeLInventaire.Items.Add("PERTE DE L'ÉCHANTILLION");
             cbItemRetireDeLInventaire.Items.Add("PLANTULES N'ONT PAS SURVÉCU À L'EXPÉRIENCE");
             cbItemRetireDeLInventaire.Items.Add("AUTRE (INDIQUER LA RAISON DANS NOTE)");
+        }
+
+        public void chargerResponsableDansComboBox()
+        {
+            //get nom
+            responsableNom = plantuleControler.getUtilisateurName("nom");
+            //MessageBox.Show(responsableNom.Count.ToString());
+
+            //get prenom
+            responsablePrenom = plantuleControler.getUtilisateurName("prenom");
+
+            //get full name
+            for (int i = 0; i < responsableNom.Count; i++)
+            {
+                responsableFullName.Add(responsablePrenom[i] + " " + responsableNom[i]);
+            }
+
+            //fill comboBox
+            for (int i = 0; i < responsableNom.Count; i++)
+            {
+                cbResponsableDecontamination.Items.Add(responsableFullName[i]);
+            }
+
         }
 
         //trouve Id d'une specialité selectionée dans un combobox
@@ -178,7 +256,8 @@ namespace sommatif3
                     }
 
                     newPlante.IdPlante = tempId;
-                    newPlante.EtatSante = cbEtatDeSante.SelectedItem.ToString();
+                    //newPlante.EtatSante = cbEtatDeSante.SelectedItem.ToString()
+                    newPlante.EtatSante = planteSante;
                     newPlante.DateAjout = (DateTime)calendrier.SelectedDate;
                     newPlante.Provenance = tbProvenance.Text;
                     newPlante.Description = tbDescription.Text;
@@ -195,7 +274,7 @@ namespace sommatif3
                     }
                     newPlante.ItemRetireInventaire = cbItemRetireDeLInventaire.SelectedItem.ToString();
                     newPlante.Note = tbNote.Text;
-                    newPlante.Responsable = tbResponsableDecontamination.Text;
+                    newPlante.Responsable = cbResponsableDecontamination.Text;
 
                     //add new car to the context/ Table SC: stand for --> specialite context
                     PC.plante.Add(newPlante);
@@ -236,9 +315,22 @@ namespace sommatif3
             // Generate the QR code
             QRCodeGenerator QRgen = new QRCodeGenerator();
 
+            //string stringDuQrcode = $"" +
+            //    $"SLH{plantuleControler.countAllPlantule().ToString()}, " +
+            //    $"{cbEtatDeSante.SelectedItem.ToString()}, " +
+            //    $"{(DateTime)calendrier.SelectedDate}, " +
+            //    $"{tbProvenance.Text}, " +
+            //    $"{tbDescription.Text}, " +
+            //    $"{cbStade.SelectedItem.ToString()}, " +
+            //    $"{cbEntreposage.SelectedItem.ToString()} " +
+            //    $"{active_inactive}, " +
+            //    $"{cbItemRetireDeLInventaire.SelectedItem.ToString()}, " +
+            //    $"{tbNote.Text}, " +
+            //    $"{tbResponsableDecontamination.Text}, ";
+
             string stringDuQrcode = $"" +
                 $"SLH{plantuleControler.countAllPlantule().ToString()}, " +
-                $"{cbEtatDeSante.SelectedItem.ToString()}, " +
+                $"{planteSante}, " +
                 $"{(DateTime)calendrier.SelectedDate}, " +
                 $"{tbProvenance.Text}, " +
                 $"{tbDescription.Text}, " +
@@ -247,7 +339,7 @@ namespace sommatif3
                 $"{active_inactive}, " +
                 $"{cbItemRetireDeLInventaire.SelectedItem.ToString()}, " +
                 $"{tbNote.Text}, " +
-                $"{tbResponsableDecontamination.Text}, ";
+                $"{cbResponsableDecontamination.Text}, ";
 
             QRCodeData QRdata = QRgen.CreateQrCode(stringDuQrcode, QRCodeGenerator.ECCLevel.H);
 
@@ -383,11 +475,54 @@ namespace sommatif3
             tbDescription.Clear();
             tbNote.Clear();
             qrCodeImageBox.Source = null;
+
+            responsableNom.Clear();
+            responsablePrenom.Clear();
+            responsableFullName.Clear();
+            cbResponsableDecontamination.Items.Clear();
+            plantuleControler.setSanteColorUi("#6C0D92", "#A85ED0", borderSanteIndicator);
         }
 
         private void loaded(object sender, RoutedEventArgs e)
         {
+            responsableNom.Clear();
+            responsablePrenom.Clear();
+            responsableFullName.Clear();
+            cbResponsableDecontamination.Items.Clear();
+            plantuleControler.setSanteColorUi("#6C0D92", "#A85ED0", borderSanteIndicator);
+
             ChargerListePlantules();
+            chargerResponsableDansComboBox();
+        }
+
+        private void sante_vert_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "vert";
+
+            // Define the gradient brush for visual feedback
+            plantuleControler.setSanteColorUi("#11d171", "#3ea882", borderSanteIndicator);
+        }
+
+        private void sante_jaune_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "jaune";
+
+            // Define the gradient brush
+            plantuleControler.setSanteColorUi("#D6DE16", "#E1E489", borderSanteIndicator);
+        }
+
+        private void sante_orange_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "orange";
+            // Define the gradient brush
+            plantuleControler.setSanteColorUi("#E29A3B", "#ECC48F", borderSanteIndicator);
+        }
+
+        private void sante_rouge_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "rouge";
+            // Define the gradient brush
+            plantuleControler.setSanteColorUi("#DE3333", "#E87777", borderSanteIndicator);
         }
     }
 }

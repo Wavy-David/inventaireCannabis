@@ -263,5 +263,12 @@ namespace Canabis.Views
                     MessageBox.Show(ex.Message);
                 }
         }
+
+        private void btRetour_Click(object sender, RoutedEventArgs e)
+        {
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+            grillePlante.ItemsSource = null;
+            tbIdentification.Clear();
+        }
     }
 }

@@ -23,6 +23,11 @@ namespace Canabis.Views
     public partial class PageModifierPlantule : Page
     {
         List<string> listInformation = new List<string>();
+        string planteSante = String.Empty;
+
+        List<string> responsableNom = new List<string>();
+        List<string> responsablePrenom = new List<string>();
+        List<string> responsableFullName = new List<string>();
         public PageModifierPlantule()
         {
             InitializeComponent();
@@ -31,10 +36,10 @@ namespace Canabis.Views
 
         private void AjouterElementsAComboBox()
         {
-            cbEtatDeSante.Items.Add("rouge");
-            cbEtatDeSante.Items.Add("orange");
-            cbEtatDeSante.Items.Add("jaune");
-            cbEtatDeSante.Items.Add("vert");
+            //cbEtatDeSante.Items.Add("rouge");
+            //cbEtatDeSante.Items.Add("orange");
+            //cbEtatDeSante.Items.Add("jaune");
+            //cbEtatDeSante.Items.Add("vert");
 
             cbStade.Items.Add("initiation");
             cbStade.Items.Add("micro dissection");
@@ -77,7 +82,26 @@ namespace Canabis.Views
             lbResponsable.Content = listInformation[8];
             tbNote.Text = listInformation[9];*/
 
-            cbEtatDeSante.SelectedItem = listInformation[0].ToLower();
+            //cbEtatDeSante.SelectedItem = listInformation[0].ToLower();
+            planteSante = listInformation[0].ToLower();
+
+            switch (planteSante)
+            {
+                case "vert":
+                    // Define the gradient brush for visual feedback
+                    plantuleControler.setSanteColorUi("#11d171", "#3ea882", borderSanteIndicator);
+                    break;
+                case "jaune":
+                    plantuleControler.setSanteColorUi("#D6DE16", "#E1E489", borderSanteIndicator);
+                    break;
+                case "orange":
+                    plantuleControler.setSanteColorUi("#E29A3B", "#ECC48F", borderSanteIndicator);
+                    break;
+                case "rouge":
+                    plantuleControler.setSanteColorUi("#DE3333", "#E87777", borderSanteIndicator);
+                    break;
+            }
+
             calendrier.SelectedDate = DateTime.Parse(listInformation[1]);
             tbProvenance.Text = listInformation[2];
             tbDescription.Text = listInformation[3];
@@ -95,7 +119,7 @@ namespace Canabis.Views
             }
             cbItemRetireDeLInventaire.SelectedItem = listInformation[7];
             tbNote.Text = listInformation[9];
-            tbResponsableDecontamination.Text = listInformation[8];
+            cbResponsableDecontamination.SelectedItem = listInformation[8];
 
             //grillePlante.ItemsSource = listInformation;
             plantuleControler.trouvePlantETChargerSurDataGrid(tbIdentification.Text, grillePlante);
@@ -124,7 +148,7 @@ namespace Canabis.Views
 
 
                             newPlante.IdPlante = tbIdentification.Text;
-                            newPlante.EtatSante = cbEtatDeSante.SelectedItem.ToString();
+                            newPlante.EtatSante = planteSante;
                             //newPlante.DateAjout = calendrier.SelectedDate.Value.ToShortDateString();
                             newPlante.DateAjout = (DateTime)calendrier.SelectedDate;
                             newPlante.Provenance = tbProvenance.Text;
@@ -141,7 +165,7 @@ namespace Canabis.Views
                             }
                             newPlante.ItemRetireInventaire = cbItemRetireDeLInventaire.SelectedItem.ToString();
                             newPlante.Note = tbNote.Text;
-                            newPlante.Responsable = tbResponsableDecontamination.Text;
+                            newPlante.Responsable = cbResponsableDecontamination.SelectedItem.ToString();
 
                             //save dans la base de donnee
                             PC.SaveChanges();
@@ -279,6 +303,86 @@ namespace Canabis.Views
                 //statusMessage.Text = ex.Message;
                 //MessageBox.Show(ex.Message);
             }
+        }
+
+        public void chargerResponsableDansComboBox()
+        {
+            //get nom
+            responsableNom = plantuleControler.getUtilisateurName("nom");
+            //MessageBox.Show(responsableNom.Count.ToString());
+
+            //get prenom
+            responsablePrenom = plantuleControler.getUtilisateurName("prenom");
+
+            //get full name
+            for (int i = 0; i < responsableNom.Count; i++)
+            {
+                responsableFullName.Add(responsablePrenom[i] + " " + responsableNom[i]);
+            }
+
+            //fill comboBox
+            for (int i = 0; i < responsableNom.Count; i++)
+            {
+                cbResponsableDecontamination.Items.Add(responsableFullName[i]);
+            }
+        }
+
+        private void btRetour_Click(object sender, RoutedEventArgs e)
+        {
+            tbIdentification.Clear();
+            tbDescription.Clear();
+            tbNote.Clear();
+            tbProvenance.Clear();
+            cbResponsableDecontamination.Items.Clear();
+
+            responsableNom.Clear();
+            responsablePrenom.Clear();
+            responsableFullName.Clear();
+            cbResponsableDecontamination.Items.Clear();
+            plantuleControler.setSanteColorUi("#6C0D92", "#A85ED0", borderSanteIndicator);
+
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+        }
+
+        private void sante_vert_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "vert";
+
+            // Define the gradient brush for visual feedback
+            plantuleControler.setSanteColorUi("#11d171", "#3ea882", borderSanteIndicator);
+        }
+
+        private void sante_jaune_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "jaune";
+
+            // Define the gradient brush
+            plantuleControler.setSanteColorUi("#D6DE16", "#E1E489", borderSanteIndicator);
+        }
+
+        private void sante_orange_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "orange";
+            // Define the gradient brush
+            plantuleControler.setSanteColorUi("#E29A3B", "#ECC48F", borderSanteIndicator);
+        }
+
+        private void sante_rouge_click(object sender, RoutedEventArgs e)
+        {
+            planteSante = "rouge";
+            // Define the gradient brush
+            plantuleControler.setSanteColorUi("#DE3333", "#E87777", borderSanteIndicator);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            responsableNom.Clear();
+            responsablePrenom.Clear();
+            responsableFullName.Clear();
+            cbResponsableDecontamination.Items.Clear();
+            plantuleControler.setSanteColorUi("#6C0D92", "#A85ED0", borderSanteIndicator);
+
+            chargerResponsableDansComboBox();
         }
     }
 }

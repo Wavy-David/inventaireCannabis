@@ -60,5 +60,11 @@ namespace Canabis.Views
         {
             ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.pageHistorique;
         }
+
+        private void btDeconnexion_click(object sender, RoutedEventArgs e)
+        {
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.pageConnexion;
+
+        }
     }
 }

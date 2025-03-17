@@ -9,6 +9,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AutreDoc\add-file.png" />
+    <None Remove="AutreDoc\back.png" />
+    <None Remove="AutreDoc\cannabis-logo.png" />
+    <None Remove="AutreDoc\cannabis.jpg" />
+    <None Remove="AutreDoc\cannabis.png" />
+    <None Remove="AutreDoc\exit.png" />
+    <None Remove="AutreDoc\history.png" />
+    <None Remove="AutreDoc\import.png" />
+    <None Remove="AutreDoc\import2.png" />
+    <None Remove="AutreDoc\medical-cannabis.png" />
+    <None Remove="AutreDoc\qr-code.png" />
+    <None Remove="AutreDoc\recycle-bin.png" />
+    <None Remove="AutreDoc\return.png" />
+    <None Remove="AutreDoc\search.png" />
+    <None Remove="AutreDoc\spreadsheet.png" />
+    <None Remove="AutreDoc\sync.png" />
+    <None Remove="AutreDoc\update.png" />
+    <None Remove="AutreDoc\xls-file.png" />
+    <None Remove="motionPicture\download.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EPPlus" Version="7.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
@@ -22,6 +44,27 @@
 
   <ItemGroup>
     <Folder Include="images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AutreDoc\add-file.png" />
+    <Resource Include="AutreDoc\back.png" />
+    <Resource Include="AutreDoc\cannabis-logo.png" />
+    <Resource Include="AutreDoc\cannabis.jpg" />
+    <Resource Include="AutreDoc\cannabis.png" />
+    <Resource Include="AutreDoc\exit.png" />
+    <Resource Include="AutreDoc\history.png" />
+    <Resource Include="AutreDoc\import2.png" />
+    <Resource Include="AutreDoc\medical-cannabis.png" />
+    <Resource Include="AutreDoc\qr-code.png" />
+    <Resource Include="AutreDoc\recycle-bin.png" />
+    <Resource Include="AutreDoc\return.png" />
+    <Resource Include="AutreDoc\search.png" />
+    <Resource Include="AutreDoc\spreadsheet.png" />
+    <Resource Include="AutreDoc\sync.png" />
+    <Resource Include="AutreDoc\update.png" />
+    <Resource Include="AutreDoc\xls-file.png" />
+    <Resource Include="motionPicture\download.gif" />
   </ItemGroup>
 
 </Project>

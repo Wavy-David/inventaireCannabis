@@ -6,15 +6,124 @@
       xmlns:local="clr-namespace:Canabis.Views"
       mc:Ignorable="d"
       d:DesignHeight="577.541" d:DesignWidth="825.355"
-      Title="PageConsultationPlantule">
+      Title="PageConsultationPlantule" Height="1080" Width="1920">
+    <Page.Resources>
+        <!-- Button Style with Rounded Corners and Gradient Background -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="0"
+                        CornerRadius="12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="#3ea882" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"/>
+                        </Border>
 
-    <Grid Background="#f0f0f0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- TextBox style for rounded edges -->
+        <Style x:Key="RoundedTextBox" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="#ccc"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="#fff"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+            BorderThickness="{TemplateBinding BorderThickness}" 
+            Background="{TemplateBinding Background}" 
+            CornerRadius="14">
+                            <!-- Apply rounded corners here -->
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--button return-->
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Foreground" Value="#fff"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
+            <!-- Set the initial background to a gradient brush -->
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#11d171" Offset="0"/>
+                        <GradientStop Color="#3ea882" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+            <!-- Define the visual structure with Border and CornerRadius -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="BorderElement" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                        </Border>
+
+                        <!-- Define the VisualState for MouseOver (hover) -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderElement" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="White" Margin="0,0,-15,-309">
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -32,76 +141,113 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Titre de la page -->
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Consultation Plantule" FontSize="28" FontWeight="Bold" Margin="10"/>
+        <Button x:Name="btnRetour" HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Width="30" Height="30" Margin="10" Click="btRetour_Click" Grid.Row="0" Style="{StaticResource RoundButtonStyle}">
+            <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
+        </Button>
 
-        <!-- Identifiant -->
-        <StackPanel Grid.Row="1" Grid.Column="0" Margin="20,10">
-            <Label Content="Identifiant:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBox x:Name="tbId" Width="250" Height="30" VerticalAlignment="Center" Margin="5" BorderBrush="#007ACC" BorderThickness="1"/>
+
+        <StackPanel HorizontalAlignment="Center" Grid.Row="1" Width="auto" Height="auto">
+
+            <Border BorderThickness="1" CornerRadius="15" Padding="20 10 0 0" Background="#F0F3F7" 
+                Margin="0 30 0 0" Width="700" Height="auto" Grid.Row="1" HorizontalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center">
+                    <!-- Identifiant -->
+                    <StackPanel Grid.Row="2" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Identifiant:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <TextBox x:Name="tbId" Width="250" Height="30" VerticalAlignment="Center" 
+                                 Margin="5"  BorderThickness="1"
+                                 Style="{StaticResource RoundedTextBox}"/>
+                        <!-- Recherche -->
+                        <Button Grid.Row="2" Content="Recherche" Width="100" 
+                            Height="30" Margin="10" VerticalAlignment="Center" 
+                            Background="#007ACC" Foreground="White" BorderBrush="#007ACC" 
+                            BorderThickness="1" Click="btRecherche_Click" Style="{StaticResource RoundedButtonStyle}"/>
+                    </StackPanel>
+
+                    <!-- État de santé -->
+                    <StackPanel Grid.Row="3" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="État de santé:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbEtatSante" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" 
+                               Background="Transparent" Padding="5" FontSize="14" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Date -->
+                    <StackPanel Grid.Row="4" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Date:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbDate" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" 
+                               Background="Transparent" Padding="5" FontSize="14" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Provenance -->
+                    <StackPanel Grid.Row="5" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Provenance:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbProvenance" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" 
+                               Background="Transparent" Padding="5" FontSize="14"  Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Description -->
+                    <StackPanel Grid.Row="6" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Description:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbDescription" Content="..." Width="auto" Height="auto" VerticalAlignment="Center" Margin="5" 
+                               Background="Transparent" Padding="5" FontSize="14" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Stade -->
+                    <StackPanel Grid.Row="7" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Stade:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbStade" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" 
+                               Background="Transparent" Padding="5" FontSize="14" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Entreposage -->
+                    <StackPanel Grid.Row="8" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Entreposage:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbEntreposage" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5"
+                               Background="Transparent" Padding="5" FontSize="14" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Quantité ajoutée -->
+                    <StackPanel Grid.Row="9" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Quantité ajoutée:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbQuantiteActif_inActif" Content="..." Width="250" Height="30" VerticalAlignment="Center"
+                               Margin="5" Background="Transparent" Padding="5" FontSize="14" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Item retiré de l’inventaire -->
+                    <StackPanel Grid.Row="10" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Item retiré de l’inventaire:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbItemRetireInventaire" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" 
+                               Background="Transparent" Padding="5" FontSize="14"  Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Note -->
+                    <StackPanel Grid.Row="11" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Note:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <TextBlock x:Name="tbNote" Text="..." Width="auto" Height="auto" VerticalAlignment="Center" Margin="5" 
+                                   Background="Transparent" Padding="5" FontSize="14" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+
+                    <!-- Responsable décontamination -->
+                    <StackPanel Grid.Row="12" Grid.Column="0" Margin="20,10" Orientation="Horizontal">
+                        <Label Content="Responsable décontamination:" Width="210" HorizontalAlignment="Left" VerticalAlignment="Center"
+                               FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbResponsable" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" 
+                               Background="Transparent" Padding="5" FontSize="14"  Foreground="#FF2E8B57"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
         </StackPanel>
 
-        <!-- Recherche -->
-        <Button Grid.Row="1" Grid.Column="1" Content="Recherche" Width="100" Height="30" Margin="10" VerticalAlignment="Center" Background="#007ACC" Foreground="White" BorderBrush="#007ACC" BorderThickness="1" Click="btRecherche_Click"/>
-
-        <!-- État de santé -->
-        <StackPanel Grid.Row="2" Grid.Column="0" Margin="20,10">
-            <Label Content="État de santé:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbEtatSante" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Date -->
-        <StackPanel Grid.Row="3" Grid.Column="0" Margin="20,10">
-            <Label Content="Date:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbDate" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Provenance -->
-        <StackPanel Grid.Row="4" Grid.Column="0" Margin="20,10">
-            <Label Content="Provenance:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbProvenance" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Description -->
-        <StackPanel Grid.Row="5" Grid.Column="0" Margin="20,10">
-            <Label Content="Description:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbDescription" Content="..." Width="250" Height="80" VerticalAlignment="Top" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Stade -->
-        <StackPanel Grid.Row="6" Grid.Column="0" Margin="20,10">
-            <Label Content="Stade:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbStade" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Entreposage -->
-        <StackPanel Grid.Row="7" Grid.Column="0" Margin="20,10">
-            <Label Content="Entreposage:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbEntreposage" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Quantité ajoutée -->
-        <StackPanel Grid.Row="8" Grid.Column="0" Margin="20,10">
-            <Label Content="Quantité ajoutée:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbQuantiteActif_inActif" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Item retiré de l’inventaire -->
-        <StackPanel Grid.Row="9" Grid.Column="0" Margin="20,10">
-            <Label Content="Item retiré de l’inventaire:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbItemRetireInventaire" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Note -->
-        <StackPanel Grid.Row="10" Grid.Column="0" Margin="20,10">
-            <Label Content="Note:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBlock x:Name="tbNote" Text="..." Width="250" Height="80" VerticalAlignment="Top" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
-
-        <!-- Responsable décontamination -->
-        <StackPanel Grid.Row="11" Grid.Column="0" Margin="20,10">
-            <Label Content="Responsable décontamination:" Width="120" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label x:Name="lbResponsable" Content="..." Width="250" Height="30" VerticalAlignment="Center" Margin="5" Background="#E0E0E0" Padding="5"/>
-        </StackPanel>
     </Grid>
 </Page>

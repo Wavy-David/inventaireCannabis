@@ -5,15 +5,291 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Canabis.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="697.5" d:DesignWidth="1005.5"
-      Title="PageModifierPlantule">
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="PageModifierPlantule" Loaded="Page_Loaded">
 
-    <Grid>
+    <Page.Resources>
+        <!-- Button sante vert -->
+        <Style x:Key="RoundedButtonStyleGreen" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="0"
+                        CornerRadius="7">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="#3ea882" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#9FECC6" Offset="0"/>
+                                            <GradientStop Color="#81F3C9" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Button sante jaune -->
+        <Style x:Key="RoundedButtonStyleJaune" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="0"
+                CornerRadius="7">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#D6DE16" Offset="0"/>
+                                    <GradientStop Color="#E1E489" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                             VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#E4DBA7" Offset="0"/>
+                                            <GradientStop Color="#F3EAB6" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Button sante orange -->
+        <Style x:Key="RoundedButtonStyleOrange" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+        BorderThickness="0"
+        CornerRadius="7">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#E29A3B" Offset="0"/>
+                                    <GradientStop Color="#ECC48F" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                     VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#FBD7A7" Offset="0"/>
+                                            <GradientStop Color="#F7E3C8" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Button sante rouge -->
+        <Style x:Key="RoundedButtonStyleRouge" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+BorderThickness="0"
+CornerRadius="7">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#DE3333" Offset="0"/>
+                                    <GradientStop Color="#E87777" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+             VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#F19F9F" Offset="0"/>
+                                            <GradientStop Color="#FBD1D1" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- TextBox style for rounded edges -->
+        <Style x:Key="RoundedTextBox" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="#ccc"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="#fff"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                    BorderThickness="{TemplateBinding BorderThickness}" 
+                    Background="{TemplateBinding Background}" 
+                    CornerRadius="14">
+                            <!-- Apply rounded corners here -->
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Button Style with Rounded Corners and Gradient Background -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="0"
+                                CornerRadius="12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="#3ea882" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--button return-->
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Foreground" Value="#fff"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
+            <!-- Set the initial background to a gradient brush -->
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#11d171" Offset="0"/>
+                        <GradientStop Color="#3ea882" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+            <!-- Define the visual structure with Border and CornerRadius -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="BorderElement" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                        CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                        </Border>
+
+                        <!-- Define the VisualState for MouseOver (hover) -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderElement" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
+    <Grid Background="white">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-
-            <ColumnDefinition Width="auto" MinWidth="230"></ColumnDefinition>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -33,82 +309,164 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Content="Specialité" HorizontalAlignment="Left" Margin="147,10,0,46" Grid.Row="0" Width="60" Grid.Column="1"/>
+        <Button x:Name="btRetour" Width="30" Height="30" Margin="20,0,0,0" 
+            HorizontalAlignment="Left" VerticalAlignment="Bottom"
+            Background="#4CAF50" Foreground="#fff" BorderBrush="#4CAF50" BorderThickness="1" Click="btRetour_Click" 
+                Style="{StaticResource RoundButtonStyle}">
+            <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
+        </Button>
 
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="1" Grid.ColumnSpan="2">
-            <Label Content="Identification" Width="170"/>
-            <TextBox x:Name="tbIdentification" Width="234"/>
-            <Button x:Name="btnSupprimerSpecialite" Content="Recherche" Grid.Row="1"  Grid.Column="1" Width="60"  Margin="21,0,0,0" Click="btRecherche_Click" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Grid.RowSpan="7" Margin="30 70 0 0">
+            <Border BorderThickness="2" CornerRadius="15" Padding="10 10 0 0" Background="#F0F3F7" Width="630" Height="auto">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="2,25,2,10" Grid.Row="2" Grid.ColumnSpan="2">
+                        <Label Content="Identification" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <TextBox x:Name="tbIdentification" Width="234" Style="{StaticResource RoundedTextBox}"/>
+                        <Button x:Name="btnSupprimerSpecialite" Content="Recherche" Grid.Row="1"  Grid.Column="1" Width="90" Height="25" 
+                                Margin="21,0,0,0" Click="btRecherche_Click" Style="{StaticResource RoundedButtonStyle}" />
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,30,2,10" Grid.Row="2" Grid.ColumnSpan="2" >
+                        <Label Content="Etat de santé" Width="167" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+
+                        <Button x:Name="btnVert"  Width="41" Height="16" Margin="10,4,23,4" 
+        Style="{StaticResource RoundedButtonStyleGreen}" Click="sante_vert_click" />
+
+                        <Button x:Name="btnJaune"  Width="41" Height="16" Margin="10,4,23,4" 
+        Style="{StaticResource RoundedButtonStyleJaune}" Click="sante_jaune_click" />
+
+                        <Button x:Name="btnOrange"  Width="41" Height="16" Margin="10,4,23,4" 
+        Style="{StaticResource RoundedButtonStyleOrange}" Click="sante_orange_click" />
+
+                        <Button x:Name="btnRouge" Width="41" Height="16" Margin="10,4,23,4" 
+        Style="{StaticResource RoundedButtonStyleRouge}" Click="sante_rouge_click" />
+
+                        <Border x:Name="borderSanteIndicator" BorderBrush="Transparent" BorderThickness="2" CornerRadius="25" Padding="5" 
+        HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0">
+                            <!-- Apply the gradient background to the Border -->
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#6C0D92" Offset="0" />
+                                    <GradientStop Color="#A85ED0" Offset="1" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+
+                            <StackPanel Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Source="pack://application:,,,/AutreDoc/cannabis-logo.png" Width="25" Height="25"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- <ComboBox x:Name="cbEtatDeSante" Width="200" Background="White" BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/> -->
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="4" Grid.ColumnSpan="2">
+                        <Label Content="Date" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <!-- <TextBox x:Name="tbDate" Width="234"/> -->
+                        <DatePicker x:Name="calendrier" VerticalAlignment="Top" HorizontalAlignment="Left" Width="234"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="5" Grid.ColumnSpan="2">
+                        <Label Content="Provenance" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <TextBox x:Name="tbProvenance" Width="234" Style="{StaticResource RoundedTextBox}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="6" Grid.ColumnSpan="2">
+                        <Label Content="Description" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <TextBox x:Name="tbDescription" Width="234" Style="{StaticResource RoundedTextBox}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="7" Grid.ColumnSpan="2">
+                        <Label Content="Stade" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <!-- <TextBox x:Name="tbStade" Width="234"/> -->
+                        <ComboBox x:Name="cbStade" Width="234"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="8" Grid.ColumnSpan="2">
+                        <Label Content="Entreposage" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <!-- <TextBox x:Name="tbEntreposage" Width="234"/> -->
+                        <ComboBox x:Name="cbEntreposage" Width="234"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="9" Grid.ColumnSpan="2" VerticalAlignment="Center">
+                        <Label Content="Quantité ajoutée" Width="210" FontSize="14" 
+                               FontWeight="Bold" Foreground="#FF2E8B57" VerticalAlignment="Top" />
+                        <!-- <TextBox x:Name="tbQuantiteAjoutee" Width="234"/> -->
+                        <!-- <CheckBox x:Name="checkboxAjoute" Margin="2,0,0,0"  Content="1"></CheckBox> -->
+                        <RadioButton x:Name="rbActif" IsChecked="True" Margin="2,7,0,0"  Content="Actif"/>
+                        <RadioButton x:Name="rbInactif"  Margin="11,7,0,0"  Content="Inactif"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="10" Grid.ColumnSpan="2">
+                        <Label Content="Item retiré de l’inventaire" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <!-- <TextBox x:Name="tbItemRetireDeLInventaire1" Width="234"/> -->
+                        <ComboBox x:Name="cbItemRetireDeLInventaire" Width="234"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="11" Grid.ColumnSpan="2">
+                        <Label Content="Note" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <TextBox x:Name="tbNote" Width="234" Style="{StaticResource RoundedTextBox}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="12" Grid.ColumnSpan="2">
+                        <Label Content="Responsable décontamination" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <!-- <TextBox x:Name="tbResponsableDecontamination" Width="234" Style="{StaticResource RoundedTextBox}"/> -->
+                        <ComboBox x:Name="cbResponsableDecontamination" Width="234" Background="White" 
+                                BorderBrush="#FF2E8B57" BorderThickness="1" Padding="5"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1"  Margin="478,10,0,25" HorizontalAlignment="Center" Width="auto">
+                        <Button x:Name="btnModifierSpecialite" Content="Modifier" Width="90" Height="25"
+                                Click="modifierPlant_Click" Style="{StaticResource RoundedButtonStyle}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
         </StackPanel>
+        <!-- D A T A    G R I D -->
 
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="2" Grid.ColumnSpan="2">
-            <Label Content="Etat de santé" Width="170"/>
-            <!-- <TextBox x:Name="tbEtatDeSante" Width="234" RenderTransformOrigin="1.771,26.192"/> -->
-            <ComboBox x:Name="cbEtatDeSante" Width="234"/>
-        </StackPanel>
+        <Border BorderBrush="#FFD3D3D3" BorderThickness="1" CornerRadius="10" Margin="70,70,30,2" MinWidth="1080"
+   Grid.Row="1" Padding="10" Background="#F0F3F7" Width="auto" Height="auto" Grid.Column="2" Grid.RowSpan="2">
+            <DataGrid x:Name="grillePlante" Grid.Row="1" Grid.RowSpan="9" Grid.Column="1" Grid.ColumnSpan="2" Background="Transparent" 
+         HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+         IsReadOnly="True" CanUserSortColumns="True" AreRowDetailsFrozen="True" CanUserResizeColumns="True" 
+         CanUserReorderColumns="True" GridLinesVisibility="None" 
+         BorderBrush="Transparent" BorderThickness="0">
 
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="3" Grid.ColumnSpan="2">
-            <Label Content="Date" Width="170"/>
-            <!-- <TextBox x:Name="tbDate" Width="234"/> -->
-            <DatePicker x:Name="calendrier" VerticalAlignment="Top" HorizontalAlignment="Left" Width="234"/>
-        </StackPanel>
+                <!-- Regular row background gradient -->
+                <DataGrid.RowBackground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#60DCA1" Offset="0"/>
+                        <GradientStop Color="#B2F1E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </DataGrid.RowBackground>
 
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="4" Grid.ColumnSpan="2">
-            <Label Content="Provenance" Width="170"/>
-            <TextBox x:Name="tbProvenance" Width="234"/>
-        </StackPanel>
+                <!-- Alternating row background gradient (white to green) -->
+                <DataGrid.AlternatingRowBackground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="#E4F5EF" Offset="1"/>
+                    </LinearGradientBrush>
+                </DataGrid.AlternatingRowBackground>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1"  Margin="0,10,0,10" HorizontalAlignment="Center" Width="230">
-            <Button x:Name="btnModifierSpecialite" Content="Modifier" Width="60" Margin="4" Click="modifierPlant_Click" />
-        </StackPanel>
+                <!-- Style for DataGrid column headers to make them transparent with borders between columns -->
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="BorderBrush" Value="#FFD3D3D3"/>
+                        <Setter Property="BorderThickness" Value="1"/>
+                    </Style>
 
-        <DataGrid x:Name="grillePlante" Grid.Row="5" Grid.RowSpan="9" Grid.Column="1" Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="CornflowerBlue" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
-BorderBrush="Gray"  BorderThickness="5" IsReadOnly="True" CanUserSortColumns = "True"   AreRowDetailsFrozen="True" CanUserResizeColumns="False"  CanUserReorderColumns="True"    Margin="21,2,2,2" />
-
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="5" Grid.ColumnSpan="2">
-            <Label Content="Description" Width="170"/>
-            <TextBox x:Name="tbDescription" Width="234"/>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="6" Grid.ColumnSpan="2">
-            <Label Content="Stade" Width="170"/>
-            <!-- <TextBox x:Name="tbStade" Width="234"/> -->
-            <ComboBox x:Name="cbStade" Width="234"/>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="7" Grid.ColumnSpan="2">
-            <Label Content="Entreposage" Width="170"/>
-            <!-- <TextBox x:Name="tbEntreposage" Width="234"/> -->
-            <ComboBox x:Name="cbEntreposage" Width="234"/>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="8" Grid.ColumnSpan="2">
-            <Label Content="Quantité ajoutée" Width="170"/>
-            <!-- <TextBox x:Name="tbQuantiteAjoutee" Width="234"/> -->
-            <!-- <CheckBox x:Name="checkboxAjoute" Margin="2,0,0,0"  Content="1"></CheckBox> -->
-            <RadioButton x:Name="rbActif" IsChecked="True" Margin="2,0,0,0"  Content="Actif"></RadioButton>
-            <RadioButton x:Name="rbInactif"  Margin="11,0,0,0"  Content="Inactif"></RadioButton>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="9" Grid.ColumnSpan="2">
-            <Label Content="Item retiré de l’inventaire" Width="170"/>
-            <!-- <TextBox x:Name="tbItemRetireDeLInventaire1" Width="234"/> -->
-            <ComboBox x:Name="cbItemRetireDeLInventaire" Width="234"/>
-        </StackPanel>
-
-
-
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="10" Grid.ColumnSpan="2">
-            <Label Content="Note" Width="170"/>
-            <TextBox x:Name="tbNote" Width="234"/>
-        </StackPanel>
-
-        <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="11" Grid.ColumnSpan="2">
-            <Label Content="Responsable décontamination" Width="170"/>
-            <TextBox x:Name="tbResponsableDecontamination" Width="234"/>
-        </StackPanel>
+                    <!-- Add more space (padding) inside the DataGrid cells -->
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="Padding" Value="15"/>
+                    </Style>
+                </DataGrid.Resources>
+            </DataGrid>
+        </Border>
 
     </Grid>
 </Page>

@@ -6,33 +6,134 @@
       xmlns:local="clr-namespace:Canabis.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAffichePlantule">
+      Title="PageAffichePlantule" Height="1080" Width="1920" Loaded="loaded">
 
-    <Grid Background="#FFF0F0F0" Margin="20">
+    <Page.Resources>
+        <!--button return-->
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Foreground" Value="#fff"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
+            <!-- Set the initial background to a gradient brush -->
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#11d171" Offset="0"/>
+                        <GradientStop Color="#3ea882" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+            <!-- Define the visual structure with Border and CornerRadius -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="BorderElement" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                        </Border>
+
+                        <!-- Define the VisualState for MouseOver (hover) -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderElement" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="White" Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="61*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,10" HorizontalAlignment="Left">
-            <Label Content="Plantules Actives:" Width="200" FontSize="16" FontWeight="Bold" Foreground="#FF2E8B57"/>
-            <Label x:Name="lbPlantActif" Content="..." Width="200" FontSize="16" Foreground="#FF2E8B57"/>
-        </StackPanel>
+        <Button x:Name="btnRetour" HorizontalAlignment="Left" 
+                VerticalAlignment="Center" Width="30" Height="30" Margin="10,0,0,0" 
+                Click="btRetour_Click" Grid.Row="0" Style="{StaticResource RoundButtonStyle}">
+            <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
+        </Button>
 
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Row="1" HorizontalAlignment="Left">
-            <Label Content="Plantules Inactives:" Width="200" FontSize="16" FontWeight="Bold" Foreground="#FF8B0000"/>
-            <Label x:Name="lbPlantInactif" Content="..." Width="200" FontSize="16" Foreground="#FF8B0000"/>
-        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="2">
+            <Border BorderThickness="2" CornerRadius="15" Padding="20 10 0 0" Background="#F0F3F7" 
+                Margin="0 34 0 0" Width="580" Height="172" Grid.Row="1" HorizontalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" Margin="100, 0, 0, 0">
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,10" HorizontalAlignment="Left" Grid.Row="1">
+                        <Label Content="Plantules Actives:" Width="200" FontSize="16" FontWeight="Bold" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbPlantActif" Content="..." Width="200" FontSize="16" Foreground="#FF2E8B57"/>
+                    </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Grid.Row="2" HorizontalAlignment="Left">
-            <Label Content="Total nombre de Plantules:" Width="200" FontSize="16" FontWeight="Bold" Foreground="#FF00008B"/>
-            <Label x:Name="lbTotalPlant" Content="..." Width="200" FontSize="16" Foreground="#FF00008B"/>
-        </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Grid.Row="2" HorizontalAlignment="Left">
+                        <Label Content="Plantules Inactives:" Width="200" FontWeight="Bold" FontSize="16" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbPlantInactif" Content="..." Width="200" FontSize="16" Foreground="#FF2E8B57"/>
+                    </StackPanel>
 
-        <DataGrid x:Name="grillePlante" Grid.Row="3" Background="White" AutoGenerateColumns="True" IsReadOnly="True" AlternatingRowBackground="#FFEEEEEE" BorderBrush="#FFD3D3D3" BorderThickness="1"
-                  CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" CanUserResizeColumns="True" CanUserReorderColumns="True" 
-                  Margin="0,0,0,0" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,20" Grid.Row="3" HorizontalAlignment="Left">
+                        <Label Content="Total nombre de Plantules:" Width="200" FontWeight="Bold" FontSize="16" Foreground="#FF2E8B57"/>
+                        <Label x:Name="lbTotalPlant" Content="..." Width="200" FontSize="16" Foreground="#FF2E8B57"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Border>
+
+            <Border BorderBrush="#FFD3D3D3" BorderThickness="1" CornerRadius="10" Margin="50,70,2,2" 
+    Grid.Row="2" Padding="10" Background="#F0F3F7" Width="auto" Height="auto">
+                <DataGrid x:Name="grillePlante" Grid.Row="1" Grid.RowSpan="9" Grid.Column="2" Background="Transparent" 
+          HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+          IsReadOnly="True" CanUserSortColumns="True" AreRowDetailsFrozen="True" CanUserResizeColumns="True" 
+          CanUserReorderColumns="True" GridLinesVisibility="None" 
+          BorderBrush="Transparent" BorderThickness="0">
+
+                    <!-- Regular row background gradient -->
+                    <DataGrid.RowBackground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#60DCA1" Offset="0"/>
+                            <GradientStop Color="#B2F1E5" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DataGrid.RowBackground>
+
+                    <!-- Alternating row background gradient (white to green) -->
+                    <DataGrid.AlternatingRowBackground>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="White" Offset="0"/>
+                            <GradientStop Color="#E4F5EF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </DataGrid.AlternatingRowBackground>
+
+                    <!-- Style for DataGrid column headers to make them transparent with borders between columns -->
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="BorderBrush" Value="#FFD3D3D3"/>
+                            <Setter Property="BorderThickness" Value="1"/>
+                        </Style>
+
+                        <!-- Add more space (padding) inside the DataGrid cells -->
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Padding" Value="15"/>
+                        </Style>
+                    </DataGrid.Resources>
+                </DataGrid>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

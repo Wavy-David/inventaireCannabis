@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Canabis.Views"
       mc:Ignorable="d"
-      Title="PageConnexion" Height="400" Width="600">
+      Title="PageConnexion" Height="1080" Width="1920">
 
     <Page.Resources>
         <Style TargetType="TextBox">
@@ -38,15 +38,59 @@
             <Setter Property="Margin" Value="5"/>
             <Setter Property="FontSize" Value="14"/>
         </Style>
+        
+        <!-- Button styling -->
+
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="0"
+                        CornerRadius="12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="#3ea882" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
     </Page.Resources>
 
     <Grid Background="#FFFAFAFA">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -54,25 +98,29 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Bienvenue" FontSize="24" FontWeight="Bold" Foreground="#FF2E8B57" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,20"/>
 
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <StackPanel Grid.Row="0"  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200" Margin="0 230 0 0">
+            <Image Source="pack://application:,,,/AutreDoc/medical-cannabis.png" Stretch="Fill" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 50 0 0" >
             <Label Content="Nom Utilisateur" HorizontalAlignment="Left"/>
             <Border BorderBrush="#FF707070" BorderThickness="1" CornerRadius="5">
-                <TextBox x:Name="tbIdentification" Margin="0"/>
+                <TextBox x:Name="tbIdentification" Margin="0" Width="400"/>
             </Border>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Content="Mot de Passe" HorizontalAlignment="Left"/>
             <Border BorderBrush="#FF707070" BorderThickness="1" CornerRadius="5">
-                <PasswordBox x:Name="PasswordBox" Margin="0"/>
+                <PasswordBox x:Name="PasswordBox" Margin="0" Width="400"/>
             </Border>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btConnexion" Content="Connexion" Click="btConnexion_Click"/>
-            <Button x:Name="btInscription" Content="Inscription" Click="btInscription_Click"/> 
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 30 0 0">
+            <Button x:Name="btConnexion" Content="Connexion" Click="btConnexion_Click" Width="110" Height="27" Margin="0 0 30 0" Style="{StaticResource RoundedButtonStyle}"/>
+            <Button x:Name="btInscription" Content="Créer un Compte" Click="btInscription_Click" Width="110" Height="27" Margin="30 0 0 0" Style="{StaticResource RoundedButtonStyle}"/>
         </StackPanel>
     </Grid>
 </Page>

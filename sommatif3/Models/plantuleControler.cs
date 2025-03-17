@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Navigation;
 
 namespace Canabis.Models
 {
@@ -15,7 +16,6 @@ namespace Canabis.Models
         public static List<string> trouverPlantuleInfo(string id)
         {
             List<string> listPlantInfo = new List<string>();
-
 
             using (PlanteContext PC = new PlanteContext())
                 try
@@ -97,6 +97,74 @@ namespace Canabis.Models
             }
         }
 
+        //return the list of names depending on the parameter. it return a list of firstname if the 
+        //parameter passed is "nom", it return a list of prenom if the parameter passed is "surname"
+        public static List<string> getUtilisateurName(string arg)
+        {
+            List<string> nameList = new List<string>();
+            nameList.Clear();
+
+            if (arg == "nom")
+            {
+                using (CompteUtilisateurContext EC = new CompteUtilisateurContext())
+                    try
+                    {
+                        //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
+                        var MesUtilisateur = EC.CompteUtilisateur.Select(p => new
+                        {
+                            p.Nom
+                        }).ToList();
+
+                        foreach (var m in MesUtilisateur)
+                        {
+                            nameList.Add(m.Nom.ToString());
+                        }
+                        return nameList;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("error");
+                    }
+            }
+            else if (arg == "prenom")
+            {
+                using (CompteUtilisateurContext EC = new CompteUtilisateurContext())
+                    try
+                    {
+                        //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
+                        var MesUtilisateur = EC.CompteUtilisateur.Select(p => new
+                        {
+                            p.Prenom
+                        }).ToList();
+
+                        foreach (var m in MesUtilisateur)
+                        {
+                            nameList.Add(m.Prenom.ToString());
+                        }
+                        return nameList;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("error");
+                    }
+            }
+            return nameList;
+        }
+
+        public static void setSanteColorUi(string color1, string color2, System.Windows.Controls.Border uiBorder)
+        {
+            System.Windows.Media.LinearGradientBrush gradientBrush = new System.Windows.Media.LinearGradientBrush();
+            gradientBrush.StartPoint = new System.Windows.Point(0, 0);
+            gradientBrush.EndPoint = new System.Windows.Point(1, 1);
+
+            // Define the two colors of the gradient
+            gradientBrush.GradientStops.Add(new System.Windows.Media.GradientStop((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString(color1), 0));
+            gradientBrush.GradientStops.Add(new System.Windows.Media.GradientStop((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString(color2), 1));
+
+            // Apply the gradient brush to the Border's background
+            uiBorder.Background = gradientBrush;
+        }
+
         public static void trouvePlantETChargerSurDataGrid(string id, DataGrid grille)
         {
             using (PlanteContext PC = new PlanteContext())
@@ -105,18 +173,18 @@ namespace Canabis.Models
                     //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
                     var MesPlante = PC.plante.Where(p => p.IdPlante == id)
                         .Select(p => new
-                        {
-                            p.IdPlante,
-                            p.EtatSante,
-                            p.DateAjout,
-                            p.Provenance,
-                            p.Description,
-                            p.Stade,
-                            p.Entreposage,
-                            p.Active_Inactive,
-                            p.ItemRetireInventaire,
-                            p.Note,
-                            p.Responsable
+                    {
+                        p.IdPlante,
+                        p.EtatSante,
+                        p.DateAjout,
+                        p.Provenance,
+                        p.Description,
+                        p.Stade,
+                        p.Entreposage,
+                        p.Active_Inactive,
+                        p.ItemRetireInventaire,
+                        p.Note,
+                        p.Responsable
                         }).ToList();
                     grille.ItemsSource = MesPlante;
                     //statusMessage.Text = "Liste des Specialités chargée";

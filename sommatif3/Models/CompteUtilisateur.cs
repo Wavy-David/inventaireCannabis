@@ -16,6 +16,6 @@ namespace Canabis.Models
         public string Email { get; set; }
         // Optional property for role (uncomment if needed)
         // public string Role { get; set; }
-        public string MotDePasse { get; set; } // Consider using a secure hashing mechanism for password storage
+        public string motdepass { get; set; } // Consider using a secure hashing mechanism for password storage
     }
 }

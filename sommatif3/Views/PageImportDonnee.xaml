@@ -5,11 +5,199 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Canabis.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="PageImportDonnee">
 
-    <Grid>
-        <Button x:Name="BrowseButton" Content="Browse..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="10" Click="BrowseButton_Click"/>
-        <DataGrid Name="grilleImport" AutoGenerateColumns="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,50,10,10"/>
+    <Page.Resources>
+        <!-- TextBox style for rounded edges -->
+        <Style x:Key="RoundedTextBox" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="#ccc"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="#fff"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+     BorderThickness="{TemplateBinding BorderThickness}" 
+     Background="{TemplateBinding Background}" 
+     CornerRadius="14">
+                            <!-- Apply rounded corners here -->
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Button Style with Rounded Corners and Gradient Background -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="0"
+                 CornerRadius="12">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="#3ea882" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Trigger for MouseOver -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--button return-->
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Foreground" Value="#fff"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
+            <!-- Set the initial background to a gradient brush -->
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#11d171" Offset="0"/>
+                        <GradientStop Color="#3ea882" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+            <!-- Define the visual structure with Border and CornerRadius -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="BorderElement" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+         CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                        </Border>
+
+                        <!-- Define the VisualState for MouseOver (hover) -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="BorderElement" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="DodgerBlue" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="white">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnRetour" HorizontalAlignment="Left" VerticalAlignment="Top" 
+                Width="30" Height="30" Margin="10" Click="btRetour_Click" Grid.Row="0"    
+                Style="{StaticResource RoundButtonStyle}">
+            <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
+        </Button>
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0 30 0 0">
+            <StackPanel>
+                <Button x:Name="BrowseButton" Content="Browse  . . ." HorizontalAlignment="Left" 
+                        VerticalAlignment="Top"
+                        Width="100" Height="25" Margin="69 0 0 20" Click="BrowseButton_Click" 
+                        Style="{StaticResource RoundedButtonStyle}"/>
+                
+                <!-- D A T A    G R I D -->
+                <Border BorderBrush="#FFD3D3D3" BorderThickness="1" CornerRadius="10" Margin="70,10,30,2" MinWidth="1080"
+                    Grid.Row="2" Padding="10" Background="#F0F3F7" Width="auto" Height="auto" Grid.Column="2" Grid.RowSpan="2">
+                    <DataGrid x:Name="grilleImport" Grid.Row="2" Grid.RowSpan="9"   Background="Transparent" 
+                          HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+                          IsReadOnly="True" CanUserSortColumns="True" AreRowDetailsFrozen="True" CanUserResizeColumns="True" 
+                          CanUserReorderColumns="True" GridLinesVisibility="None" 
+                          BorderBrush="Transparent" BorderThickness="0">
+
+                        <!-- Regular row background gradient -->
+                        <DataGrid.RowBackground>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#60DCA1" Offset="0"/>
+                                <GradientStop Color="#B2F1E5" Offset="1"/>
+                            </LinearGradientBrush>
+                        </DataGrid.RowBackground>
+
+                        <!-- Alternating row background gradient (white to green) -->
+                        <DataGrid.AlternatingRowBackground>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="#E4F5EF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </DataGrid.AlternatingRowBackground>
+
+                        <!-- Style for DataGrid column headers to make them transparent with borders between columns -->
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="#FFD3D3D3"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                            </Style>
+
+                            <!-- Add more space (padding) inside the DataGrid cells -->
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Padding" Value="15"/>
+                            </Style>
+                        </DataGrid.Resources>
+                    </DataGrid>
+                </Border>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

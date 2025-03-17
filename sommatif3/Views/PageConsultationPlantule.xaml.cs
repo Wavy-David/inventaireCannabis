@@ -40,8 +40,8 @@ namespace Canabis.Views
             lbEntreposage.Content = listInformation[5];
             lbQuantiteActif_inActif.Content = listInformation[6];
             lbItemRetireInventaire.Content = listInformation[7];
-            tbNote.Text = listInformation[8];
-            lbResponsable.Content = listInformation[9];
+            lbResponsable.Content = listInformation[8];
+            tbNote.Text = listInformation[9]; 
 
             enregistreHistorique();
 
@@ -86,6 +86,22 @@ namespace Canabis.Views
                 //statusMessage.Text = ex.Message;
                 //MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btRetour_Click(object sender, RoutedEventArgs e)
+        {
+            ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+            tbId.Clear();
+            tbNote.Text = string.Empty;
+            lbEntreposage.Content = string.Empty;
+            lbDescription.Content = string.Empty;
+            lbDate.Content = string.Empty;
+            lbEtatSante.Content = string.Empty;
+            lbItemRetireInventaire.Content = string.Empty;
+            lbProvenance.Content = string.Empty;
+            lbQuantiteActif_inActif.Content = string.Empty;
+            lbResponsable.Content = string.Empty;
+            lbStade.Content = string.Empty;
         }
     }
 }
