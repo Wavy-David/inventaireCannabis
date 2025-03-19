@@ -35,7 +35,7 @@ namespace Canabis.Views
             tbIdentification.Clear();
             PasswordBox.Clear();
         }
-    
+
 
         private void btConnexion_Click(object sender, RoutedEventArgs e)
         {
@@ -67,8 +67,8 @@ namespace Canabis.Views
                 MessageBox.Show("nom d'utilisateur ou mot de passe vide!");
             }
 
-            
-            
+
+
             /*=====================================================================================
             try
             {

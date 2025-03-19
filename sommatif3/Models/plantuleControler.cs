@@ -57,6 +57,29 @@ namespace Canabis.Models
             return listPlantInfo;
         }
 
+        public static void trouverUtilisateurIDs(string nom, DataGrid grille)
+        {
+            List<string> listNomUtilisateur = new List<string>();
+
+            using (CompteUtilisateurContext PC = new CompteUtilisateurContext())
+                try
+                {
+                    //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
+                    var MesUsers = PC.CompteUtilisateur.Where(p => p.Prenom == nom).Select(p => new
+                    {
+                        p.Prenom,
+                        p.Nom,
+                        p.IdUtilisateur
+                    }).ToList();
+
+                    grille.ItemsSource = MesUsers;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+        }
+
         public static int countActifPlantule()
         {
             using (PlanteContext PC = new PlanteContext())
@@ -173,18 +196,18 @@ namespace Canabis.Models
                     //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
                     var MesPlante = PC.plante.Where(p => p.IdPlante == id)
                         .Select(p => new
-                    {
-                        p.IdPlante,
-                        p.EtatSante,
-                        p.DateAjout,
-                        p.Provenance,
-                        p.Description,
-                        p.Stade,
-                        p.Entreposage,
-                        p.Active_Inactive,
-                        p.ItemRetireInventaire,
-                        p.Note,
-                        p.Responsable
+                        {
+                            p.IdPlante,
+                            p.EtatSante,
+                            p.DateAjout,
+                            p.Provenance,
+                            p.Description,
+                            p.Stade,
+                            p.Entreposage,
+                            p.Active_Inactive,
+                            p.ItemRetireInventaire,
+                            p.Note,
+                            p.Responsable
                         }).ToList();
                     grille.ItemsSource = MesPlante;
                     //statusMessage.Text = "Liste des Specialités chargée";

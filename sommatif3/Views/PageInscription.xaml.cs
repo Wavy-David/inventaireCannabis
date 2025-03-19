@@ -103,6 +103,7 @@ namespace Canabis.Views
                         tbEmail.Clear();
                         PasswordBox.Clear();
                         PasswordBox2.Clear();
+                        tbNomRecherche.Clear();
                     }
 
                 }
@@ -116,7 +117,18 @@ namespace Canabis.Views
 
         private void btRetour_Click(object sender, RoutedEventArgs e)
         {
+            tbnom.Clear();
+            tbPrenom.Clear();
+            tbEmail.Clear();
+            PasswordBox.Clear();
+            PasswordBox2.Clear();
+            tbNomRecherche.Clear();
             ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.pageConnexion;
+        }
+
+        private void btRechercheUtilisateur_Click(object sender, RoutedEventArgs e)
+        {
+            plantuleControler.trouverUtilisateurIDs(tbNomRecherche.Text, grilleUtilisateur);
         }
     }
 }

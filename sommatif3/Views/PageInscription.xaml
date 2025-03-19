@@ -7,8 +7,8 @@
       mc:Ignorable="d"
       Title="PageInscription" Height="1080" Width="1920">
 
-    
-    
+
+
     <Page.Resources>
         <!-- TextBox style for rounded edges -->
         <Style x:Key="RoundedTextBox" TargetType="TextBox">
@@ -32,7 +32,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <!-- passwordBox -->
         <Style x:Key="RoundedPasswordBoxStyle" TargetType="PasswordBox">
             <Setter Property="Width" Value="200"/>
@@ -65,7 +65,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
         <!-- return button -->
         <Style x:Key="RoundButtonStyle" TargetType="Button">
             <Setter Property="Height" Value="40"/>
@@ -116,6 +116,12 @@
     </Page.Resources>
 
     <Grid Background="white">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto" MinWidth="200"/>
+        </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -137,7 +143,7 @@
         </Button>
 
         <Label Content="Créer un Compte Utilisateur" HorizontalAlignment="Center" 
-FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="1">
+FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="1" Margin="700 0 0 0">
             <Label.Template>
                 <ControlTemplate TargetType="Label">
                     <Border BorderThickness="0" Background="Transparent">
@@ -159,14 +165,14 @@ FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="
         <!-- Full-screen Grid to center content -->
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" Height="auto" Grid.Row="1" Margin="0 140 0 0">
             <!-- Box with rounded border edge -->
-            <StackPanel >
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="700 0 0 0">
                 <Border  BorderThickness="2" CornerRadius="15" Padding="20 50 0 0" Background="#F0F3F7" Margin="0 0 0 0" Width="520" Height="630">
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
 
                         <StackPanel Orientation="Horizontal" Margin="20">
                             <Label Content="Nom Utilisateur" Width="160" VerticalContentAlignment="Center"/>
                             <Label  Content="Nom Utilisateur" x:Name="lbIdentification" Width="200" Height="30" 
-                                    VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#FF2E8B57" />
+                                    VerticalContentAlignment="Center" FontWeight="Bold" Foreground="#FF2E8B57" FontSize="14" />
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" Margin="20">
@@ -199,7 +205,7 @@ FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="
                             <PasswordBox x:Name="PasswordBox2" Width="200" Height="30" VerticalContentAlignment="Center" 
                          BorderThickness="1" BorderBrush="#ccc" Background="#fff" Style="{StaticResource RoundedPasswordBoxStyle}" />
                         </StackPanel>
-                        
+
                         <!-- Button creer compte -->
                         <Button x:Name="btEnregistrerUtilisateur" Content="Créer un Compte" Width="180" Height="40" Margin="20" 
                             HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -236,11 +242,127 @@ FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        
+
                     </StackPanel>
                 </Border>
             </StackPanel>
-            
         </Grid>
+        <StackPanel Grid.Row="1"  Grid.Column="2" Margin="90 140 0 0">
+            <!-- border 2 -->
+            <Border BorderThickness="2" CornerRadius="15" Padding="20 0 0 0" Background="#F0F3F7" 
+                    Margin="0 0 0 0" Width="520" Height="100" >
+                <StackPanel>
+
+                    <Label Content="Recherchez votre nom d'Utilisateur" FontWeight="Bold" FontStyle="Italic" 
+                           Margin="20 7 0 10" Foreground="#FF2E8B57" FontSize="16" />
+                    <StackPanel Orientation="Horizontal" >
+                        <Label Content="Nom" Margin="20 0 0 0"/>
+                        <TextBox x:Name="tbNomRecherche" Width="200" Height="30" VerticalContentAlignment="Center" 
+    BorderThickness="1" BorderBrush="#ccc" Background="#fff" Style="{StaticResource RoundedTextBox}" Margin="30 0 0 0"/>
+
+                        <Button x:Name="btRechercheUtilisateur" Content="Recherche" Width="100" Height="30" Margin="40 0 0 0" 
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                            BorderBrush="Green" BorderThickness="1" Click="btRechercheUtilisateur_Click"
+                            Foreground="White">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid>
+                                        <Border x:Name="BorderElement" BorderBrush="Green" BorderThickness="0" CornerRadius="20">
+                                            <Border.Background>
+                                                <LinearGradientBrush x:Name="NormalGradient" StartPoint="0,0" EndPoint="1,1">
+                                                    <GradientStop Color="#11d171" Offset="0" />
+                                                    <GradientStop Color="#3ea882" Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Border.Background>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <Border BorderBrush="White" BorderThickness="1" CornerRadius="20" Opacity="0.3" />
+                                    </Grid>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="BorderElement" Property="Background">
+                                                <Setter.Value>
+                                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                                        <GradientStop Color="DodgerBlue" Offset="0" />
+                                                        <GradientStop Color="RoyalBlue" Offset="1" />
+                                                    </LinearGradientBrush>
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Setter TargetName="BorderElement" Property="BorderBrush" Value="DodgerBlue"/>
+                                            <Setter Property="Foreground" Value="White"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Border BorderThickness="2" CornerRadius="15" Padding="10 0 10 0" Background="#F0F3F7" 
+                Margin="0 10 0 0" Width="520" Height="auto" >
+                <StackPanel Orientation="Horizontal" Height="auto" >
+
+                    <!-- D A T A    G R I D -->
+                    <DataGrid x:Name="grilleUtilisateur" Grid.Row="1" Grid.RowSpan="9" Grid.Column="2" Background="Transparent" 
+                        HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
+                        IsReadOnly="True" CanUserSortColumns="True" AreRowDetailsFrozen="True" CanUserResizeColumns="True" 
+                        CanUserReorderColumns="True" GridLinesVisibility="None" 
+                        BorderBrush="Transparent" BorderThickness="0" Margin="10" Width="480">
+
+                        <!-- Regular row background gradient -->
+                        <DataGrid.RowBackground>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#60DCA1" Offset="0"/>
+                                <GradientStop Color="#B2F1E5" Offset="1"/>
+                            </LinearGradientBrush>
+                        </DataGrid.RowBackground>
+
+                        <!-- Alternating row background gradient -->
+                        <DataGrid.AlternatingRowBackground>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="#E4F5EF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </DataGrid.AlternatingRowBackground>
+
+                        <!-- Style for DataGrid column headers -->
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#F0F3F7"/>
+                                <!-- Header Background -->
+                                <Setter Property="Foreground" Value="#F0F3F7"/>
+                                <!-- Header Text Color -->
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <!-- Hide Header Borders -->
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <!-- No Border -->
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+
+                            <!-- Style for DataGrid cells to remove borders -->
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <!-- Remove Cell Borders -->
+                                <Setter Property="Padding" Value="15"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <!-- Keep Background Consistent -->
+                            </Style>
+
+                            <!-- Style for DataGrid Rows to remove separators -->
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <!-- Remove Row Borders -->
+                                <Setter Property="Background" Value="Transparent"/>
+                                <!-- Ensure No Extra Lines -->
+                            </Style>
+                        </DataGrid.Resources>
+                    </DataGrid>
+
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

@@ -27,7 +27,7 @@ namespace Canabis.Views
     /// </summary>
     public partial class PageImportDonnee : Page
     {
-        public List<plante> listMesPlantules  = new List<plante>();
+        public List<plante> listMesPlantules = new List<plante>();
         public PageImportDonnee()
         {
             InitializeComponent();
@@ -108,7 +108,8 @@ namespace Canabis.Views
                 // Start reading from the second row to skip headers
                 for (int rowNum = 2; rowNum <= worksheet.Dimension.End.Row; rowNum++)
                 {
-                    var row = new plante{
+                    var row = new plante
+                    {
                         EtatSante = worksheet.Cells[rowNum, 1].Text,
                         DateAjout = DateTime.Parse(worksheet.Cells[rowNum, 2].Text),
                         IdPlante = worksheet.Cells[rowNum, 3].Text,

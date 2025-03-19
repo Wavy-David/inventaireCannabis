@@ -176,7 +176,7 @@ FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="
                         VerticalAlignment="Top"
                         Width="100" Height="25" Margin="69 0 0 20" Click="BrowseButton_Click" 
                         Style="{StaticResource RoundedButtonStyle}"/>
-                
+
                 <!-- D A T A    G R I D -->
                 <Border BorderBrush="#FFD3D3D3" BorderThickness="1" CornerRadius="10" Margin="70,10,30,2" MinWidth="1080"
                     Grid.Row="2" Padding="10" Background="#F0F3F7" Width="auto" Height="auto" Grid.Column="2" Grid.RowSpan="2">

@@ -50,15 +50,15 @@ namespace Canabis.Views
             //grillePlante.ItemsSource = listInformation;
             plantuleControler.trouvePlantETChargerSurDataGrid(tbIdentification.Text, grillePlante);
 
-            if(listInformation.Count > 0)
+            if (listInformation.Count > 0)
             {
-                planteExist = true; 
+                planteExist = true;
             }
 
             listInformation.Clear();
             plantuleControler.trouverPlantuleInfo(tbIdentification.Text).Clear();
 
-            
+
         }
 
         public void enregistreHistorique()
@@ -107,7 +107,7 @@ namespace Canabis.Views
             {
                 if (tbIdentification.Text != "")
                 {
-                    if (planteExist || listInformation.Count > 0)
+                    if (planteExist)
                     {
                         using (PlanteArchiveContext PC = new PlanteArchiveContext())
                         {
@@ -152,6 +152,7 @@ namespace Canabis.Views
                     MessageBox.Show("aucun champ ne doit etre vide");
                 }
                 listInformation.Clear();
+                planteExist = false;
                 plantuleControler.trouverPlantuleInfo(tbIdentification.Text).Clear();
             }
             catch (Exception ex)
@@ -269,6 +270,7 @@ namespace Canabis.Views
             ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
             grillePlante.ItemsSource = null;
             tbIdentification.Clear();
+            planteExist = false;
         }
     }
 }

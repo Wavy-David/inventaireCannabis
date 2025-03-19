@@ -68,64 +68,71 @@ namespace Canabis.Views
 
         private void btRecherche_Click(object sender, RoutedEventArgs e)
         {
-            listInformation = plantuleControler.trouverPlantuleInfo(tbIdentification.Text);
-            //MessageBox.Show("size: "+listInformation.Count);
-
-            /*lbEtatSante.Content = listInformation[0];
-            lbDate.Content = listInformation[1];
-            lbProvenance.Content = listInformation[2];
-            lbDescription.Content = listInformation[3];
-            lbStade.Content = listInformation[4];
-            lbEntreposage.Content = listInformation[5];
-            lbQuantiteActif_inActif.Content = listInformation[6];
-            lbItemRetireInventaire.Content = listInformation[7];
-            lbResponsable.Content = listInformation[8];
-            tbNote.Text = listInformation[9];*/
-
-            //cbEtatDeSante.SelectedItem = listInformation[0].ToLower();
-            planteSante = listInformation[0].ToLower();
-
-            switch (planteSante)
+            try
             {
-                case "vert":
-                    // Define the gradient brush for visual feedback
-                    plantuleControler.setSanteColorUi("#11d171", "#3ea882", borderSanteIndicator);
-                    break;
-                case "jaune":
-                    plantuleControler.setSanteColorUi("#D6DE16", "#E1E489", borderSanteIndicator);
-                    break;
-                case "orange":
-                    plantuleControler.setSanteColorUi("#E29A3B", "#ECC48F", borderSanteIndicator);
-                    break;
-                case "rouge":
-                    plantuleControler.setSanteColorUi("#DE3333", "#E87777", borderSanteIndicator);
-                    break;
-            }
+                listInformation = plantuleControler.trouverPlantuleInfo(tbIdentification.Text);
+                //MessageBox.Show("size: "+listInformation.Count);
 
-            calendrier.SelectedDate = DateTime.Parse(listInformation[1]);
-            tbProvenance.Text = listInformation[2];
-            tbDescription.Text = listInformation[3];
-            cbStade.SelectedItem = listInformation[4].ToLower();
-            cbEntreposage.SelectedItem = listInformation[5];
-            if (listInformation[6] == "1")
+                /*lbEtatSante.Content = listInformation[0];
+                lbDate.Content = listInformation[1];
+                lbProvenance.Content = listInformation[2];
+                lbDescription.Content = listInformation[3];
+                lbStade.Content = listInformation[4];
+                lbEntreposage.Content = listInformation[5];
+                lbQuantiteActif_inActif.Content = listInformation[6];
+                lbItemRetireInventaire.Content = listInformation[7];
+                lbResponsable.Content = listInformation[8];
+                tbNote.Text = listInformation[9];*/
+
+                //cbEtatDeSante.SelectedItem = listInformation[0].ToLower();
+                planteSante = listInformation[0].ToLower();
+
+                switch (planteSante)
+                {
+                    case "vert":
+                        // Define the gradient brush for visual feedback
+                        plantuleControler.setSanteColorUi("#11d171", "#3ea882", borderSanteIndicator);
+                        break;
+                    case "jaune":
+                        plantuleControler.setSanteColorUi("#D6DE16", "#E1E489", borderSanteIndicator);
+                        break;
+                    case "orange":
+                        plantuleControler.setSanteColorUi("#E29A3B", "#ECC48F", borderSanteIndicator);
+                        break;
+                    case "rouge":
+                        plantuleControler.setSanteColorUi("#DE3333", "#E87777", borderSanteIndicator);
+                        break;
+                }
+
+                calendrier.SelectedDate = DateTime.Parse(listInformation[1]);
+                tbProvenance.Text = listInformation[2];
+                tbDescription.Text = listInformation[3];
+                cbStade.SelectedItem = listInformation[4].ToLower();
+                cbEntreposage.SelectedItem = listInformation[5];
+                if (listInformation[6] == "1")
+                {
+                    rbActif.IsChecked = true;
+                    rbInactif.IsChecked = false;
+                }
+                else if (listInformation[6] == "0")
+                {
+                    rbInactif.IsChecked = true;
+                    rbActif.IsChecked = false;
+                }
+                cbItemRetireDeLInventaire.SelectedItem = listInformation[7];
+                tbNote.Text = listInformation[9];
+                cbResponsableDecontamination.SelectedItem = listInformation[8];
+
+                //grillePlante.ItemsSource = listInformation;
+                plantuleControler.trouvePlantETChargerSurDataGrid(tbIdentification.Text, grillePlante);
+
+                listInformation.Clear();
+                plantuleControler.trouverPlantuleInfo(tbIdentification.Text).Clear();
+            }
+            catch (Exception ex)
             {
-                rbActif.IsChecked = true;
-                rbInactif.IsChecked = false;
+                MessageBox.Show("Plantule inexistante\n\n" + ex);
             }
-            else if (listInformation[6] == "0")
-            {
-                rbInactif.IsChecked = true;
-                rbActif.IsChecked = false;
-            }
-            cbItemRetireDeLInventaire.SelectedItem = listInformation[7];
-            tbNote.Text = listInformation[9];
-            cbResponsableDecontamination.SelectedItem = listInformation[8];
-
-            //grillePlante.ItemsSource = listInformation;
-            plantuleControler.trouvePlantETChargerSurDataGrid(tbIdentification.Text, grillePlante);
-
-            listInformation.Clear();
-            plantuleControler.trouverPlantuleInfo(tbIdentification.Text).Clear();
         }
 
         private void modifierPlant_Click(object sender, RoutedEventArgs e)
@@ -264,7 +271,7 @@ namespace Canabis.Views
                     Console.WriteLine("Invalid day value");
                     break;
             }*/
-            
+
         }
 
         public void enregistreHistorique()
@@ -295,7 +302,7 @@ namespace Canabis.Views
                     plantuleControler.trouverPlantuleInfo(tbIdentification.Text).Clear();
 
                     listInformation.Clear();
-                   // MessageBox.Show("Plantule archivée");
+                    // MessageBox.Show("Plantule archivée");
                 }
             }
             catch (Exception ex)
@@ -339,6 +346,7 @@ namespace Canabis.Views
             responsablePrenom.Clear();
             responsableFullName.Clear();
             cbResponsableDecontamination.Items.Clear();
+            grillePlante.ItemsSource = null;
             plantuleControler.setSanteColorUi("#6C0D92", "#A85ED0", borderSanteIndicator);
 
             ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
@@ -393,7 +401,7 @@ namespace Canabis.Views
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show( ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             #endregion
         }

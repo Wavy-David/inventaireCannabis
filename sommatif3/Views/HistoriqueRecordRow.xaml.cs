@@ -26,6 +26,6 @@ namespace Canabis.Views
             InitializeComponent();
         }
 
-        
+
     }
 }

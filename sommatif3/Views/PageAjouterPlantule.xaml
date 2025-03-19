@@ -369,7 +369,7 @@ FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic">
                             <!-- Form Inputs -->
                             <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="2" Grid.ColumnSpan="2" >
                                 <Label Content="Etat de santé" Width="167" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
-                                
+
                                 <Button x:Name="btnVert"  Width="41" Height="16" Margin="10,4,23,4" 
                                     Style="{StaticResource RoundedButtonStyleGreen}" Click="sante_vert_click" />
 

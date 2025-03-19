@@ -41,7 +41,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Vertical" Margin="2,10,2,10" Grid.Row="0" Grid.ColumnSpan="6">
-            
+
             <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="0" Grid.ColumnSpan="6">
                 <Label  Content="Plantule Id" Width="90"/>
                 <Label  Content="type d'Action/ Status" Width="131"/>
@@ -54,9 +54,9 @@
             <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="0" Grid.ColumnSpan="6">
                 <Label x:Name="idPlante" Content="id" Width="90"/>
             </StackPanel>
-            
+
         </StackPanel>
-        
-        
+
+
     </Grid>
 </Page>

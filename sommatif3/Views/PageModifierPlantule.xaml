@@ -432,7 +432,7 @@ CornerRadius="7">
 
                     <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="11" Grid.ColumnSpan="2">
                         <Label Content="Note" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
-                        <TextBox x:Name="tbNote" Width="234" Style="{StaticResource RoundedTextBox}"/>
+                        <TextBox x:Name="tbNote" Width="234" Height="90" Style="{StaticResource RoundedTextBox}"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="12" Grid.ColumnSpan="2">

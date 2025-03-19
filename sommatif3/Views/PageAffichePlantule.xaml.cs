@@ -52,8 +52,8 @@ namespace Canabis.Views
                 }
                 catch (Exception ex)
                 {
-                   // statusMessage.Text = ex.Message;
-                   Console.WriteLine(ex.ToString());
+                    // statusMessage.Text = ex.Message;
+                    Console.WriteLine(ex.ToString());
                 }
         }
 

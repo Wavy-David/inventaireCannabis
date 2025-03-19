@@ -191,7 +191,7 @@ namespace sommatif3
 
         }
 
-                private bool ValidateForm()
+        private bool ValidateForm()
         {
             // Validate TextBoxes (except tbNote)
             if (string.IsNullOrWhiteSpace(tbProvenance.Text) ||
