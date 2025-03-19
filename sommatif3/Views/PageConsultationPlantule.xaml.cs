@@ -30,23 +30,30 @@ namespace Canabis.Views
 
         private void btRecherche_Click(object sender, RoutedEventArgs e)
         {
-            listInformation = plantuleControler.trouverPlantuleInfo(tbId.Text);
+            if(tbId.Text != "")
+            {
+                listInformation = plantuleControler.trouverPlantuleInfo(tbId.Text);
 
-            lbEtatSante.Content = listInformation[0];
-            lbDate.Content = listInformation[1];
-            lbProvenance.Content = listInformation[2];
-            lbDescription.Content = listInformation[3];
-            lbStade.Content = listInformation[4];
-            lbEntreposage.Content = listInformation[5];
-            lbQuantiteActif_inActif.Content = listInformation[6];
-            lbItemRetireInventaire.Content = listInformation[7];
-            lbResponsable.Content = listInformation[8];
-            tbNote.Text = listInformation[9]; 
+                lbEtatSante.Content = listInformation[0];
+                lbDate.Content = listInformation[1];
+                lbProvenance.Content = listInformation[2];
+                lbDescription.Content = listInformation[3];
+                lbStade.Content = listInformation[4];
+                lbEntreposage.Content = listInformation[5];
+                lbQuantiteActif_inActif.Content = listInformation[6];
+                lbItemRetireInventaire.Content = listInformation[7];
+                lbResponsable.Content = listInformation[8];
+                tbNote.Text = listInformation[9];
 
-            enregistreHistorique();
+                enregistreHistorique();
 
-            listInformation.Clear();
-            plantuleControler.trouverPlantuleInfo(tbId.Text).Clear();
+                listInformation.Clear();
+                plantuleControler.trouverPlantuleInfo(tbId.Text).Clear();
+            }
+            else
+            {
+                MessageBox.Show("entrez un ID valid");
+            }
         }
 
         public void enregistreHistorique()

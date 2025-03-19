@@ -136,6 +136,26 @@
             <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
         </Button>
 
+        <Label Content="Créer un Compte Utilisateur" HorizontalAlignment="Center" 
+FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="1">
+            <Label.Template>
+                <ControlTemplate TargetType="Label">
+                    <Border BorderThickness="0" Background="Transparent">
+                        <TextBlock FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic"
+                    HorizontalAlignment="Center">
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,9">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="RoyalBlue" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+             <ContentPresenter/>
+                        </TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Label.Template>
+        </Label>
+
         <!-- Full-screen Grid to center content -->
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" Height="auto" Grid.Row="1" Margin="0 140 0 0">
             <!-- Box with rounded border edge -->

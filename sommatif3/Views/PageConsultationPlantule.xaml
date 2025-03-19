@@ -146,8 +146,28 @@
             <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
         </Button>
 
+        <Label Content="Consulter une Plantule" HorizontalAlignment="Center" 
+FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="1">
+            <Label.Template>
+                <ControlTemplate TargetType="Label">
+                    <Border BorderThickness="0" Background="Transparent">
+                        <TextBlock FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic"
+                    HorizontalAlignment="Center">
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,9">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="RoyalBlue" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+             <ContentPresenter/>
+                        </TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Label.Template>
+        </Label>
 
-        <StackPanel HorizontalAlignment="Center" Grid.Row="1" Width="auto" Height="auto">
+
+        <StackPanel HorizontalAlignment="Center" Grid.Row="2" Width="auto" Height="auto">
 
             <Border BorderThickness="1" CornerRadius="15" Padding="20 10 0 0" Background="#F0F3F7" 
                 Margin="0 30 0 0" Width="700" Height="auto" Grid.Row="1" HorizontalAlignment="Center">

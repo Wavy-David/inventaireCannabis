@@ -74,6 +74,27 @@
         </Button>
 
         <StackPanel HorizontalAlignment="Center" Grid.Row="2">
+            <Label Content="Liste de Plantules" HorizontalAlignment="Center" 
+       FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic">
+                <Label.Template>
+                    <ControlTemplate TargetType="Label">
+                        <Border BorderThickness="0" Background="Transparent">
+                            <TextBlock FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic"
+                           HorizontalAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,7">
+                                        <GradientStop Color="#11d171" Offset="0"/>
+                                        <GradientStop Color="RoyalBlue" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+                    <ContentPresenter/>
+                            </TextBlock>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+
+
             <Border BorderThickness="2" CornerRadius="15" Padding="20 10 0 0" Background="#F0F3F7" 
                 Margin="0 34 0 0" Width="580" Height="172" Grid.Row="1" HorizontalAlignment="Center">
                 <StackPanel HorizontalAlignment="Center" Margin="100, 0, 0, 0">

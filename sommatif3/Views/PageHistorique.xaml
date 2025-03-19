@@ -176,7 +176,27 @@
                     </Button>
                 </StackPanel>
 
-                <StackPanel HorizontalAlignment="Center" Grid.Row="1">
+                <Label Content="Historique" HorizontalAlignment="Center" 
+FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="1">
+                    <Label.Template>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderThickness="0" Background="Transparent">
+                                <TextBlock FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic"
+                    HorizontalAlignment="Center">
+                                    <TextBlock.Foreground>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,5">
+                                            <GradientStop Color="#11d171" Offset="0"/>
+                                            <GradientStop Color="RoyalBlue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Foreground>
+             <ContentPresenter/>
+                                </TextBlock>
+                            </Border>
+                        </ControlTemplate>
+                    </Label.Template>
+                </Label>
+
+                <StackPanel HorizontalAlignment="Center" Grid.Row="2">
                     <StackPanel Orientation="Horizontal" Margin="70,50,2,10" Grid.Row="1" >
                         <Label Content="Identification" Width="170" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
                         <TextBox x:Name="tbIdentification" Width="234" Style="{StaticResource RoundedTextBox}"/>

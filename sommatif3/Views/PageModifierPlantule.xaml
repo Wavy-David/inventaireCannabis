@@ -320,7 +320,29 @@ CornerRadius="7">
             <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
         </Button>
 
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Grid.RowSpan="7" Margin="30 70 0 0">
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Width="900">
+            <Label Content="Modifier une Plantule" HorizontalAlignment="Center"  Margin="0 0 585 0"
+                FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic">
+                <Label.Template>
+                    <ControlTemplate TargetType="Label">
+                        <Border BorderThickness="0" Background="Transparent">
+                            <TextBlock FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic"
+                    HorizontalAlignment="Center">
+                                <TextBlock.Foreground>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,9">
+                                        <GradientStop Color="#3ea882" Offset="0"/>
+                                        <GradientStop Color="RoyalBlue" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </TextBlock.Foreground>
+             <ContentPresenter/>
+                            </TextBlock>
+                        </Border>
+                    </ControlTemplate>
+                </Label.Template>
+            </Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Grid.RowSpan="7" Margin="30 70 0 0">
             <Border BorderThickness="2" CornerRadius="15" Padding="10 10 0 0" Background="#F0F3F7" Width="630" Height="auto">
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="2,25,2,10" Grid.Row="2" Grid.ColumnSpan="2">
@@ -389,6 +411,8 @@ CornerRadius="7">
                         <Label Content="Entreposage" Width="210" FontSize="14" FontWeight="Bold" Foreground="#FF2E8B57"/>
                         <!-- <TextBox x:Name="tbEntreposage" Width="234"/> -->
                         <ComboBox x:Name="cbEntreposage" Width="234"/>
+                        <Button x:Name="btnAjouterEntrepo" Content="Ajout entrepos" Width="100" Height="25" Margin="30,4,34,4" 
+        Style="{StaticResource RoundedButtonStyle}" Click="ajouter_entrepo_click" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="2,10,2,10" Grid.Row="9" Grid.ColumnSpan="2" VerticalAlignment="Center">
@@ -429,7 +453,7 @@ CornerRadius="7">
         <!-- D A T A    G R I D -->
 
         <Border BorderBrush="#FFD3D3D3" BorderThickness="1" CornerRadius="10" Margin="70,70,30,2" MinWidth="1080"
-   Grid.Row="1" Padding="10" Background="#F0F3F7" Width="auto" Height="auto" Grid.Column="2" Grid.RowSpan="2">
+   Grid.Row="2" Padding="10" Background="#F0F3F7" Width="auto" Height="auto" Grid.Column="2" Grid.RowSpan="2">
             <DataGrid x:Name="grillePlante" Grid.Row="1" Grid.RowSpan="9" Grid.Column="1" Grid.ColumnSpan="2" Background="Transparent" 
          HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" SelectionMode="Single"
          IsReadOnly="True" CanUserSortColumns="True" AreRowDetailsFrozen="True" CanUserResizeColumns="True" 

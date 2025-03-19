@@ -150,6 +150,26 @@
             <Image Source="pack://application:,,,/AutreDoc/back.png" Margin="5"/>
         </Button>
 
+        <Label Content="Import de données Excel" HorizontalAlignment="Center" 
+FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic" Grid.Row="1">
+            <Label.Template>
+                <ControlTemplate TargetType="Label">
+                    <Border BorderThickness="0" Background="Transparent">
+                        <TextBlock FontFamily="Latha" FontWeight="Bold" FontSize="25" FontStyle="Italic"
+                    HorizontalAlignment="Center">
+                            <TextBlock.Foreground>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,9">
+                                    <GradientStop Color="#11d171" Offset="0"/>
+                                    <GradientStop Color="RoyalBlue" Offset="1"/>
+                                </LinearGradientBrush>
+                            </TextBlock.Foreground>
+             <ContentPresenter/>
+                        </TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Label.Template>
+        </Label>
+
         <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0 30 0 0">
             <StackPanel>
                 <Button x:Name="BrowseButton" Content="Browse  . . ." HorizontalAlignment="Left" 

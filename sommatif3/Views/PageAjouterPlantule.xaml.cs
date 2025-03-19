@@ -57,6 +57,20 @@ namespace sommatif3
             cbStade.Items.Add("double magenta");
             cbStade.Items.Add("Hydroponie");
 
+            cbItemRetireDeLInventaire.Items.Add("DESTRUCTION PAR AUTOCLAVE");
+            cbItemRetireDeLInventaire.Items.Add("TRANSFERT CLIENT");
+            cbItemRetireDeLInventaire.Items.Add("TRANSFERT AUTRE CENTRE");
+            cbItemRetireDeLInventaire.Items.Add("TRANSFERT POUR ANALYSE");
+            cbItemRetireDeLInventaire.Items.Add("ANALYSE");
+            cbItemRetireDeLInventaire.Items.Add("CONTAMINATION");
+            cbItemRetireDeLInventaire.Items.Add("LIMITATION DE LA LICENCE");
+            cbItemRetireDeLInventaire.Items.Add("PERTE DE L'ÉCHANTILLION");
+            cbItemRetireDeLInventaire.Items.Add("PLANTULES N'ONT PAS SURVÉCU À L'EXPÉRIENCE");
+            cbItemRetireDeLInventaire.Items.Add("AUTRE (INDIQUER LA RAISON DANS NOTE)");
+        }
+
+        public void chargerEntrepo()
+        {
             #region add entrepo from db
             using (EntreposageContext EC = new EntreposageContext())
                 try
@@ -66,7 +80,7 @@ namespace sommatif3
                     {
                         p.idEntreposage
                     }).ToList();
-                    
+
                     foreach (var m in MesEntrepo)
                     {
                         cbEntreposage.Items.Add(m.idEntreposage.ToString());
@@ -79,66 +93,6 @@ namespace sommatif3
                     statusMessage.Text = ex.Message;
                 }
             #endregion
-
-
-            #region add responsable from db
-
-            /*
-            using (CompteUtilisateurContext EC = new CompteUtilisateurContext())
-                try
-                {
-                    //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
-                    var MesUtilisateur = EC.CompteUtilisateur.Select(p => new
-                    {
-                        p.Prenom
-                    }).ToList();
-
-                    foreach (var m in MesUtilisateur)
-                    {
-                        cbResponsableDecontamination.Items.Add(m.Prenom.ToString());
-                    }
-
-                    statusMessage.Text = "Liste des Specialités chargée";
-                }
-                catch (Exception ex)
-                {
-                    statusMessage.Text = ex.Message;
-                }
-            */
-
-
-            //using (CompteUtilisateurContext EC = new CompteUtilisateurContext())
-            //    try
-            //    {
-            //        //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
-            //        var MesUtilisateur = EC.CompteUtilisateur.Select(p => new
-            //        {
-            //            p.Nom
-            //        }).ToList();
-
-            //        foreach (var m in MesUtilisateur)
-            //        {
-            //            cbEntreposage.Items.Add(m.Nom.ToString());
-            //        }
-
-            //        statusMessage.Text = "Liste des Specialités chargée";
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        statusMessage.Text = ex.Message;
-            //    }
-            #endregion
-
-            cbItemRetireDeLInventaire.Items.Add("DESTRUCTION PAR AUTOCLAVE");
-            cbItemRetireDeLInventaire.Items.Add("TRANSFERT CLIENT");
-            cbItemRetireDeLInventaire.Items.Add("TRANSFERT AUTRE CENTRE");
-            cbItemRetireDeLInventaire.Items.Add("TRANSFERT POUR ANALYSE");
-            cbItemRetireDeLInventaire.Items.Add("ANALYSE");
-            cbItemRetireDeLInventaire.Items.Add("CONTAMINATION");
-            cbItemRetireDeLInventaire.Items.Add("LIMITATION DE LA LICENCE");
-            cbItemRetireDeLInventaire.Items.Add("PERTE DE L'ÉCHANTILLION");
-            cbItemRetireDeLInventaire.Items.Add("PLANTULES N'ONT PAS SURVÉCU À L'EXPÉRIENCE");
-            cbItemRetireDeLInventaire.Items.Add("AUTRE (INDIQUER LA RAISON DANS NOTE)");
         }
 
         public void chargerResponsableDansComboBox()
@@ -237,65 +191,103 @@ namespace sommatif3
 
         }
 
+                private bool ValidateForm()
+        {
+            // Validate TextBoxes (except tbNote)
+            if (string.IsNullOrWhiteSpace(tbProvenance.Text) ||
+                string.IsNullOrWhiteSpace(tbDescription.Text))
+            {
+                MessageBox.Show("Veuillez remplir tous les champs obligatoires.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            // Validate ComboBoxes
+            if (cbStade.SelectedIndex == -1 || cbEntreposage.SelectedIndex == -1 ||
+                cbItemRetireDeLInventaire.SelectedIndex == -1 || cbResponsableDecontamination.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuillez sélectionner une option pour tous les menus déroulants.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            // Validate DatePicker
+            if (!calendrier.SelectedDate.HasValue)
+            {
+                MessageBox.Show("Veuillez sélectionner une date.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            if (planteSante == string.Empty || planteSante == null || planteSante == "" || planteSante == " ")
+            {
+                MessageBox.Show("Veuillez sélectionner l'etat de santé.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
+
+            return true;
+        }
+
+
         private void ajouter_plantule(object sender, RoutedEventArgs e)
         {
             //******* Ajouter Plantule
-            try
+            if (ValidateForm())
             {
-                //utilise le context
-                using (PlanteContext PC = new PlanteContext())
+                try
                 {
-                    plante newPlante = new plante();
-                    String tempId = "SLH" + (plantuleControler.countAllPlantule() + 1);
-                    int idDigit = 1;
-
-                    while (plantuleControler.getPlantIdFromDb(tempId) == tempId)
+                    //utilise le context
+                    using (PlanteContext PC = new PlanteContext())
                     {
-                        idDigit++;
-                        tempId = "SLH" + (plantuleControler.countAllPlantule() + idDigit);
+                        plante newPlante = new plante();
+                        String tempId = "SLH" + (plantuleControler.countAllPlantule() + 1);
+                        int idDigit = 1;
+
+                        while (plantuleControler.getPlantIdFromDb(tempId) == tempId)
+                        {
+                            idDigit++;
+                            tempId = "SLH" + (plantuleControler.countAllPlantule() + idDigit);
+                        }
+
+                        newPlante.IdPlante = tempId;
+                        //newPlante.EtatSante = cbEtatDeSante.SelectedItem.ToString()
+                        newPlante.EtatSante = planteSante;
+                        newPlante.DateAjout = (DateTime)calendrier.SelectedDate;
+                        newPlante.Provenance = tbProvenance.Text;
+                        newPlante.Description = tbDescription.Text;
+                        newPlante.Stade = cbStade.SelectedItem.ToString();
+                        newPlante.Entreposage = cbEntreposage.SelectedItem.ToString();
+
+                        if (rbActif.IsChecked == true)
+                        {
+                            newPlante.Active_Inactive = 1;
+                        }
+                        else if (rbInactif.IsChecked == true)
+                        {
+                            newPlante.Active_Inactive = 0;
+                        }
+                        newPlante.ItemRetireInventaire = cbItemRetireDeLInventaire.SelectedItem.ToString();
+                        newPlante.Note = tbNote.Text;
+                        newPlante.Responsable = cbResponsableDecontamination.Text;
+
+                        //add new car to the context/ Table SC: stand for --> specialite context
+                        PC.plante.Add(newPlante);
+
+                        //save dans la base de donnee
+                        PC.SaveChanges();
+
+                        enregistreHistorique(newPlante.IdPlante);
+
+                        GeneratePrintQRcode();
+
+                        ChargerListePlantules();
+
+                        statusMessage.Text = "Plantule ajoutée";
+
                     }
-
-                    newPlante.IdPlante = tempId;
-                    //newPlante.EtatSante = cbEtatDeSante.SelectedItem.ToString()
-                    newPlante.EtatSante = planteSante;
-                    newPlante.DateAjout = (DateTime)calendrier.SelectedDate;
-                    newPlante.Provenance = tbProvenance.Text;
-                    newPlante.Description = tbDescription.Text;
-                    newPlante.Stade = cbStade.SelectedItem.ToString();
-                    newPlante.Entreposage = cbEntreposage.SelectedItem.ToString();
-
-                    if (rbActif.IsChecked == true)
-                    {
-                        newPlante.Active_Inactive = 1;
-                    }
-                    else if (rbInactif.IsChecked == true)
-                    {
-                        newPlante.Active_Inactive = 0;
-                    }
-                    newPlante.ItemRetireInventaire = cbItemRetireDeLInventaire.SelectedItem.ToString();
-                    newPlante.Note = tbNote.Text;
-                    newPlante.Responsable = cbResponsableDecontamination.Text;
-
-                    //add new car to the context/ Table SC: stand for --> specialite context
-                    PC.plante.Add(newPlante);
-
-                    //save dans la base de donnee
-                    PC.SaveChanges();
-
-                    enregistreHistorique(newPlante.IdPlante);
-
-                    GeneratePrintQRcode();
-
-                    ChargerListePlantules();
-
-                    statusMessage.Text = "Plantule ajoutée";
-
                 }
-            }
-            catch (Exception ex)
-            {
-                statusMessage.Text = ex.Message;
-                MessageBox.Show(ex.Message.ToString());
+                catch (Exception ex)
+                {
+                    statusMessage.Text = ex.Message;
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
         }
 
@@ -489,9 +481,11 @@ namespace sommatif3
             responsablePrenom.Clear();
             responsableFullName.Clear();
             cbResponsableDecontamination.Items.Clear();
+            cbEntreposage.Items.Clear();
             plantuleControler.setSanteColorUi("#6C0D92", "#A85ED0", borderSanteIndicator);
 
             ChargerListePlantules();
+            chargerEntrepo();
             chargerResponsableDansComboBox();
         }
 

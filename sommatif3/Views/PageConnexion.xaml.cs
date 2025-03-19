@@ -41,23 +41,30 @@ namespace Canabis.Views
         {
             //bool isUsername = false;
             //bool isPassword = false;
-
-            try
+            if (tbIdentification.Text != "" && PasswordBox.Password != "")
             {
-                if (tbIdentification.Text.Equals(plantuleControler.getUserIdFromDb(tbIdentification.Text), StringComparison.OrdinalIgnoreCase)  && PasswordBox.Password == plantuleControler.getPasswordFromDb(PasswordBox.Password))
+
+                try
                 {
-                    tbIdentification.Clear();
-                    PasswordBox.Clear();
-                    ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+                    if (tbIdentification.Text.Equals(plantuleControler.getUserIdFromDb(tbIdentification.Text), StringComparison.OrdinalIgnoreCase) && PasswordBox.Password == plantuleControler.getPasswordFromDb(PasswordBox.Password))
+                    {
+                        tbIdentification.Clear();
+                        PasswordBox.Clear();
+                        ControlerPage.mainFrameControl.MainFrame.Content = ControlerPage.PageAcceuil;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mot de passe, nom d'utilisateur incorrect");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Mot de passe, nom d'utilisateur incorrect");
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("nom d'utilisateur ou mot de passe vide!");
             }
 
             

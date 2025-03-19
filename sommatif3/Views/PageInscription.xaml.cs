@@ -87,12 +87,13 @@ namespace Canabis.Views
                         newPlanteArchive.motdepass = PasswordBox.Password;
 
                         //save dans la base de donnee
+                        newPlanteArchive.IdUtilisateur.ToUpper();
                         PC.CompteUtilisateur.Add(newPlanteArchive);
                         PC.SaveChanges();
 
 
                         //listInformation.Clear();
-                        MessageBox.Show("Utilisateur Enregistré\nVotre nom d'utilisateur est: " + newPlanteArchive.IdUtilisateur);
+                        MessageBox.Show("Utilisateur Enregistré\nVotre nom d'utilisateur est: " + newPlanteArchive.IdUtilisateur.ToUpper());
 
                         lbIdentification.Content = newPlanteArchive.IdUtilisateur;
                         lbIdentification.Visibility = Visibility.Visible;

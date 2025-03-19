@@ -130,7 +130,7 @@ namespace Canabis.Views
 
         private void modifierPlant_Click(object sender, RoutedEventArgs e)
         {
-            if (tbIdentification.Text != "")
+            if (tbIdentification.Text != "" && tbDescription.Text != "" && tbProvenance.Text != "")
             {
                 try
                 {
@@ -374,15 +374,90 @@ namespace Canabis.Views
             plantuleControler.setSanteColorUi("#DE3333", "#E87777", borderSanteIndicator);
         }
 
+        public void chargerEntrepo()
+        {
+            #region add entrepo from db
+            using (EntreposageContext EC = new EntreposageContext())
+                try
+                {
+                    //var rechercheSpecialite = PC.plante.FirstOrDefault(s => s.IdPlante == specialite);
+                    var MesEntrepo = EC.Entreposage.Select(p => new
+                    {
+                        p.idEntreposage
+                    }).ToList();
+
+                    foreach (var m in MesEntrepo)
+                    {
+                        cbEntreposage.Items.Add(m.idEntreposage.ToString());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show( ex.Message);
+                }
+            #endregion
+        }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             responsableNom.Clear();
             responsablePrenom.Clear();
             responsableFullName.Clear();
             cbResponsableDecontamination.Items.Clear();
+            cbEntreposage.Items.Clear();
             plantuleControler.setSanteColorUi("#6C0D92", "#A85ED0", borderSanteIndicator);
 
+            chargerEntrepo();
             chargerResponsableDansComboBox();
+        }
+
+        private void ajouter_entrepo_click(object sender, RoutedEventArgs e)
+        {
+            string promptMessage = "Entrer le code de l'entrepos:";
+            string title = "Ajouter un entrepo";
+            string entrepoCode = Microsoft.VisualBasic.Interaction.InputBox(promptMessage, title, "");
+            string nomEntrepo = Microsoft.VisualBasic.Interaction.InputBox("Entrer le nom de l'entrepos:", title, "");
+
+            // Check if the input is not empty
+            if (!string.IsNullOrEmpty(entrepoCode))
+            {
+                cbEntreposage.Items.Add(entrepoCode);
+                MessageBox.Show("Entrepos Ajouté", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                #region add entrepo to db
+                try
+                {
+                    //utilise le context
+                    using (EntreposageContext EC = new EntreposageContext())
+                    {
+                        Entreposage newEntrepo = new Entreposage();
+
+                        //newPlante.IdPlante = tbIdentification.Text;
+                        newEntrepo.idEntreposage = entrepoCode;
+                        newEntrepo.nom = nomEntrepo;
+
+                        //add new car to the context/ Table SC: stand for --> specialite context
+                        EC.Entreposage.Add(newEntrepo);
+                        //save dans la base de donnee
+                        EC.SaveChanges();
+
+                        //GeneratePrintQRcode();
+
+                        //ChargerListePlantules();
+
+                        //viderToutLesComboBox();
+                        //chargerComboBox(cbMedecinSpecialite);
+                        //chargerComboBox(cbSpecialiteConsultation);
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // MessageBox.Show("s'assurer de mettre l'Id de l'utilisateur sur le champ Responsable");
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                #endregion
+            }
         }
     }
 }
