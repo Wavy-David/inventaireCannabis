@@ -1,0 +1,389 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pagehistorique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagehistorique.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageconsultationplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconsultationplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageimportdonnee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageimportdonnee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pagearchive.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagearchive.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageacceuil.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageacceuil.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageafficheplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageafficheplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pagemodifierplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagemodifierplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageinscription.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageinscription.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageconnexion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconnexion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageajouterplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageajouterplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageacceuil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageacceuil.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageconnexion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconnexion.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pagemodifierplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagemodifierplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageinscription.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageinscription.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\models\\plantulecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\models\\plantulecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageimportdonnee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageimportdonnee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pagehistorique.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagehistorique.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageconsultationplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageconsultationplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pagearchive.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pagearchive.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageajouterplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageajouterplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\pageafficheplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageafficheplantule.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\historiquerecordrow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\historiquerecordrow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|d:\\lacite\\session4\\projet integration\\cannabis projet\\canabis final product\\inventairecannabis\\sommatif3\\views\\historiquerecordrow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\historiquerecordrow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PageModifierPlantule.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageModifierPlantule.xaml.cs",
+              "ViewState": "AQIAAL0BAAAAAAAAAAAAwNcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:29:18.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PageModifierPlantule.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageModifierPlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageModifierPlantule.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageModifierPlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageModifierPlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:28:38.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "plantuleControler.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Models\\plantuleControler.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Models\\plantuleControler.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Models\\plantuleControler.cs",
+              "RelativeToolTip": "sommatif3\\Models\\plantuleControler.cs",
+              "ViewState": "AQIAAFcBAAAAAAAAAAAuwHMBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:25:48.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PageInscription.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageInscription.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageInscription.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageInscription.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageInscription.xaml.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAcwIYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:20:43.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PageInscription.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageInscription.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageInscription.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageInscription.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageInscription.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:19:57.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PageImportDonnee.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageImportDonnee.xaml.cs",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAkwMAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:17:42.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PageImportDonnee.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageImportDonnee.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageImportDonnee.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageImportDonnee.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageImportDonnee.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:16:48.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PageHistorique.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageHistorique.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageHistorique.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageHistorique.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageHistorique.xaml.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAkwEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:15:42.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PageHistorique.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageHistorique.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageHistorique.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageHistorique.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageHistorique.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:15:14.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PageConsultationPlantule.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageConsultationPlantule.xaml.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAYwHkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:14:23.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PageConsultationPlantule.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageConsultationPlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:13:47.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PageConnexion.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConnexion.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConnexion.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConnexion.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageConnexion.xaml.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAvwIgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:11:40.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PageConnexion.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConnexion.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageConnexion.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageConnexion.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageConnexion.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:10:25.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PageArchive.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageArchive.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageArchive.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageArchive.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageArchive.xaml.cs",
+              "ViewState": "AQIAAPsAAAAAAAAAAAAkwBQBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:09:29.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PageArchive.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageArchive.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageArchive.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageArchive.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageArchive.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:09:01.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PageAjouterPlantule.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageAjouterPlantule.xaml.cs",
+              "ViewState": "AQIAAAwBAAAAAAAAAAAvwB0BAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:08:18.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PageAffichePlantule.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageAffichePlantule.xaml.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:05:40.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PageAffichePlantule.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAffichePlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAffichePlantule.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAffichePlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageAffichePlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:04:34.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PageAcceuil.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\PageAcceuil.xaml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAvwCQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:03:39.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PageAcceuil.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAcceuil.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAcceuil.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAcceuil.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageAcceuil.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:02:56.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "HistoriqueRecordRow.xaml.cs",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "RelativeToolTip": "sommatif3\\Views\\HistoriqueRecordRow.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T09:02:09.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PageAjouterPlantule.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:01:24.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HistoriqueRecordRow.xaml",
+              "DocumentMoniker": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "ToolTip": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\HistoriqueRecordRow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-19T09:00:25.579Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

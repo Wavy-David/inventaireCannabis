@@ -1,5 +1,0 @@
-- responsable.
-- recherche bug
-- ajout couleur
-- ajout journalisation sur import
-
