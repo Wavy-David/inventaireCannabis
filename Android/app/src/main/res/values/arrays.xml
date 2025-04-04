@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="responsables_decontamination">
+        <item>Kadija Houssein Youssouf</item>
+        <item>Alexandre Tromas</item>
+        <!-- Ajoutez d'autres éléments selon vos besoins -->
+    </string-array>
+
+    <string-array name="motifs_retrait">
+        <item>Initiation</item>
+        <item>Microdissection</item>
+        <item>Magenta</item>
+        <item>Double magenta</item>
+        <item>Hydroponie</item>
+        <!-- Ajoutez d'autres éléments selon vos besoins -->
+    </string-array>
+
+    <string-array name="etat_sante">
+        <item>Bonne santé</item>
+        <item>Santé moyenne</item>
+        <item>Mauvaise santé</item>
+        <item>Plante en grand danger</item>
+    </string-array>
+
+    <string-array name="entreposage">
+        <item>F1260.04</item>
+        <item>B3200</item>
+    </string-array>
+</resources>

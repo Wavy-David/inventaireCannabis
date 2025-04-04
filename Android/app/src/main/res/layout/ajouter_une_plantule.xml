@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="AjouterUnePlantule">
+
+
+    <!-- Main Menu -->
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:background="#2BEEB7"
+        android:gravity="center">
+
+        <!-- Menu Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter Une Plante"
+            android:layout_above="@id/menu_layout"
+            android:layout_below="@+id/status_message"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <!-- Form Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scroll_view_form"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_layout"
+        android:background="@color/beige"
+        android:scrollbars="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/form_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Identifiant -->
+            <LinearLayout
+                android:id="@+id/identifiant_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/lblIdentifiant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identifiant:"
+                    android:textSize="18sp"
+                    android:paddingStart="8dp" />
+
+                <EditText
+                    android:id="@+id/tbIdentifiant"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+            </LinearLayout>
+
+            <!-- Date Ajout -->
+            <LinearLayout
+                android:id="@+id/date_ajout_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/lblDateAjout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Ajout:"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/tbDateAjout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+
+            <!-- Etat de Sante -->
+            <LinearLayout
+                android:id="@+id/etat_sante_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/lblEtatDeSante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Etat de Sante:"
+                    android:textSize="18sp"/>
+
+                <Spinner
+                    android:id="@+id/cbEtatDeSante"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:entries="@array/etat_sante"/>
+            </LinearLayout>
+
+            <!-- Provenance -->
+            <LinearLayout
+                android:id="@+id/provenance_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/lblProvenance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Provenance:"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/tbProvenance"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:inputType="text"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"/>
+            </LinearLayout>
+
+            <!-- Description -->
+            <LinearLayout
+                android:id="@+id/description_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/lblDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description:"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:id="@+id/tbDescription"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:maxLines="5"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp" />
+            </LinearLayout>
+
+            <!-- Stade -->
+            <LinearLayout
+                android:id="@+id/stade_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/lblStade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stade:"
+                    android:textSize="18sp"/>
+
+                <Spinner
+                    android:id="@+id/cbStade"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="48dp"
+                    android:entries="@array/motifs_retrait"/>
+            </LinearLayout>
+
+            <!-- Entreposage -->
+            <LinearLayout
+                android:id="@+id/entreposage_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/lblEntreposage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entreposage:"
+                    android:textSize="18sp"/>
+
+                <Spinner
+                    android:id="@+id/cbEntreposage"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:entries="@array/entreposage"/>
+            </LinearLayout>
+
+            <!-- Date Retrait -->
+            <LinearLayout
+                android:id="@+id/date_retrait_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/lblDateRetrait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Retrait:"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/tbDateRetrait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+            <!-- Responsable Decontamination -->
+            <LinearLayout
+                android:id="@+id/responsable_decontamination_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Responsable Decontamination:"
+                    android:textSize="18sp"
+                    android:id="@+id/lblResponsableDecontamination"/>
+
+                <Spinner
+                    android:id="@+id/cbResponsableDecontamination"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:entries="@array/responsables_decontamination"/>
+            </LinearLayout>
+
+            <!-- Raison Retrait de l'Inventaire -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Raison retrait de l'inventaire:"
+                    android:textSize="18sp"/>
+                <!-- Spinner cbRaisonRetrait -->
+                <Spinner
+                    android:id="@+id/cbRaisonRetrait"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"/>
+            </LinearLayout>
+
+            <!-- Ajouter Button -->
+            <Button
+                android:id="@+id/btnAjouterPlant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ajouter"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+            <!-- Annuler Button -->
+            <Button
+                android:id="@+id/btnAnnulerPlant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Annuler"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/date_retrait_layout"
+                android:onClick="onCancelClick"
+                android:layout_alignParentEnd="true"/>
+
+            <!-- DataGrid Placeholder -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp">
+
+                <!-- DataGrid -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dgPlants"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E0E0E0"/>
+            </FrameLayout>
+
+            <!-- QR Code Display -->
+            <ImageView
+                android:id="@+id/qrCodeImageBox"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Status Bar -->
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+</RelativeLayout>

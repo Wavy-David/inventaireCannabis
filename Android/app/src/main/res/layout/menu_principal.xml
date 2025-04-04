@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Menuprincipal">
+
+    <!-- Status Bar -->
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Status Message -->
+        <TextView
+            android:id="@+id/status_message"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <!-- Status Action -->
+        <TextView
+            android:id="@+id/status_action"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+    </LinearLayout>
+
+    <!-- Main Menu -->
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/status_bar"
+        android:background="#2BEEB7"
+        android:gravity="center">
+
+        <!-- Menu Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canabis stock"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <!-- Scrollable content et placer le content des icon en desous du menu principal-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_layout"
+        android:scrollbars="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+            <!-- Icons Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <!-- Button Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:padding="16dp">
+
+                    <!-- Button 1 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- Button Icon -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="72dp"
+                            android:src="@drawable/add"
+                            android:layout_gravity="center"
+                            android:id="@+id/add_button"/>
+
+                        <!-- Button Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ajouter une plante"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Button 2 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- Button Icon -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="72dp"
+                            android:src="@drawable/importer"
+                            android:layout_gravity="center"
+                            android:id="@+id/importer_button"/>
+
+                        <!-- Button Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Importer depuis Excel"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Button Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp">
+
+                    <!-- Button 3 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- Button Icon -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="72dp"
+                            android:src="@drawable/update"
+                            android:id="@+id/update_button"
+                            android:layout_gravity="center"/>
+
+                        <!-- Button Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Modification d'une plante"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"
+                            android:id="@+id/update_button_label"/>
+                    </LinearLayout>
+
+                    <!-- Button 4 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- Button Icon -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="72dp"
+                            android:src="@drawable/archive"
+                            android:layout_gravity="center"
+                            android:id="@+id/archive_button"/>
+
+                        <!-- Button Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Archives"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Button Row 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp">
+
+                    <!-- Button 5 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- Button Icon -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="72dp"
+                            android:src="@drawable/consulter"
+                            android:layout_gravity="center"
+                            android:id="@+id/consulter_button"/>
+
+                        <!-- Button Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Consulter les plantes"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Button 6 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!-- Button Icon -->
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="72dp"
+                            android:id="@+id/historique_button"
+                            android:src="@drawable/historique"
+                            android:layout_gravity="center"/>
+
+                        <!-- Button Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Historique des plantes"
+                            android:textAlignment="center"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Button Logout -->
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Logout" />
+
+</RelativeLayout>
