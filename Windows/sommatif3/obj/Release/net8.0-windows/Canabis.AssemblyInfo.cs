@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Canabis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09f954525b377ebe252381a2d27b66a4ad6ba981")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0765882aac8fbb60f9fabd1749a83ae99a10ea9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Canabis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Canabis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

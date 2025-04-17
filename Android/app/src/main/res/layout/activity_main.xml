@@ -78,18 +78,19 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Login Button -->
+
+            <!-- Sign Up Button -->
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Login"
-                android:padding="18dp"
-                app:cornerRadius="8dp"
-                android:textColor="@android:color/white"
                 android:backgroundTint="#3b84f1"
-                android:id="@+id/login_button" />
+                android:padding="18dp"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                app:cornerRadius="8dp" />
 
-            <!-- Sign Up Button -->
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

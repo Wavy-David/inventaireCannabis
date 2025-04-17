@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\guipr\Doc_OneDrive\OneDrive - Collège la Cité\inventaireCannabis\sommatif3\obj\Release\net8.0-windows\
+C:\Users\sowso\OneDrive\Bureau\inventaireCannabis\Windows\sommatif3\obj\Release\net8.0-windows\
 Canabis
 none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
-C:\Users\guipr\Doc_OneDrive\OneDrive - Collège la Cité\inventaireCannabis\sommatif3\App.xaml
+C:\Users\sowso\OneDrive\Bureau\inventaireCannabis\Windows\sommatif3\App.xaml
 131534555883
 
 311520321143
-198-1431420039
+1981451641563
 MainSwitch.xaml;MainWindow.xaml;Views\HistoriqueRecordRow.xaml;Views\PageAcceuil.xaml;Views\PageAffichePlantule.xaml;Views\PageAjouterPlantule.xaml;Views\PageArchive.xaml;Views\PageConnexion.xaml;Views\PageConsultationPlantule.xaml;Views\PageHistorique.xaml;Views\PageImportDonnee.xaml;Views\PageInscription.xaml;Views\PageModifierPlantule.xaml;
 
 True

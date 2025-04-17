@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\Windows\sommatif3\obj\Debug\net8.0-windows\
+C:\Users\sowso\OneDrive\Bureau\inventaireCannabis\Windows\sommatif3\obj\Debug\net8.0-windows\
 Canabis
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\laCite\session4\projet integration\Cannabis projet\Canabis final product\inventaireCannabis\Windows\sommatif3\App.xaml
+C:\Users\sowso\OneDrive\Bureau\inventaireCannabis\Windows\sommatif3\App.xaml
 131534555883
 
 311298038965
-2501308239233
+1981451641563
 MainSwitch.xaml;MainWindow.xaml;Views\HistoriqueRecordRow.xaml;Views\PageAcceuil.xaml;Views\PageAffichePlantule.xaml;Views\PageAjouterPlantule.xaml;Views\PageArchive.xaml;Views\PageConnexion.xaml;Views\PageConsultationPlantule.xaml;Views\PageHistorique.xaml;Views\PageImportDonnee.xaml;Views\PageInscription.xaml;Views\PageModifierPlantule.xaml;
 
-False
+True
 
