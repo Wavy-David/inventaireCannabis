@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginbackground"
+    android:background="@color/white"
     android:gravity="center"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -29,7 +29,7 @@
             <ImageView
                 android:layout_width="460dp"
                 android:layout_height="160dp"
-                android:src="@drawable/canabis" />
+                android:src="@drawable/medicalcannabis"/>
 
             <!-- Username Input -->
             <com.google.android.material.textfield.TextInputLayout
@@ -112,7 +112,9 @@
                 android:text="Social Login"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:gravity="center" />
+                android:gravity="center"
+                android:visibility="invisible"
+                />
 
 
             <!-- Social Logain Buttons (Facebook and Google) -->
@@ -130,7 +132,9 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="8dp"
                     android:src="@drawable/facebook"
-                    android:id="@+id/facebook_button"/>
+                    android:id="@+id/facebook_button"
+                    android:visibility="invisible"
+                    />
 
                 <!-- Google Button -->
                 <ImageView
@@ -140,7 +144,9 @@
                     android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="16dp"
-                    android:src="@drawable/google" />
+                    android:src="@drawable/google"
+                    android:visibility="invisible"
+                    />
             </LinearLayout>
 
         </LinearLayout>

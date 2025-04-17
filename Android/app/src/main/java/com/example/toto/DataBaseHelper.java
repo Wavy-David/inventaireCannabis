@@ -229,7 +229,7 @@
             cv.put("Date", today);
 
             cv.put("champ", "--");
-            cv.put("ancienneValeur", "--");
+            cv.put("ancienneValeur", "__");
             cv.put("nouvelleValeur", "__");
 
             long insert = db.insert("HistoriquePlante", null, cv);
@@ -291,6 +291,101 @@
             int deleted = db.delete("Plante", "idPlante = ?", new String[]{idPlante});
             db.close();
             return deleted > 0;
+        }
+
+        public List<PlantuleModel> getAllPlantules() {
+            List<PlantuleModel> plantules = new ArrayList<>();
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("SELECT * FROM " + PLANTE, null);
+
+            if (cursor.moveToFirst()) {
+                do {
+                    PlantuleModel plantule = new PlantuleModel(
+                            cursor.getString(cursor.getColumnIndexOrThrow(ID_PLANTE)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(RESPONSABLE)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(NOTE)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(ITEM_RETIRE_INVENTAIRE)),
+                            cursor.getInt(cursor.getColumnIndexOrThrow(ACTIVE_INACTIVE)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(STADE)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(DESCRIPTION)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(PROVENANCE)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(DATE_AJOUT)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(ETAT_SANTE)),
+                            cursor.getString(cursor.getColumnIndexOrThrow(ENTREPOSAGE))
+                    );
+                    plantules.add(plantule);
+                } while (cursor.moveToNext());
+            }
+
+            cursor.close();
+            db.close();
+            return plantules;
+        }
+
+        public List<PlantuleModel> getAllArchivedPlantules() {
+            List<PlantuleModel> list = new ArrayList<>();
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery("SELECT * FROM PlanteArchive", null);
+
+            if (cursor.moveToFirst()) {
+                do {
+                    list.add(new PlantuleModel(
+                            cursor.getString(cursor.getColumnIndexOrThrow("idPlante")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("Responsable")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("note")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("itemRetireInventaire")),
+                            cursor.getInt(cursor.getColumnIndexOrThrow("active_Inactive")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("stade")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("description")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("provenance")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("dateAjout")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("etatSante")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("entreposage"))
+                    ));
+                } while (cursor.moveToNext());
+            }
+
+            cursor.close();
+            db.close();
+            return list;
+        }
+
+        public PlantuleModel getArchivedPlantuleById(String idPlante) {
+            SQLiteDatabase db = this.getReadableDatabase();
+            PlantuleModel plantule = null;
+            Cursor cursor = db.rawQuery("SELECT * FROM PlanteArchive WHERE idPlante = ?", new String[]{idPlante});
+            if (cursor != null && cursor.moveToFirst()) {
+                plantule = new PlantuleModel(
+                        idPlante,
+                        cursor.getString(cursor.getColumnIndexOrThrow("Responsable")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("note")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("itemRetireInventaire")),
+                        cursor.getInt(cursor.getColumnIndexOrThrow("active_Inactive")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("stade")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("description")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("provenance")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("dateAjout")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("etatSante")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("entreposage"))
+                );
+                cursor.close();
+            }
+            db.close();
+            return plantule;
+        }
+
+        public boolean enregistrerHistorique(String idPlante, String action, String champ, String ancienne, String nouvelle, String date) {
+            SQLiteDatabase db = this.getWritableDatabase();
+            ContentValues cv = new ContentValues();
+            cv.put("idPlante", idPlante);
+            cv.put("action", action);
+            cv.put("champ", champ);
+            cv.put("ancienneValeur", ancienne);
+            cv.put("nouvelleValeur", nouvelle);
+            cv.put("Date", date);
+            long result = db.insert("HistoriquePlante", null, cv);
+            db.close();
+            return result != -1;
         }
 
     }

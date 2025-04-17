@@ -1,72 +1,94 @@
 package com.example.toto
 
-import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.toto.databinding.ArchivesBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class Archives : AppCompatActivity() {
 
     private lateinit var binding: ArchivesBinding
-    private var lastFoundPlant: PlantuleModel? = null  // holds the found plant for deletion
+    private lateinit var dbHelper: DataBaseHelper
+    private var currentPlantule: PlantuleModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ArchivesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        dbHelper = DataBaseHelper(this)
         binding.recyclerViewPlants.layoutManager = LinearLayoutManager(this)
-        binding.buttonSupprimerBottom.isEnabled = false // disabled initially
 
-        // Handle search click
+        afficherToutesLesPlantes()
+        binding.buttonSupprimerBottom.isEnabled = false
+
         binding.buttonSearch.setOnClickListener {
             val id = binding.searchId.text.toString().trim()
-            if (id.isEmpty()) {
-                Toast.makeText(this, "Veuillez entrer un ID", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            val db = DataBaseHelper(this)
-            val plantule = db.getPlantuleById(id.uppercase())
-
-            if (plantule != null) {
-                lastFoundPlant = plantule
-                binding.recyclerViewPlants.adapter = PlantuleAdapter(listOf(plantule))
-                binding.statusMessage.text = "Plantule trouvée."
-                binding.buttonSupprimerBottom.isEnabled = true
+            if (id.isNotEmpty()) {
+                afficherUneArchiveParId(id)
             } else {
-                lastFoundPlant = null
-                binding.recyclerViewPlants.adapter = null
-                binding.statusMessage.text = "Aucune plantule trouvée."
-                binding.buttonSupprimerBottom.isEnabled = false
+                Toast.makeText(this, "Veuillez entrer un ID.", Toast.LENGTH_SHORT).show()
             }
         }
 
-        // Handle supprimer click
         binding.buttonSupprimerBottom.setOnClickListener {
-            val plantule = lastFoundPlant
-            if (plantule != null) {
-                val db = DataBaseHelper(this)
-                val successArchive = db.addPlantuleToArchive(plantule)
-                val successDelete = db.deletePlantuleById(plantule.idPlante)
+            currentPlantule?.let { plant ->
+                val successArchive = dbHelper.addPlantuleToArchive(plant)
+                val successDelete = dbHelper.deletePlantuleById(plant.idPlante)
 
                 if (successArchive && successDelete) {
-                    Toast.makeText(this, "Plantule archivée avec succès.", Toast.LENGTH_SHORT).show()
-                    binding.recyclerViewPlants.adapter = null
+                    // Enregistrer l'action dans HistoriquePlante
+                    enregistrerHistoriqueArchivage(plant.idPlante)
+                    Toast.makeText(this, "Plante archivée avec succès.", Toast.LENGTH_SHORT).show()
+                    currentPlantule = null
+                    afficherToutesLesPlantes()
                     binding.buttonSupprimerBottom.isEnabled = false
-                    binding.statusMessage.text = "La plantule a été archivée et supprimée."
                 } else {
-                    Toast.makeText(this, "Erreur lors de l'archivage ou la suppression.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Erreur lors de l'archivage.", Toast.LENGTH_SHORT).show()
                 }
             }
         }
     }
 
-    private fun retourMenuPrincipal() {
-        val intent = Intent(this, Menuprincipal::class.java)
-        startActivity(intent)
-        finish()
+    private fun afficherToutesLesPlantes() {
+        val allPlants = dbHelper.getAllPlantules()
+        binding.recyclerViewPlants.adapter = PlantuleAdapter(allPlants)
+        binding.statusMessage.text = "${allPlants.size} plantes trouvées."
+    }
+
+    private fun afficherUneArchiveParId(id: String) {
+        val plant = dbHelper.getPlantuleById(id)
+        if (plant != null) {
+            currentPlantule = plant
+            binding.recyclerViewPlants.adapter = PlantuleAdapter(listOf(plant))
+            binding.statusMessage.text = "Plante trouvée pour ID : $id"
+            binding.buttonSupprimerBottom.isEnabled = true
+        } else {
+            binding.recyclerViewPlants.adapter = null
+            binding.statusMessage.text = "Aucune plante trouvée pour ID : $id"
+            binding.buttonSupprimerBottom.isEnabled = false
+        }
+    }
+
+    private fun enregistrerHistoriqueArchivage(idPlante: String) {
+        val db = dbHelper.writableDatabase
+        val cv = android.content.ContentValues()
+
+        val date = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
+
+        cv.put("idPlante", idPlante)
+        cv.put("action", "archiver")
+        cv.put("Date", date)
+        cv.put("champ", "__")
+        cv.put("ancienneValeur", "__")
+        cv.put("nouvelleValeur", "__")
+
+        db.insert("HistoriquePlante", null, cv)
+        db.close()
     }
 }

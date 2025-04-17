@@ -6,20 +6,21 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.toto.databinding.ModifierPlantuleBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ModifierPlante : AppCompatActivity() {
 
     private lateinit var binding: ModifierPlantuleBinding
+    private lateinit var originalPlantule: PlantuleModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ModifierPlantuleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Spinner setup (needed to use setSelection properly)
         setupSpinners()
 
-        // Search button click
         binding.btnSearch.setOnClickListener {
             val id = binding.searchId.text.toString().trim()
             if (id.isNotEmpty()) {
@@ -29,19 +30,16 @@ class ModifierPlante : AppCompatActivity() {
             }
         }
 
-        //button sauvegarder
         binding.btnSave.setOnClickListener {
             updatePlantule()
         }
 
-        // Cancel button
         binding.btnCancel.setOnClickListener {
             retourMenuPrincipal()
         }
     }
 
     private fun setupSpinners() {
-        // These should match the arrays in res/values/strings.xml
         val etatAdapter = ArrayAdapter.createFromResource(this, R.array.etat_sante, android.R.layout.simple_spinner_item)
         etatAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.cbEtatDeSante.adapter = etatAdapter
@@ -72,20 +70,20 @@ class ModifierPlante : AppCompatActivity() {
             return
         }
 
+        originalPlantule = plantule
+
         binding.tbIdentifiant.setText(plantule.idPlante)
         binding.tbDateAjout.setText(plantule.dateAjout)
         binding.tbProvenance.setText(plantule.provenance)
         binding.tbDescription.setText(plantule.description)
         binding.tbNotes.setText(plantule.note)
 
-        // Spinners: select item by value
         setSpinnerSelection(binding.cbEtatDeSante, plantule.etatSante)
         setSpinnerSelection(binding.cbStade, plantule.stade)
         setSpinnerSelection(binding.cbEntreposage, plantule.entreposage)
         setSpinnerSelection(binding.cbResponsableDecontamination, plantule.responsable)
         setSpinnerSelection(binding.cbRaisonRetrait, plantule.itemRetireInventaire)
 
-        // Radio buttons
         if (plantule.active_Inactive == 1) {
             binding.radioActif.isChecked = true
         } else {
@@ -114,34 +112,70 @@ class ModifierPlante : AppCompatActivity() {
 
         val db = DataBaseHelper(this)
 
-        val etatSante = binding.cbEtatDeSante.selectedItem.toString()
-        val dateAjout = binding.tbDateAjout.text.toString()
-        val provenance = binding.tbProvenance.text.toString()
-        val description = binding.tbDescription.text.toString()
-        val stade = binding.cbStade.selectedItem.toString()
-        val entreposage = binding.cbEntreposage.selectedItem.toString()
-        val responsable = binding.cbResponsableDecontamination.selectedItem.toString()
-        val note = binding.tbNotes.text.toString()
-        val raisonRetrait = binding.cbRaisonRetrait.selectedItem.toString()
-
-        val isActive = if (binding.radioActif.isChecked) 1 else 0
+        val newEtatSante = binding.cbEtatDeSante.selectedItem.toString()
+        val newDateAjout = binding.tbDateAjout.text.toString()
+        val newProvenance = binding.tbProvenance.text.toString()
+        val newDescription = binding.tbDescription.text.toString()
+        val newStade = binding.cbStade.selectedItem.toString()
+        val newEntreposage = binding.cbEntreposage.selectedItem.toString()
+        val newResponsable = binding.cbResponsableDecontamination.selectedItem.toString()
+        val newNote = binding.tbNotes.text.toString()
+        val newRaisonRetrait = binding.cbRaisonRetrait.selectedItem.toString()
+        val newIsActive = if (binding.radioActif.isChecked) 1 else 0
 
         val updatedPlantule = PlantuleModel(
             id,
-            responsable,
-            note,
-            raisonRetrait,
-            isActive,
-            stade,
-            description,
-            provenance,
-            dateAjout,
-            etatSante,
-            entreposage
+            newResponsable,
+            newNote,
+            newRaisonRetrait,
+            newIsActive,
+            newStade,
+            newDescription,
+            newProvenance,
+            newDateAjout,
+            newEtatSante,
+            newEntreposage
         )
 
         val success = db.updatePlantule(updatedPlantule)
         if (success) {
+            val changes = mutableListOf<String>()
+            val oldValues = mutableListOf<String>()
+            val newValues = mutableListOf<String>()
+
+            fun checkChange(field: String, oldVal: String, newVal: String) {
+                if (oldVal != newVal) {
+                    changes.add(field)
+                    oldValues.add(oldVal)
+                    newValues.add(newVal)
+                }
+            }
+
+            checkChange("etatSante", originalPlantule.etatSante, newEtatSante)
+            checkChange("dateAjout", originalPlantule.dateAjout, newDateAjout)
+            checkChange("provenance", originalPlantule.provenance, newProvenance)
+            checkChange("description", originalPlantule.description, newDescription)
+            checkChange("stade", originalPlantule.stade, newStade)
+            checkChange("entreposage", originalPlantule.entreposage, newEntreposage)
+            checkChange("responsable", originalPlantule.responsable, newResponsable)
+            checkChange("note", originalPlantule.note, newNote)
+            checkChange("itemRetireInventaire", originalPlantule.itemRetireInventaire, newRaisonRetrait)
+            checkChange("active_Inactive", originalPlantule.active_Inactive.toString(), newIsActive.toString())
+
+            val champ = changes.joinToString(", ")
+            val ancienneValeur = oldValues.joinToString(", ")
+            val nouvelleValeur = newValues.joinToString(", ")
+            val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
+
+            db.enregistrerHistorique(
+                id,
+                "Mis à jour / modifier",
+                champ.ifEmpty { "__" },
+                ancienneValeur.ifEmpty { "__" },
+                nouvelleValeur.ifEmpty { "__" },
+                currentDate
+            )
+
             Toast.makeText(this, "Plante mise à jour avec succès!", Toast.LENGTH_LONG).show()
         } else {
             Toast.makeText(this, "Échec de la mise à jour.", Toast.LENGTH_LONG).show()

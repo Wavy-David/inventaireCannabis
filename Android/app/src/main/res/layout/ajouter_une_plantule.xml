@@ -251,7 +251,7 @@
                     android:id="@+id/lblResponsableDecontamination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Responsable Decontamination:"
+                    android:text="Responsable:"
                     android:textSize="18sp" />
 
                 <Spinner
@@ -274,7 +274,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Raison retrait de l'inventaire:"
+                    android:text="Item retiré de l’inventaire:"
                     android:textSize="18sp" />
                 <!-- Spinner cbRaisonRetrait -->
                 <Spinner
@@ -330,7 +330,7 @@
                 android:layout_below="@id/date_retrait_layout"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="16dp"
-                android:text="Annuler"
+                android:text="retour"
                 android:textSize="18sp" />
 
             <!-- DataGrid Placeholder -->

@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/status_bar"
-        android:background="#2BEEB7"
+        android:background="#FFFFFF"
         android:gravity="center">
 
         <!-- Menu Title -->
@@ -52,10 +52,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Canabis stock"
-            android:textSize="25sp"
+            android:textSize="23sp"
             android:gravity="center"
             android:textStyle="bold"
-            android:textColor="#FF0000"
+            android:textColor="#000000"
             android:padding="10dp"/>
     </LinearLayout>
 
@@ -102,7 +102,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="72dp"
-                            android:src="@drawable/add"
+                            android:src="@drawable/addfile"
                             android:layout_gravity="center"
                             android:id="@+id/add_button"/>
 
@@ -128,7 +128,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="72dp"
-                            android:src="@drawable/importer"
+                            android:src="@drawable/import2"
                             android:layout_gravity="center"
                             android:id="@+id/importer_button"/>
 
@@ -164,7 +164,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="72dp"
-                            android:src="@drawable/update"
+                            android:src="@drawable/sync"
                             android:id="@+id/update_button"
                             android:layout_gravity="center"/>
 
@@ -191,7 +191,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="72dp"
-                            android:src="@drawable/archive"
+                            android:src="@drawable/recyclebin"
                             android:layout_gravity="center"
                             android:id="@+id/archive_button"/>
 
@@ -227,7 +227,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="72dp"
-                            android:src="@drawable/consulter"
+                            android:src="@drawable/search"
                             android:layout_gravity="center"
                             android:id="@+id/consulter_button"/>
 
@@ -254,7 +254,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="72dp"
                             android:id="@+id/historique_button"
-                            android:src="@drawable/historique"
+                            android:src="@drawable/history"
                             android:layout_gravity="center"/>
 
                         <!-- Button Label -->

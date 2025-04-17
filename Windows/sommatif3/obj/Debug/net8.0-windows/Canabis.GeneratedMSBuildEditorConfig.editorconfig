@@ -8,10 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Canabis
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\sowso\OneDrive\Bureau\inventaireCannabis\Windows\sommatif3\
-=======
 build_property.ProjectDir = C:\Users\david\OneDrive\Desktop\Cannabis projet\inventaireCannabis\Windows\sommatif3\
->>>>>>> d81ae48 (stable version push)
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

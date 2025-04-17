@@ -16,19 +16,31 @@
     </string-array>
 
     <string-array name="etat_sante">
-        <item>Bonne santé</item>
-        <item>Santé moyenne</item>
-        <item>Mauvaise santé</item>
-        <item>Plante en grand danger</item>
+        <item>🟩 Bonne santé</item>         <!-- Green square -->
+        <item>🟨 Santé moyenne</item>       <!-- Yellow square -->
+        <item>🟧 Mauvaise santé</item>      <!-- Orange square -->
+        <item>🟥 Plante en grand danger</item> <!-- Red square -->
     </string-array>
 
     <string-array name="entreposage">
-        <item>F1260.04</item>
+        <item>B3070</item>
+        <item>B3080.01</item>
         <item>B3200</item>
+        <item>B3320</item>
+        <item>F1260.01</item>
+        <item>F1260.04</item>
     </string-array>
 
     <string-array name="raison_retrait">
-        <item>raison1</item>
-        <item>raison2</item>
+        <item>DESTRUCTION PAR AUTOCLAVE</item>
+        <item>TRANSFERT CLIENT</item>
+        <item>TRANSFERT AUTRE CENTRE</item>
+        <item>TRANSFERT POUR ANALYSE</item>
+        <item>ANALYSE</item>
+        <item>CONTAMINATION</item>
+        <item>LIMITATION DE LA LICENCE</item>
+        <item>PERTE DE ÉCHANTILLION</item>
+        <item>PLANTULES ONT PAS SURVÉCU À EXPÉRIENCE</item>
+        <item>AUTRE (INDIQUER LA RAISON DANS NOTE)</item>
     </string-array>
 </resources>

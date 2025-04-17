@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\david\\OneDrive\\Desktop\\Cannabis projet\\inventaireCannabis\\Windows\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|c:\\users\\david\\onedrive\\desktop\\cannabis projet\\inventairecannabis\\windows\\sommatif3\\views\\pageajouterplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B29AED9D-2CA7-48DD-BB49-9A605BCFFAF2}|sommatif3\\Canabis.csproj|solutionrelative:sommatif3\\views\\pageajouterplantule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PageAjouterPlantule.xaml",
+              "DocumentMoniker": "C:\\Users\\david\\OneDrive\\Desktop\\Cannabis projet\\inventaireCannabis\\Windows\\sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "RelativeDocumentMoniker": "sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "ToolTip": "C:\\Users\\david\\OneDrive\\Desktop\\Cannabis projet\\inventaireCannabis\\Windows\\sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "RelativeToolTip": "sommatif3\\Views\\PageAjouterPlantule.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-17T09:40:09.641Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
