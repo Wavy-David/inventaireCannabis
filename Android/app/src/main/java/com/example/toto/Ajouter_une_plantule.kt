@@ -11,32 +11,31 @@ import java.util.Calendar
 class AjouterUnePlantule : AppCompatActivity() {
 
     private lateinit var binding: AjouterUnePlantuleBinding
+    var isActive: Int = 0
+    var idPlant: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = AjouterUnePlantuleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Ajouter une plante
         binding.btnAjouterPlant.setOnClickListener {
             if (validateInput()) {
                 ajouterPlante()
             } else {
-                // Afficher un message d'erreur à l'utilisateur
                 println("Veuillez remplir tous les champs.")
             }
         }
 
+        // Annuler
         binding.btnAnnulerPlant.setOnClickListener {
             retourMenuPrincipal()
         }
 
-        // Ajoutez les click listeners pour les EditTexts des dates
+        // Choix de la date
         binding.tbDateAjout.setOnClickListener {
             showDatePickerDialog(binding.tbDateAjout)
-        }
-
-        binding.tbDateRetrait.setOnClickListener {
-            showDatePickerDialog(binding.tbDateRetrait)
         }
     }
 
@@ -58,34 +57,60 @@ class AjouterUnePlantule : AppCompatActivity() {
     }
 
     private fun validateInput(): Boolean {
-        // Implémenter la validation des champs selon les besoins
-        return true
+        return true // You can improve this later
     }
 
     private fun ajouterPlante() {
-        // Récupérer les valeurs des champs
-        val identifiant = binding.tbIdentifiant.text.toString()
+        val db = DataBaseHelper(this)
+
         val dateAjout = binding.tbDateAjout.text.toString()
-        val dateRetrait = binding.tbDateRetrait.text.toString()
         val etatSante = binding.cbEtatDeSante.selectedItem.toString()
         val provenance = binding.tbProvenance.text.toString()
         val description = binding.tbDescription.text.toString()
         val stade = binding.cbStade.selectedItem.toString()
         val entreposage = binding.cbEntreposage.selectedItem.toString()
-        val responsableDecontamination = binding.cbResponsableDecontamination.selectedItem.toString()
+        val responsable = binding.cbResponsableDecontamination.selectedItem.toString()
+        val note = binding.tbNote.text.toString()
+        val retrait = binding.cbRaisonRetrait.selectedItem.toString()
 
-        // Ajouter les données à un DataGrid ou à une base de données (à implémenter selon les besoins)
+        isActive = when {
+            binding.radioActif.isChecked -> 1
+            binding.radioInactif.isChecked -> 0
+            else -> 0
+        }
 
-        // Exemple : Envoi des données à une autre activité (Menu principal dans cet exemple)
+        idPlant = "SLH" + (db.getNombreTotalDePlantes() + 1)
+
+        val plantule = PlantuleModel(
+            idPlant,
+            responsable,
+            note,
+            retrait,
+            isActive,
+            stade,
+            description,
+            provenance,
+            dateAjout,
+            etatSante,
+            entreposage
+        )
+
+        val success = db.addPlantule(plantule)
+        println("✅ Plante insert success? --> $success")
+
+        if (success) {
+            val historiqueSuccess = db.enregistrerHistoriqueAjout(idPlant)
+            println("📚 Historique insert success? --> $historiqueSuccess")
+        }
+
         val intent = Intent(this@AjouterUnePlantule, Menuprincipal::class.java)
         startActivity(intent)
-        finish() // Termine l'activité en cours (AjouterUnePlantule)
+        finish()
     }
 
     private fun retourMenuPrincipal() {
-        // Retourner à l'activité MenuPrincipalActivity sans rien faire
-        val intent = Intent(this@AjouterUnePlantule, Menuprincipal::class.java)
+        val intent = Intent(this, Menuprincipal::class.java)
         startActivity(intent)
-        finish() // Termine l'activité en cours (AjouterUnePlantule)
+        finish()
     }
 }

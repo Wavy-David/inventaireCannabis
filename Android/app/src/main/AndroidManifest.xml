@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Required to read Excel files from file manager -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,35 +15,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Toto"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Menuprincipal">
-            <!-- Optionally, specify intent filters or other activity attributes -->
-        </activity>
-        <activity android:name=".AjouterUnePlantule">
-            <!-- Optionally, specify intent filters or other activity attributes -->
-        </activity>
-        <activity android:name=".Importer_Plantule">
-            <!-- Optionally, specify intent filters or other activity attributes -->
-        </activity>
-        <activity android:name=".ModifierPlante">
-            <!-- Optionally, specify intent filters or other activity attributes -->
-        </activity>
-        <activity android:name=".Archives">
-            <!-- Optionally, specify intent filters or other activity attributes -->
-        </activity>
-        <activity android:name=".ConsulterPlantules">
-            <!-- Optionally, specify intent filters or other activity attributes -->
-        </activity>
-        <activity android:name=".HistoriquePlantules">
-            <!-- Optionally, specify intent filters or other activity attributes -->
-        </activity>
+
+        <activity android:name=".Menuprincipal" />
+        <activity android:name=".AjouterUnePlantule" />
+        <activity android:name=".Importer_Plantule" />
+        <activity android:name=".ModifierPlante" />
+        <activity android:name=".Archives" />
+        <activity android:name=".ConsulterPlantules" />
+        <activity android:name=".HistoriquePlantules" />
+
     </application>
 </manifest>

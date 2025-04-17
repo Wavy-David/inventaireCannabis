@@ -1,10 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    xmlns:tools="http://schemas.android.com/tools">
+    tools:context=".HistoriquePlantes">
 
-    <!-- ToolBar -->
     <LinearLayout
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
@@ -15,25 +15,22 @@
         android:gravity="center"
         android:padding="8dp">
 
-        <!-- Title -->
         <TextView
             android:id="@+id/menu_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity=""
             android:gravity="center"
             android:padding="10dp"
-            android:text="Historisque des Plantules"
+            android:text="Historique des Plantules"
             android:textColor="#FF0000"
             android:textSize="25sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Search-->
     <LinearLayout
+        android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/search_layout"
         android:layout_below="@id/tool_bar"
         android:layout_marginTop="16dp"
         android:gravity="center_vertical"
@@ -48,99 +45,55 @@
 
         <EditText
             android:id="@+id/search_id"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/editbox_background_normal"
-            android:padding="4dp"
-            android:contentDescription="Search "/>
+            android:hint="Entrez l'ID"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background_normal" />
 
         <Button
             android:id="@+id/button_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="Search_click"
             android:text="Afficher" />
     </LinearLayout>
 
-    <!-- ScrollView for Content -->
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_plants"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_below="@id/search_layout"
-        android:layout_marginBottom="80dp"
-        android:layout_weight="1"
-        android:background="@color/beige"
-        android:scrollbars="vertical">
+        android:layout_above="@id/status_bar"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- DataGrid -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_plants"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/light_gray"
-                android:padding="8dp" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <!-- StatusBar -->
     <LinearLayout
         android:id="@+id/status_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:padding="8dp">
 
-        <!-- Status Message -->
         <TextView
             android:id="@+id/status_message"
             android:layout_width="0dp"
             android:layout_weight="4"
             android:layout_height="wrap_content"
-            android:text="Message:"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
+            android:text="Message :"
+            android:textSize="16sp"
+            android:textColor="#000000" />
 
-        <!-- Status Action -->
         <TextView
             android:id="@+id/status_action"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Action!"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
-
+            android:text="Action"
+            android:textSize="16sp"
+            android:textColor="#000000" />
     </LinearLayout>
-
-    <!-- Quitter and Supprimer Buttons at the Bottom -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/status_bar"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:padding="8dp">
-
-        <!-- Supprimer Button -->
-        <Button
-            android:id="@+id/button_supprimer_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="btnSupprimerPlant_Click"
-            android:text="Supprimer" />
-
-    </LinearLayout>
-
 </RelativeLayout>

@@ -41,7 +41,7 @@ CREATE TABLE Plante (
     --CodeQr VARCHAR(255),
     Responsable VARCHAR(255),
 	--dateRetrait DATE,
-    FOREIGN KEY (entreposage) REFERENCES Entreposage(idEntreposage),
+    FOREIGN KEY (entreposage) REFERENCES Entreposage(idEntreposage)
     --FOREIGN KEY (Responsable) REFERENCES CompteUtilisateur(idUtilisateur)
 	--FOREIGN KEY (Responsable) REFERENCES Responsable(nom)
 );

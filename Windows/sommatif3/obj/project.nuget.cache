@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S/NB9zlO0zs8DlI5qYyVckNLNSlgKHBfyoAwoLAa+cTQEcWKCWSC13yq12FAyfZuVQH4YFPjSKSaWt5gupM9BA==",
+  "dgSpecHash": "1ClmUeAwHJpPAi1wkYidQdo/MtW19YCFiYaBYCLHzVFR2XnpJxnv7WWm0RW7AWPMbw24iWr113X925qCkBUTHw==",
   "success": true,
-  "projectFilePath": "D:\\laCite\\session4\\projet integration\\Cannabis projet\\Canabis final product\\inventaireCannabis\\Windows\\sommatif3\\Canabis.csproj",
+  "projectFilePath": "C:\\Users\\david\\OneDrive\\Desktop\\Cannabis projet\\inventaireCannabis\\Windows\\sommatif3\\Canabis.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

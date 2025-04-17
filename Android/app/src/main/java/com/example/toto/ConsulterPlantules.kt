@@ -1,11 +1,13 @@
 package com.example.toto
 
-import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.toto.databinding.ConsulterPlantesBinding
 
 class ConsulterPlantules : AppCompatActivity() {
+
     private lateinit var binding: ConsulterPlantesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,13 +15,29 @@ class ConsulterPlantules : AppCompatActivity() {
         binding = ConsulterPlantesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Configurer les vues et le comportement ici si nécessaire
+        binding.recyclerViewPlants.layoutManager = LinearLayoutManager(this)
+
+        binding.buttonSearch.setOnClickListener {
+            val id = binding.searchId.text.toString().trim()
+            if (id.isEmpty()) {
+                Toast.makeText(this, "Veuillez entrer un ID", Toast.LENGTH_SHORT).show()
+            } else {
+                displayPlantuleById(id)
+            }
+        }
     }
 
-    private fun retourMenuPrincipal() {
-        // Retourner à l'activité MenuPrincipal
-        val intent = Intent(this, Menuprincipal::class.java)
-        startActivity(intent)
-        finish() // Termine l'activité en cours (ConsulterPlantules)
+    private fun displayPlantuleById(id: String) {
+        val db = DataBaseHelper(this)
+        val plant = db.getPlantuleById(id)
+
+        if (plant != null) {
+            val adapter = PlantuleAdapter(listOf(plant))
+            binding.recyclerViewPlants.adapter = adapter
+            binding.statusMessage.text = "Plante trouvée."
+        } else {
+            binding.statusMessage.text = "Aucune plante trouvée avec l'ID \"$id\"."
+            binding.recyclerViewPlants.adapter = null
+        }
     }
 }

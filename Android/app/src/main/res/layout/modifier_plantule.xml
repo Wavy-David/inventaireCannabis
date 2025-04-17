@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:text="Modifier Une Plante"
         android:textSize="25sp"
-        android:textColor="#FF0000"
+        android:textColor="#000000"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
-        android:background="#2BEEB7"
+        android:background="#FFFFFF"
         android:padding="10dp"
         android:layout_marginBottom="16dp"
         android:layout_alignParentTop="true"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/menuTitle"
-        android:background="#F5F5DC"
+        android:background="#FFFFFF"
         android:padding="16dp">
 
         <LinearLayout
@@ -42,10 +42,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@color/beige"
-                android:padding="8dp">
-                <!-- Add Table Rows and Columns as needed -->
-            </TableLayout>
+                android:background="@color/white"
+                android:padding="8dp" />
 
             <!-- Search by ID -->
             <LinearLayout
@@ -63,10 +61,10 @@
                 <EditText
                     android:id="@+id/search_id"
                     android:layout_width="100dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:background="@android:drawable/editbox_background_normal"
                     android:padding="4dp"
-                    android:hint="Enter ID"/>
+                    android:hint="Enter ID" />
 
                 <Button
                     android:id="@+id/btnSearch"
@@ -74,7 +72,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Rechercher" />
-
             </LinearLayout>
 
             <!-- Identifiant -->
@@ -93,7 +90,7 @@
                 <EditText
                     android:id="@+id/tbIdentifiant"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
                     android:hint="Identifiant" />
             </LinearLayout>
@@ -137,9 +134,9 @@
                 <Spinner
                     android:id="@+id/cbEtatDeSante"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:entries="@array/etat_sante"/>
+                    android:entries="@array/etat_sante" />
             </LinearLayout>
 
             <!-- Provenance -->
@@ -155,6 +152,12 @@
                     android:layout_height="wrap_content"
                     android:text="Provenance:" />
 
+                <EditText
+                    android:id="@+id/tbProvenance"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Provenance" />
             </LinearLayout>
 
             <!-- Description -->
@@ -173,7 +176,7 @@
                 <EditText
                     android:id="@+id/tbDescription"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
                     android:hint="Description" />
             </LinearLayout>
@@ -194,10 +197,48 @@
                 <Spinner
                     android:id="@+id/cbStade"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:entries="@drawable/spinner_item_background"/>
+                    android:entries="@array/motifs_retrait"
+                    android:gravity="center" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/date_retrait_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblDateRetrait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active/Inactive:"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioActif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actif"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioInactif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inactif" />
+                </RadioGroup>
+            </LinearLayout>
+
 
             <!-- Entreposage -->
             <LinearLayout
@@ -215,35 +256,12 @@
                 <Spinner
                     android:id="@+id/cbEntreposage"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="48dp"
                     android:layout_weight="1"
                     android:entries="@array/entreposage" />
             </LinearLayout>
 
             <!-- Date Retrait -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingVertical="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Date Retrait:" />
-
-                <EditText
-                    android:id="@+id/tbDateRetrait"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:focusable="false"
-                    android:hint="Date Retrait" />
-
-
-            </LinearLayout>
 
             <!-- Responsable Decontamination -->
             <LinearLayout
@@ -270,21 +288,23 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingVertical="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Motif Retrait:" />
-
+                    android:text="Raison retrait de l'inventaire:"
+                    android:textSize="18sp" />
+                <!-- Spinner cbRaisonRetrait -->
                 <Spinner
-                    android:id="@+id/cbMotifRetrait"
+                    android:id="@+id/cbRaisonRetrait"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:entries="@array/motifs_retrait" />
+                    android:minHeight="48dp"
+                    android:entries="@array/raison_retrait" />
             </LinearLayout>
 
             <!-- Notes -->
@@ -309,13 +329,13 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/tbProvenance"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Provenance" />
         </LinearLayout>
     </ScrollView>
+
     <!-- Buttons -->
     <LinearLayout
         android:id="@+id/layoutButtons"
@@ -350,18 +370,12 @@
 
     <!-- Status Bar -->
     <LinearLayout
-        android:layout_marginTop="4dp"
         android:id="@+id/status_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:layout_alignParentBottom="true"
-
         android:layout_marginBottom="4dp"
-        android:orientation="horizontal">
-
-
-    </LinearLayout>
-
-
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" />
 </RelativeLayout>

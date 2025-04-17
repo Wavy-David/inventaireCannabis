@@ -14,32 +14,34 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
 
-        android:background="#2BEEB7"
+        android:background="@color/white"
         android:gravity="center">
 
         <!-- Menu Title -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ajouter Une Plante"
             android:layout_above="@id/menu_layout"
             android:layout_below="@+id/status_message"
             android:gravity="center"
+            android:padding="10dp"
+            android:text="Ajouter Une Plante"
+            android:textColor="@color/blue"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="#FF0000"
-            android:padding="10dp"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <!-- Form Content -->
+    <!-- Status Bar -->
     <ScrollView
-        android:layout_width="match_parent"
         android:id="@+id/scroll_view_form"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/menu_layout"
-        android:background="@color/beige"
-        android:scrollbars="vertical"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginTop="-72dp"
+        android:background="@color/white"
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:id="@+id/form_layout"
@@ -48,54 +50,28 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Identifiant -->
-            <LinearLayout
-                android:id="@+id/identifiant_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:id="@+id/lblIdentifiant"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Identifiant:"
-                    android:textSize="18sp"
-                    android:paddingStart="8dp" />
-
-                <EditText
-                    android:id="@+id/tbIdentifiant"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"/>
-            </LinearLayout>
-
             <!-- Date Ajout -->
             <LinearLayout
                 android:id="@+id/date_ajout_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblDateAjout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date Ajout:"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/tbDateAjout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusable="false"
-                    android:clickable="true"/>
+                    android:clickable="true"
+                    android:focusable="false" />
 
             </LinearLayout>
 
@@ -104,23 +80,23 @@
                 android:id="@+id/etat_sante_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblEtatDeSante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Etat de Sante:"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <Spinner
                     android:id="@+id/cbEtatDeSante"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="48dp"
-                    android:entries="@array/etat_sante"/>
+                    android:layout_weight="1"
+                    android:entries="@array/etat_sante" />
             </LinearLayout>
 
             <!-- Provenance -->
@@ -128,25 +104,25 @@
                 android:id="@+id/provenance_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblProvenance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Provenance:"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/tbProvenance"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="48dp"
+                    android:layout_weight="1"
                     android:inputType="text"
                     android:paddingStart="8dp"
-                    android:paddingEnd="8dp"/>
+                    android:paddingEnd="8dp" />
             </LinearLayout>
 
             <!-- Description -->
@@ -154,24 +130,23 @@
                 android:id="@+id/description_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblDescription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Description:"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <EditText
                     android:id="@+id/tbDescription"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
-                    android:minLines="2"
-                    android:maxLines="5"
+                    android:layout_weight="1"
+                    android:inputType="text"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp" />
             </LinearLayout>
@@ -181,24 +156,24 @@
                 android:id="@+id/stade_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblStade"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Stade:"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <Spinner
                     android:id="@+id/cbStade"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
                     android:layout_height="48dp"
-                    android:entries="@array/motifs_retrait"/>
+                    android:layout_weight="1"
+                    android:entries="@array/motifs_retrait"
+                    android:gravity="center" />
             </LinearLayout>
 
             <!-- Entreposage -->
@@ -206,48 +181,61 @@
                 android:id="@+id/entreposage_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblEntreposage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Entreposage:"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <Spinner
                     android:id="@+id/cbEntreposage"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:entries="@array/entreposage"/>
+                    android:layout_weight="1"
+                    android:entries="@array/entreposage"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
-            <!-- Date Retrait -->
+            <!-- actif/ inactif -->
             <LinearLayout
                 android:id="@+id/date_retrait_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/lblDateRetrait"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date Retrait:"
-                    android:textSize="18sp"/>
+                    android:text="Active/Inactive:"
+                    android:textSize="18sp" />
 
-                <EditText
-                    android:id="@+id/tbDateRetrait"
-                    android:layout_width="match_parent"
+                <RadioGroup
+                    android:id="@+id/radioGroupStatus"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:focusable="false"
-                    android:clickable="true"/>
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioActif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actif"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioInactif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inactif" />
+                </RadioGroup>
             </LinearLayout>
 
             <!-- Responsable Decontamination -->
@@ -255,46 +243,75 @@
                 android:id="@+id/responsable_decontamination_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/lblResponsableDecontamination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Responsable Decontamination:"
-                    android:textSize="18sp"
-                    android:id="@+id/lblResponsableDecontamination"/>
+                    android:textSize="18sp" />
 
                 <Spinner
                     android:id="@+id/cbResponsableDecontamination"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:entries="@array/responsables_decontamination"/>
+                    android:layout_weight="1"
+                    android:entries="@array/responsables_decontamination"
+                    android:minHeight="48dp" />
             </LinearLayout>
 
             <!-- Raison Retrait de l'Inventaire -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
-                android:layout_marginTop="8dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Raison retrait de l'inventaire:"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
                 <!-- Spinner cbRaisonRetrait -->
                 <Spinner
                     android:id="@+id/cbRaisonRetrait"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:minHeight="48dp"/>
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:entries="@array/raison_retrait" />
+            </LinearLayout>
+
+            <!-- Identifiant -->
+            <LinearLayout
+                android:id="@+id/identifiant_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblIdentifiant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:text="Note:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/tbNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:minLines="2"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp" />
             </LinearLayout>
 
             <!-- Ajouter Button -->
@@ -302,34 +319,33 @@
                 android:id="@+id/btnAjouterPlant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Ajouter"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"/>
+                android:textSize="18sp" />
             <!-- Annuler Button -->
             <Button
                 android:id="@+id/btnAnnulerPlant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Annuler"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
                 android:layout_below="@id/date_retrait_layout"
-                android:onClick="onCancelClick"
-                android:layout_alignParentEnd="true"/>
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:text="Annuler"
+                android:textSize="18sp" />
 
             <!-- DataGrid Placeholder -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                android:layout_weight="1">
 
                 <!-- DataGrid -->
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/dgPlants"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#E0E0E0"/>
+                    android:background="#E0E0E0" />
             </FrameLayout>
 
             <!-- QR Code Display -->
@@ -338,11 +354,11 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
     </ScrollView>
-    <!-- Status Bar -->
+
     <LinearLayout
         android:layout_marginTop="4dp"
         android:id="@+id/status_bar"

@@ -9,17 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="#2BEEB7"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
         android:gravity="center"
         android:padding="8dp">
 
-        <!-- Title -->
         <TextView
             android:id="@+id/menu_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity=""
             android:gravity="center"
             android:padding="10dp"
             android:text="Archives"
@@ -28,21 +26,62 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- Search Row -->
+    <LinearLayout
+        android:id="@+id/search_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tool_bar"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PlantuleID:"
+            android:textSize="16sp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- TextBox -->
+        <EditText
+            android:id="@+id/search_id"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="Enter ID"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background_normal" />
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:text="Rechercher"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6A4FBF"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+
     <!-- ScrollView for Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/search_row"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="80dp"
-        android:layout_weight="1"
-        android:layout_below="@id/tool_bar"
-        android:background="@color/beige"
+        android:background="@color/white"
         android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_below="@id/menu_title"
             android:padding="16dp">
 
             <!-- DataGrid -->
@@ -50,9 +89,8 @@
                 android:id="@+id/recycler_view_plants"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/light_gray"
+                android:background="@color/white"
                 android:padding="16dp" />
-
         </LinearLayout>
     </ScrollView>
 
@@ -65,7 +103,6 @@
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
-        <!-- Status Message -->
         <TextView
             android:id="@+id/status_message"
             android:layout_width="0dp"
@@ -75,9 +112,8 @@
             android:textSize="18sp"
             android:textColor="#000000"
             android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
+            android:paddingEnd="8dp" />
 
-        <!-- Status Action -->
         <TextView
             android:id="@+id/status_action"
             android:layout_width="0dp"
@@ -87,8 +123,7 @@
             android:textSize="18sp"
             android:textColor="#000000"
             android:paddingStart="8dp"
-            android:paddingEnd="8dp"/>
-
+            android:paddingEnd="8dp" />
     </LinearLayout>
 
     <!-- Quitter and Supprimer Buttons at the Bottom -->
@@ -100,14 +135,11 @@
         android:gravity="center"
         android:padding="8dp">
 
-        <!-- Supprimer Button -->
         <Button
             android:id="@+id/button_supprimer_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="btnSupprimerPlant_Click"
             android:text="Supprimer" />
-
     </LinearLayout>
-
 </RelativeLayout>

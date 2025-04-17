@@ -26,4 +26,9 @@
         <item>F1260.04</item>
         <item>B3200</item>
     </string-array>
+
+    <string-array name="raison_retrait">
+        <item>raison1</item>
+        <item>raison2</item>
+    </string-array>
 </resources>

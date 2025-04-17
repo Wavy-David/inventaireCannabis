@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="#2BEEB7"
+        android:background="#FFFFFF"
         android:orientation="horizontal"
         android:gravity="center"
         android:padding="8dp">
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/search_layout"
 
-        android:background="@color/beige"
+        android:background="@color/white"
         android:scrollbars="vertical">
 
         <LinearLayout
@@ -84,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/button_supprimer_bottom"
-                android:background="@android:color/darker_gray"
+                android:background="@android:color/white"
                 android:padding="8dp" />
 
         </LinearLayout>
